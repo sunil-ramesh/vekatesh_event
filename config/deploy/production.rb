@@ -16,6 +16,17 @@
 # group is considered to be the first unless any hosts have the primary
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
+set :stage, :production
+set :branch, :master
+set :deploy_to, '/u01/apps/qwinix/production-sunil'
+set :user, "deploy"
+role :app, %w{deploy@192.168.2.174}
+role :web, %w{deploy@192.168.2.174}
+role :db,  %w{deploy@192.168.2.174}
+server '192.168.2.174', roles: %w{:web, :app, :db}, user: 'deploy'
+set :ssh_options,
+ {keys: %w(~/.ssh/id_rsa),
+	auth_methods: %w(publickey)}
 
 # role :app, %w{deploy@example.com}, my_property: :my_value
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
