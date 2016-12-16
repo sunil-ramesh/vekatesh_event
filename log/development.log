@@ -30926,3 +30926,313 @@ Processing by EventsController#index as
   Rendered partials/_signup.html.erb (5.0ms)
   Rendered partials/_login.html.erb (1.3ms)
 Completed 200 OK in 80ms (Views: 71.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-16 12:17:11 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered partials/_navbar.html.erb (22.2ms)
+  Rendered partials/_signup.html.erb (12.3ms)
+  Rendered partials/_login.html.erb (1.1ms)
+Completed 200 OK in 201ms (Views: 187.8ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2016-12-16 12:17:16 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"26yM3n2Aps2VnU1clHxaSezqocGEvQ17n15CMmqYIM8v8Ou0igLQ2TVzdjTc61/l4JV5Ik9iZYZX5ZtBfozAZA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-16 12:17:16 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.0ms)
+  Rendered partials/_navbar.html.erb (0.0ms)
+  Rendered partials/_signup.html.erb (2.1ms)
+  Rendered partials/_login.html.erb (0.6ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-12-16 12:18:21 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bIOa54u4XxyIIRG+k5j0IcdZy9gWxArgjCubTE6j2YGY3/2NfDopCCjPKtbbD/GNyyYTO90bYh1EkEI/Wrc5Kg==", "user"=>{"firstname"=>"sunil", "lastname"=>"Arya", "username"=>"sunil-ramesh", "email"=>"sp@gmail.com", "phone"=>"7411155798", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fbe56058220 @tempfile=#<Tempfile:/tmp/RackMultipart20161216-11062-1gkbiem.jpg>, @original_filename="1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[attachment]\"; filename=\"1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Register User"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'sp@gmail.com' LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/
+Completed 302 Found in 107ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-16 12:18:21 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.0ms)
+  Rendered partials/_navbar.html.erb (0.0ms)
+  Rendered partials/_signup.html.erb (3.7ms)
+  Rendered partials/_login.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-16 12:19:53 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.8ms)
+  Rendered partials/_navbar.html.erb (0.5ms)
+  Rendered partials/_signup.html.erb (14.6ms)
+  Rendered partials/_login.html.erb (1.1ms)
+Completed 200 OK in 191ms (Views: 182.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:53 +0530
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:53 +0530
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:53 +0530
+
+
+Started GET "/assets/application.self-f2172a98e5acfd5c165ada384ede51a09b2d16a6bf03064d42e5cc28a8463def.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/jquery-ui.self-34e6fc152285ed671a6e0ec5f0cc5d4ab2bc7ac619b067648746a4e09afeb21f.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/jquery-ui.self-bac161e5cdca8c4d90a254b8a05bbf6fe02083b019e0ff9bf3d5602a918d6fbf.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/jquery.validate.min.self-ab4e76b9146880528a3c96ee9442eb915492cbb20b92edfcc274542c134a6fb4.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/application.self-02284963a877045abe969faccfa8d068cd7468e1b950c362cbbd541dd0c9da64.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/assets/avatar-fb839452628eb0054276f60294a4a512288c6ba128b1502a8fb94392a85dfa28.jpg" for 127.0.0.1 at 2016-12-16 12:19:54 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.0ms)
+  Rendered partials/_signup.html.erb (4.1ms)
+  Rendered partials/_login.html.erb (0.8ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/jquery-ui.self-34e6fc152285ed671a6e0ec5f0cc5d4ab2bc7ac619b067648746a4e09afeb21f.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/application.self-f2172a98e5acfd5c165ada384ede51a09b2d16a6bf03064d42e5cc28a8463def.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/jquery-ui.self-bac161e5cdca8c4d90a254b8a05bbf6fe02083b019e0ff9bf3d5602a918d6fbf.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/jquery.validate.min.self-ab4e76b9146880528a3c96ee9442eb915492cbb20b92edfcc274542c134a6fb4.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/application.self-02284963a877045abe969faccfa8d068cd7468e1b950c362cbbd541dd0c9da64.js?body=1" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started GET "/assets/avatar-fb839452628eb0054276f60294a4a512288c6ba128b1502a8fb94392a85dfa28.jpg" for 127.0.0.1 at 2016-12-16 12:19:58 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2016-12-16 12:20:53 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+epRI+se81FFJWrQ7woOI/P8940AE8vj63nCcwHUdgINtjZJHJyFReXLUbinnQuP/4MvbsvMox4jwhsAFcCWqQ==", "user"=>{"firstname"=>"sunil", "lastname"=>"kumar", "username"=>"sunil-ramesh1", "email"=>"sp@gmail.com", "phone"=>"7411155798", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register User"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'sp@gmail.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/
+Completed 302 Found in 32183ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-16 12:21:26 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.2ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (3.1ms)
+  Rendered partials/_login.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-12-16 12:22:19 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T6PayFTyfVKa5aWh0BJAdwqFTfD1NwfD+FTchIqWWe67/72io3ALRjoLnsmYhUXbBvqVEz7obz4w7wX3noK5RQ==", "user"=>{"firstname"=>"sunil", "lastname"=>"krs", "username"=>"sunil-ramesh1", "email"=>"spr@gmail.com", "phone"=>"7411155798", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'spr@gmail.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("firstname", "lastname", "username", "email", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["firstname", "sunil"], ["lastname", "krs"], ["username", "sunil-ramesh1"], ["email", "spr@gmail.com"], ["phone", "7411155798"], ["password_digest", "$2a$10$bnZWwZPmBa363pmlnSyB5uehYtEKWWgiH.nnQSDjmObforNFsyRDy"], ["created_at", "2016-12-16 06:52:45.432874"], ["updated_at", "2016-12-16 06:52:45.432874"]]
+  [1m[35m (57.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'spr@gmail.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 64494ms (ActiveRecord: 59.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-16 12:23:23 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.0ms)
+  Rendered partials/_navbar.html.erb (0.2ms)
+  Rendered partials/_signup.html.erb (2.4ms)
+  Rendered partials/_login.html.erb (0.6ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-12-16 12:24:10 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fu0hOyjCUmVjtKrwFfETJifPNrC81SVDr0IFUI7quPiKsUZR30AkccNakZhdZhaKK7DuU3cKTb5n+dwjmv5YUw==", "login"=>{"email"=>"spr@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "spr@gmail.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-16 12:24:10 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.0ms)
+  Rendered partials/_navbar.html.erb (0.0ms)
+  Rendered partials/_signup.html.erb (2.1ms)
+  Rendered partials/_login.html.erb (0.5ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-12-16 12:24:29 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"arKqJ4+2iCtY6BvpcCapqFNZ1j7DFkcDdNhvDgc2Jgqe7s1NeDT+P/gGIIE4sawEXyYO3QjJL/68Y7Z9EyLGoQ==", "login"=>{"email"=>"spr@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "spr@gmail.com"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Redirected to http://localhost:3000/events.3
+Completed 302 Found in 75ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/events.3" for 127.0.0.1 at 2016-12-16 12:24:29 +0530
+Processing by EventsController#index as 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered partials/_create_event.html.erb (4.7ms)
+  Rendered events/index.html.erb within layouts/application (10.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered partials/_navbar.html.erb (3.9ms)
+  Rendered partials/_signup.html.erb (3.7ms)
+  Rendered partials/_login.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 46.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/user/show" for 127.0.0.1 at 2016-12-16 12:27:50 +0530
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered partials/_navbar.html.erb (1.4ms)
+  Rendered partials/_signup.html.erb (1.7ms)
+  Rendered partials/_login.html.erb (0.5ms)
+Completed 200 OK in 38ms (Views: 25.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/events.3" for 127.0.0.1 at 2016-12-16 12:28:08 +0530
+Processing by EventsController#index as 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered partials/_create_event.html.erb (4.8ms)
+  Rendered events/index.html.erb within layouts/application (10.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered partials/_navbar.html.erb (43.2ms)
+  Rendered partials/_signup.html.erb (2.1ms)
+  Rendered partials/_login.html.erb (0.6ms)
+Completed 200 OK in 88ms (Views: 82.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/events.3" for 127.0.0.1 at 2016-12-16 12:28:19 +0530
+Processing by EventsController#index as 
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (2.4ms)
+  Rendered events/index.html.erb within layouts/application (6.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered partials/_navbar.html.erb (3.1ms)
+  Rendered partials/_signup.html.erb (2.9ms)
+  Rendered partials/_login.html.erb (1.8ms)
+Completed 200 OK in 58ms (Views: 54.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events.3" for 127.0.0.1 at 2016-12-16 12:28:53 +0530
+Processing by EventsController#index as 
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered partials/_create_event.html.erb (3.3ms)
+  Rendered events/index.html.erb within layouts/application (8.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_signup.html.erb (2.0ms)
+  Rendered partials/_login.html.erb (1.7ms)
+Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 1.7ms)
