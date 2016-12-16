@@ -2,11 +2,11 @@ class SessionsController < ApplicationController
 	before_action :must_login, only: [:show, :destroy]
 
   def new
-    binding.pry
+    # binding.pry
   end
 
   def create
-    binding.pry
+    # binding.pry
   	user = User.find_by(email: params[:login][:email] )
 
     
@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    binding.pry
+    # binding.pry
      session[:user_id]=nil
      flash[:success]="Logged out! "
      redirect_to root_path
