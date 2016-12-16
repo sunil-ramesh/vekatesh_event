@@ -780,3 +780,148 @@ FOREIGN KEY ("event_id")
   INFO [45c40da8] Running /usr/bin/env echo "Branch master (at 15016cd04c83c6544a1d29f26ddff12d7fb79775) deployed as release 20161216052539 by sunil" >> /u01/apps/qwinix/production-sunil/revisions.log as deploy@192.168.2.174
  DEBUG [45c40da8] Command: cd /u01/apps/qwinix/production-sunil/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 15016cd04c83c6544a1d29f26ddff12d7fb79775) deployed as release 20161216052539 by sunil" >> /u01/apps/qwinix/production-sunil/revisions.log )
   INFO [45c40da8] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-16 11:04:21 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [cd8306f6] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deploy@192.168.2.174
+ DEBUG [cd8306f6] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [cd8306f6] Finished in 0.598 seconds with exit status 0 (successful).
+  INFO [9dbec5e6] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.2.174
+ DEBUG [9dbec5e6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [9dbec5e6] Finished in 0.274 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-production-sunil.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-production-sunil.sh 100.0%
+  INFO [0f73e3c3] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-sunil.sh as deploy@192.168.2.174
+ DEBUG [0f73e3c3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-sunil.sh )
+  INFO [0f73e3c3] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [392a51c4] Running /usr/bin/env git ls-remote --heads https://github.com/sunil-ramesh/vekatesh_event as deploy@192.168.2.174
+ DEBUG [392a51c4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-sunil.sh" ; /usr/bin/env git ls-remote --heads https://github.com/sunil-ramesh/vekatesh_event )
+ DEBUG [392a51c4] 	255758fa9e1271cbf34e1a1f6af848c303d1650d	refs/heads/master
+  INFO [392a51c4] Finished in 6.486 seconds with exit status 0 (successful).
+  INFO [3ab77567] Running /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/shared /u01/apps/qwinix/production-sunil/releases as deploy@192.168.2.174
+ DEBUG [3ab77567] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/shared /u01/apps/qwinix/production-sunil/releases )
+  INFO [3ab77567] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [1fcb76cb] Running /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/shared/public/assets as deploy@192.168.2.174
+ DEBUG [1fcb76cb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/shared/public/assets )
+  INFO [1fcb76cb] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [c12e31a3] Running [ -f /u01/apps/qwinix/production-sunil/current/REVISION ] as deploy@192.168.2.174
+ DEBUG [c12e31a3] Command: [ -f /u01/apps/qwinix/production-sunil/current/REVISION ]
+ DEBUG [c12e31a3] Finished in 0.251 seconds with exit status 0 (successful).
+ DEBUG [f6504fd6] Running /usr/bin/env cat /u01/apps/qwinix/production-sunil/current/REVISION 2>/dev/null as deploy@192.168.2.174
+ DEBUG [f6504fd6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /u01/apps/qwinix/production-sunil/current/REVISION 2>/dev/null )
+ DEBUG [f6504fd6] 	15016cd04c83c6544a1d29f26ddff12d7fb79775
+ DEBUG [f6504fd6] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [f80036db] Running [ -f /u01/apps/qwinix/production-sunil/repo/HEAD ] as deploy@192.168.2.174
+ DEBUG [f80036db] Command: [ -f /u01/apps/qwinix/production-sunil/repo/HEAD ]
+ DEBUG [f80036db] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /u01/apps/qwinix/production-sunil/repo
+ DEBUG [cfb62acc] Running if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [cfb62acc] Command: if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi
+ DEBUG [cfb62acc] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [41ce41c0] Running /usr/bin/env git remote update --prune as deploy@192.168.2.174
+ DEBUG [41ce41c0] Command: cd /u01/apps/qwinix/production-sunil/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-sunil.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [41ce41c0] 	Fetching origin
+ DEBUG [41ce41c0] 	From https://github.com/sunil-ramesh/vekatesh_event
+   15016cd..255758f  master     -> master
+  INFO [41ce41c0] Finished in 13.503 seconds with exit status 0 (successful).
+ DEBUG [c211013c] Running if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [c211013c] Command: if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi
+ DEBUG [c211013c] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [f6428a06] Running /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/releases/20161216053429 as deploy@192.168.2.174
+ DEBUG [f6428a06] Command: cd /u01/apps/qwinix/production-sunil/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-sunil.sh" ; /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/releases/20161216053429 )
+  INFO [f6428a06] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO [fae4c8fb] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/production-sunil/releases/20161216053429 as deploy@192.168.2.174
+ DEBUG [fae4c8fb] Command: cd /u01/apps/qwinix/production-sunil/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-sunil.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/production-sunil/releases/20161216053429 )
+  INFO [fae4c8fb] Finished in 0.231 seconds with exit status 0 (successful).
+ DEBUG [68434c2c] Running if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [68434c2c] Command: if test ! -d /u01/apps/qwinix/production-sunil/repo; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/repo'" 1>&2; false; fi
+ DEBUG [68434c2c] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [930dac92] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.2.174
+ DEBUG [930dac92] Command: cd /u01/apps/qwinix/production-sunil/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-sunil.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [930dac92] 	255758fa9e1271cbf34e1a1f6af848c303d1650d
+ DEBUG [930dac92] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [61666e67] Running if test ! -d /u01/apps/qwinix/production-sunil/releases/20161216053429; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161216053429'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [61666e67] Command: if test ! -d /u01/apps/qwinix/production-sunil/releases/20161216053429; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161216053429'" 1>&2; false; fi
+ DEBUG [61666e67] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [bd7568de] Running /usr/bin/env echo "255758fa9e1271cbf34e1a1f6af848c303d1650d" >> REVISION as deploy@192.168.2.174
+ DEBUG [bd7568de] Command: cd /u01/apps/qwinix/production-sunil/releases/20161216053429 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "255758fa9e1271cbf34e1a1f6af848c303d1650d" >> REVISION )
+  INFO [bd7568de] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [a7772d0c] Running /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/releases/20161216053429/public as deploy@192.168.2.174
+ DEBUG [a7772d0c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/releases/20161216053429/public )
+  INFO [a7772d0c] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [f2752380] Running [ -L /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets ] as deploy@192.168.2.174
+ DEBUG [f2752380] Command: [ -L /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets ]
+ DEBUG [f2752380] Finished in 0.090 seconds with exit status 1 (failed).
+ DEBUG [e57e7d27] Running [ -d /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets ] as deploy@192.168.2.174
+ DEBUG [e57e7d27] Command: [ -d /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets ]
+ DEBUG [e57e7d27] Finished in 0.090 seconds with exit status 1 (failed).
+  INFO [6bd52bfe] Running /usr/bin/env ln -s /u01/apps/qwinix/production-sunil/shared/public/assets /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets as deploy@192.168.2.174
+ DEBUG [6bd52bfe] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /u01/apps/qwinix/production-sunil/shared/public/assets /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets )
+  INFO [6bd52bfe] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [222519cb] Running if test ! -d /u01/apps/qwinix/production-sunil/releases/20161216053429; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161216053429'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [222519cb] Command: if test ! -d /u01/apps/qwinix/production-sunil/releases/20161216053429; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161216053429'" 1>&2; false; fi
+ DEBUG [222519cb] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [37eb41bb] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/production-sunil/shared/bundle as deploy@192.168.2.174
+ DEBUG [37eb41bb] Command: cd /u01/apps/qwinix/production-sunil/releases/20161216053429 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/production-sunil/shared/bundle )
+ DEBUG [37eb41bb] 	The following gems are missing
+ * debug_inspector (0.0.2)
+ * binding_of_caller (0.7.2)
+ * byebug (9.0.6)
+ DEBUG [37eb41bb] 	 * coderay (1.1.1)
+ DEBUG [37eb41bb] 	 * method_source (0.8.2)
+ * slop (3.6.0)
+ * pry (0.10.4)
+ * spring (2.0.0)
+ * web-console (2.3.0)
+ DEBUG [37eb41bb] 	Install missing gems with `bundle install`
+ DEBUG [37eb41bb] Finished in 0.489 seconds with exit status 1 (failed).
+  INFO [6005b4ca] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/production-sunil/shared/bundle --without development test --deployment --quiet as deploy@192.168.2.174
+ DEBUG [6005b4ca] Command: cd /u01/apps/qwinix/production-sunil/releases/20161216053429 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/production-sunil/shared/bundle --without development test --deployment --quiet )
+  INFO [6005b4ca] Finished in 20.587 seconds with exit status 0 (successful).
+ DEBUG [3c6f9b0f] Running if test ! -d /u01/apps/qwinix/production-sunil/releases/20161216053429; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161216053429'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [3c6f9b0f] Command: if test ! -d /u01/apps/qwinix/production-sunil/releases/20161216053429; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161216053429'" 1>&2; false; fi
+ DEBUG [3c6f9b0f] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [dda73d93] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@192.168.2.174
+ DEBUG [dda73d93] Command: cd /u01/apps/qwinix/production-sunil/releases/20161216053429 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [dda73d93] Finished in 32.798 seconds with exit status 0 (successful).
+ DEBUG [65ff505b] Running if test ! -d /u01/apps/qwinix/production-sunil/releases/20161216053429; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161216053429'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [65ff505b] Command: if test ! -d /u01/apps/qwinix/production-sunil/releases/20161216053429; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161216053429'" 1>&2; false; fi
+ DEBUG [65ff505b] Finished in 0.104 seconds with exit status 0 (successful).
+  INFO [9875f9de] Running /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/releases/20161216053429/assets_manifest_backup as deploy@192.168.2.174
+ DEBUG [9875f9de] Command: cd /u01/apps/qwinix/production-sunil/releases/20161216053429 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /u01/apps/qwinix/production-sunil/releases/20161216053429/assets_manifest_backup )
+  INFO [9875f9de] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [aca055d6] Running /usr/bin/env ls /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets/.sprockets-manifest* as deploy@192.168.2.174
+ DEBUG [aca055d6] Command: cd /u01/apps/qwinix/production-sunil/releases/20161216053429 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets/.sprockets-manifest* )
+ DEBUG [aca055d6] 	/u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets/.sprockets-manifest-48751b55ad8c0b1917f28ebdf5d094d7.json
+ DEBUG [aca055d6] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [eda1be3e] Running /usr/bin/env ls /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets/.sprockets-manifest* as deploy@192.168.2.174
+ DEBUG [eda1be3e] Command: cd /u01/apps/qwinix/production-sunil/releases/20161216053429 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets/.sprockets-manifest* )
+ DEBUG [eda1be3e] 	/u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets/.sprockets-manifest-48751b55ad8c0b1917f28ebdf5d094d7.json
+ DEBUG [eda1be3e] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [1e7d3502] Running /usr/bin/env cp /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets/.sprockets-manifest-48751b55ad8c0b1917f28ebdf5d094d7.json /u01/apps/qwinix/production-sunil/releases/20161216053429/assets_manifest_backup as deploy@192.168.2.174
+ DEBUG [1e7d3502] Command: cd /u01/apps/qwinix/production-sunil/releases/20161216053429 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /u01/apps/qwinix/production-sunil/releases/20161216053429/public/assets/.sprockets-manifest-48751b55ad8c0b1917f28ebdf5d094d7.json /u01/apps/qwinix/production-sunil/releases/20161216053429/assets_manifest_backup )
+  INFO [1e7d3502] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [a811dfe4] Running if test ! -d /u01/apps/qwinix/production-sunil/releases/20161216053429; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161216053429'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [a811dfe4] Command: if test ! -d /u01/apps/qwinix/production-sunil/releases/20161216053429; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases/20161216053429'" 1>&2; false; fi
+ DEBUG [a811dfe4] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [e66bbd22] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@192.168.2.174
+ DEBUG [e66bbd22] Command: cd /u01/apps/qwinix/production-sunil/releases/20161216053429 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [e66bbd22] 	  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  INFO [e66bbd22] Finished in 2.467 seconds with exit status 0 (successful).
+  INFO [095e9528] Running /usr/bin/env ln -s /u01/apps/qwinix/production-sunil/releases/20161216053429 /u01/apps/qwinix/production-sunil/releases/current as deploy@192.168.2.174
+ DEBUG [095e9528] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /u01/apps/qwinix/production-sunil/releases/20161216053429 /u01/apps/qwinix/production-sunil/releases/current )
+  INFO [095e9528] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [e96a720a] Running /usr/bin/env mv /u01/apps/qwinix/production-sunil/releases/current /u01/apps/qwinix/production-sunil as deploy@192.168.2.174
+ DEBUG [e96a720a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /u01/apps/qwinix/production-sunil/releases/current /u01/apps/qwinix/production-sunil )
+  INFO [e96a720a] Finished in 0.162 seconds with exit status 0 (successful).
+ DEBUG [216ac181] Running /usr/bin/env ls -x /u01/apps/qwinix/production-sunil/releases as deploy@192.168.2.174
+ DEBUG [216ac181] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /u01/apps/qwinix/production-sunil/releases )
+ DEBUG [216ac181] 	20161216052022	20161216052233	20161216052539	20161216053429
+ DEBUG [216ac181] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [7962cd79] Running if test ! -d /u01/apps/qwinix/production-sunil/releases; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases'" 1>&2; false; fi as deploy@192.168.2.174
+ DEBUG [7962cd79] Command: if test ! -d /u01/apps/qwinix/production-sunil/releases; then echo "Directory does not exist '/u01/apps/qwinix/production-sunil/releases'" 1>&2; false; fi
+ DEBUG [7962cd79] Finished in 0.106 seconds with exit status 0 (successful).
+  INFO [94a9ed2c] Running /usr/bin/env echo "Branch master (at 255758fa9e1271cbf34e1a1f6af848c303d1650d) deployed as release 20161216053429 by sunil" >> /u01/apps/qwinix/production-sunil/revisions.log as deploy@192.168.2.174
+ DEBUG [94a9ed2c] Command: cd /u01/apps/qwinix/production-sunil/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 255758fa9e1271cbf34e1a1f6af848c303d1650d) deployed as release 20161216053429 by sunil" >> /u01/apps/qwinix/production-sunil/revisions.log )
+  INFO [94a9ed2c] Finished in 0.122 seconds with exit status 0 (successful).

@@ -2,23 +2,23 @@ class EventsController < ApplicationController
 	before_action :must_login, only: [:show, :edit, :new, :index, :create, :update, :destroy, :invitation]
 
 	def new
-		binding.pry
+		# binding.pry
 		@users=User.all
 	end
 
 	def show
-		binding.pry
+		# binding.pry
 	end
 
 	def index
-		binding.pry
+		# binding.pry
 		@events=Event.all
 		@users=User.all
 	end
 
 
 	def create
-		binding.pry
+		# binding.pry
 		User.find(current_user).events << Event.new(event_params)
 		
 		if params["user_ids"]
@@ -28,14 +28,14 @@ class EventsController < ApplicationController
 	end
 
 	def edit
-		binding.pry
+		# binding.pry
 		@users=User.all
 		@event=Event.find(params["event_id"])
 		@current_event_user=@event.users
 	end
 
 	def update
-		binding.pry
+		# binding.pry
 		@event=Event.find(params["event_id"])
 		@event.update(event_params)
 		
@@ -50,14 +50,14 @@ class EventsController < ApplicationController
 	end
 
 	def destroy
-		binding.pry
+		# binding.pry
 		@event=Event.find(params[:id])
 		@event.destroy
 		redirect_to list_events_path
 	end
 
 	def invitation
-		binding.pry
+		# binding.pry
 		@a =[]
 		current_user.participents.each do |p|
 			@a << p.event_id
