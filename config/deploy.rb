@@ -2,7 +2,7 @@
 lock "3.7.0"
 
 set :application, "venkatesh_event"
-set :repo_url, "git@github.com:sunil-ramesh/vekatesh_event.git"
+set :repo_url, "https://github.com/sunil-ramesh/vekatesh_event"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
