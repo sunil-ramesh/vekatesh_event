@@ -20,9 +20,9 @@ set :stage, :production
 set :branch, :master
 set :deploy_to, '/u01/apps/qwinix/production-sunil'
 set :user, "sunil"
-role :app, %w{sunil192.168.2.96}
-role :web, %w{sunil192.168.2.96}
-role :db,  %w{sunil192.168.2.96}
+role :app, %w{sunil@192.168.2.96}
+role :web, %w{sunil@192.168.2.96}
+role :db,  %w{sunil@192.168.2.96}
 server '192.168.2.96', roles: %w{:web, :app, :db}, user: 'sunil'
 set :ssh_options,
  {keys: %w(~/.ssh/id_rsa),
