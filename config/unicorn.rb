@@ -1,6 +1,6 @@
 # set path to application
 # set path to application
-app_dir = File.expand_path("/home/deploy/u01/apps/qwinix/production-sunil", __FILE__)
+app_dir = File.expand_path("/home/deploy/u01/apps/qwinix/production-sunil/current", __FILE__)
 #shared_dir = "#{app_dir}/shared"
 working_directory app_dir
 
