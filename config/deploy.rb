@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "3.7.0"
+lock "3.9.1"
 
 set :application, "venkatesh_event"
 set :repo_url, "https://github.com/sunil-ramesh/vekatesh_event"

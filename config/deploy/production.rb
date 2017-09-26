@@ -18,12 +18,12 @@
 # Don't use `:all`, it's a meta role.
 set :stage, :production
 set :branch, :master
-set :deploy_to, '/u01/apps/qwinix/production-sunil'
-set :user, "sunil"
-role :app, %w{sunil@192.168.2.96}
-role :web, %w{sunil@192.168.2.96}
-role :db,  %w{sunil@192.168.2.96}
-server '192.168.2.96', roles: %w{:web, :app, :db}, user: 'sunil'
+set :deploy_to, '/home/deploy/u01/apps/qwinix/production-sunil'
+set :user, "deploy"
+role :app, %w{deploy@34.201.1.80}
+role :web, %w{deploy@34.201.1.80}
+role :db,  %w{deploy@34.201.1.80}
+server '34.201.1.80', roles: %w{:web, :app, :db}, user: 'deploy'
 set :ssh_options,
  {keys: %w(~/.ssh/id_rsa),
 	auth_methods: %w(publickey)}
