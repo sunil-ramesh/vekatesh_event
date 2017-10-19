@@ -44,6 +44,6 @@ production:
   reconnect: false
   username: postgres
   password: password
-  database: event_scheduler
+  database: event_production
   pool: 5
   host: localhost
