@@ -5968,3 +5968,11 @@ could not connect to server: Connection refused
 /home/deploy/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
 Tasks: TOP => db:migrate
 (See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-26 13:12:04 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [da27db9c] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deploy@52.90.14.191}
+ DEBUG [9de41e8c] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deploy@52.90.14.191
+ DEBUG [da27db9c] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [9de41e8c] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [9de41e8c] Finished in 2.989 seconds with exit status 0 (successful).
