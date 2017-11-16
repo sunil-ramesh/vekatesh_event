@@ -5976,3 +5976,457 @@ Tasks: TOP => db:migrate
  DEBUG [da27db9c] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
  DEBUG [9de41e8c] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
  DEBUG [9de41e8c] Finished in 2.989 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-26 13:14:17 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e052ace5] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deploy@52.90.14.191
+ DEBUG [5b7b5678] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deploy@52.90.14.191}
+ DEBUG [e052ace5] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [5b7b5678] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [e052ace5] Finished in 2.956 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-26 15:34:34 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3a2a08f4] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deploy@52.90.14.191}
+ DEBUG [3a2a08f4] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [a988df9b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deploy@52.90.14.191
+ DEBUG [a988df9b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [a988df9b] Finished in 3.459 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-26 15:40:00 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8dab702f] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deploy@52.90.14.191
+ DEBUG [8dab702f] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [8dab702f] Finished in 3.314 seconds with exit status 0 (successful).
+  INFO [a109912a] Running /usr/bin/env mkdir -p /tmp as deploy@52.90.14.191
+ DEBUG [a109912a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [a109912a] Finished in 0.849 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-production-nimishamba.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-production-nimishamba.sh 100.0%
+  INFO [4b919c8d] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-nimishamba.sh as deploy@52.90.14.191
+ DEBUG [4b919c8d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-nimishamba.sh )
+  INFO [4b919c8d] Finished in 0.874 seconds with exit status 0 (successful).
+  INFO [472a26c8] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as deploy@52.90.14.191
+ DEBUG [472a26c8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [472a26c8] 	14351d8a2efc6ab86c07ae1e8083606a788962bb	HEAD
+  INFO [472a26c8] Finished in 1.015 seconds with exit status 0 (successful).
+  INFO [299a29b8] Running /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/shared /home/deploy/u01/apps/qwinix/pictour/releases as deploy@52.90.14.191
+ DEBUG [299a29b8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/shared /home/deploy/u01/apps/qwinix/pictour/releases )
+  INFO [299a29b8] Finished in 0.836 seconds with exit status 0 (successful).
+  INFO [c6f995c8] Running /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/shared/public/assets as deploy@52.90.14.191
+ DEBUG [c6f995c8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/shared/public/assets )
+  INFO [c6f995c8] Finished in 0.872 seconds with exit status 0 (successful).
+ DEBUG [3400d9ea] Running [ -f /home/deploy/u01/apps/qwinix/pictour/current/REVISION ] as deploy@52.90.14.191
+ DEBUG [3400d9ea] Command: [ -f /home/deploy/u01/apps/qwinix/pictour/current/REVISION ]
+ DEBUG [3400d9ea] Finished in 0.874 seconds with exit status 1 (failed).
+ DEBUG [07521ecf] Running [ -f /home/deploy/u01/apps/qwinix/pictour/repo/HEAD ] as deploy@52.90.14.191
+ DEBUG [07521ecf] Command: [ -f /home/deploy/u01/apps/qwinix/pictour/repo/HEAD ]
+ DEBUG [07521ecf] Finished in 0.839 seconds with exit status 1 (failed).
+ DEBUG [9bbb12a7] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [9bbb12a7] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour'" 1>&2; false; fi
+ DEBUG [9bbb12a7] Finished in 0.851 seconds with exit status 0 (successful).
+  INFO [fcc0bcce] Running /usr/bin/env git clone --mirror https://github.com/sunil-ramesh/vekatesh_event /home/deploy/u01/apps/qwinix/pictour/repo as deploy@52.90.14.191
+ DEBUG [fcc0bcce] Command: cd /home/deploy/u01/apps/qwinix/pictour && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git clone --mirror https://github.com/sunil-ramesh/vekatesh_event /home/deploy/u01/apps/qwinix/pictour/repo )
+ DEBUG [fcc0bcce] 	Cloning into bare repository '/home/deploy/u01/apps/qwinix/pictour/repo'...
+  INFO [fcc0bcce] Finished in 1.834 seconds with exit status 0 (successful).
+ DEBUG [ba985020] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [ba985020] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi
+ DEBUG [ba985020] Finished in 0.829 seconds with exit status 0 (successful).
+  INFO [eaee140d] Running /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event as deploy@52.90.14.191
+ DEBUG [eaee140d] Command: cd /home/deploy/u01/apps/qwinix/pictour/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event )
+  INFO [eaee140d] Finished in 0.837 seconds with exit status 0 (successful).
+  INFO [bebd849f] Running /usr/bin/env git remote update --prune as deploy@52.90.14.191
+ DEBUG [bebd849f] Command: cd /home/deploy/u01/apps/qwinix/pictour/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [bebd849f] 	Fetching origin
+  INFO [bebd849f] Finished in 0.987 seconds with exit status 0 (successful).
+ DEBUG [3954855e] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [3954855e] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi
+ DEBUG [3954855e] Finished in 1.045 seconds with exit status 0 (successful).
+  INFO [5f103d6f] Running /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 as deploy@52.90.14.191
+ DEBUG [5f103d6f] Command: cd /home/deploy/u01/apps/qwinix/pictour/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 )
+  INFO [5f103d6f] Finished in 1.001 seconds with exit status 0 (successful).
+  INFO [8ac0dda8] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 as deploy@52.90.14.191
+ DEBUG [8ac0dda8] Command: cd /home/deploy/u01/apps/qwinix/pictour/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 )
+  INFO [8ac0dda8] Finished in 1.028 seconds with exit status 0 (successful).
+ DEBUG [212371b6] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [212371b6] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi
+ DEBUG [212371b6] Finished in 0.825 seconds with exit status 0 (successful).
+ DEBUG [b5d9cf36] Running /usr/bin/env git rev-list --max-count=1 master as deploy@52.90.14.191
+ DEBUG [b5d9cf36] Command: cd /home/deploy/u01/apps/qwinix/pictour/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b5d9cf36] 	14351d8a2efc6ab86c07ae1e8083606a788962bb
+ DEBUG [b5d9cf36] Finished in 0.847 seconds with exit status 0 (successful).
+ DEBUG [6ebcd848] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [6ebcd848] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010'" 1>&2; false; fi
+ DEBUG [6ebcd848] Finished in 0.977 seconds with exit status 0 (successful).
+  INFO [08dc7737] Running /usr/bin/env echo "14351d8a2efc6ab86c07ae1e8083606a788962bb" >> REVISION as deploy@52.90.14.191
+ DEBUG [08dc7737] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "14351d8a2efc6ab86c07ae1e8083606a788962bb" >> REVISION )
+  INFO [08dc7737] Finished in 0.866 seconds with exit status 0 (successful).
+  INFO [ce497873] Running /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public as deploy@52.90.14.191
+ DEBUG [ce497873] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public )
+  INFO [ce497873] Finished in 0.875 seconds with exit status 0 (successful).
+ DEBUG [056c470d] Running [ -L /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets ] as deploy@52.90.14.191
+ DEBUG [056c470d] Command: [ -L /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets ]
+ DEBUG [056c470d] Finished in 0.837 seconds with exit status 1 (failed).
+ DEBUG [97c35e4e] Running [ -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets ] as deploy@52.90.14.191
+ DEBUG [97c35e4e] Command: [ -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets ]
+ DEBUG [97c35e4e] Finished in 0.880 seconds with exit status 1 (failed).
+  INFO [a8c23ce3] Running /usr/bin/env ln -s /home/deploy/u01/apps/qwinix/pictour/shared/public/assets /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets as deploy@52.90.14.191
+ DEBUG [a8c23ce3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/u01/apps/qwinix/pictour/shared/public/assets /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets )
+  INFO [a8c23ce3] Finished in 0.894 seconds with exit status 0 (successful).
+ DEBUG [07f1765c] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [07f1765c] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010'" 1>&2; false; fi
+ DEBUG [07f1765c] Finished in 1.120 seconds with exit status 0 (successful).
+ DEBUG [ed5b0a26] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/u01/apps/qwinix/pictour/shared/bundle as deploy@52.90.14.191
+ DEBUG [ed5b0a26] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/u01/apps/qwinix/pictour/shared/bundle )
+ DEBUG [ed5b0a26] 	Warning: the running version of Bundler (1.15.4) is older than the version that created the lockfile (1.16.0.pre.2). We suggest you upgrade to the latest version of Bundler by running `gem install bundler --pre`.
+ DEBUG [ed5b0a26] 	The following gems are missing
+ * rake (12.1.0)
+ * concurrent-ruby (1.0.5)
+ * i18n (0.9.0)
+ * json (1.8.6)
+ * minitest (5.10.3)
+ * thread_safe (0.3.6)
+ * tzinfo (1.2.3)
+ * activesupport (4.2.7.1)
+ * builder (3.2.3)
+ * erubis (2.7.0)
+ * mini_portile2 (2.3.0)
+ * nokogiri (1.8.1)
+ * rails-deprecated_sanitizer (1.0.3)
+ * rails-dom-testing (1.0.8)
+ * crass (1.0.2)
+ * loofah (2.1.1)
+ * rails-html-sanitizer (1.0.3)
+ * actionview (4.2.7.1)
+ * rack (1.6.8)
+ * rack-test (0.6.3)
+ * actionpack (4.2.7.1)
+ * globalid (0.4.0)
+ * activejob (4.2.7.1)
+ * mime-types-data (3.2016.0521)
+ * mime-types (3.1)
+ * mail (2.6.6)
+ * actionmailer (4.2.7.1)
+ * activemodel (4.2.7.1)
+ * arel (6.0.4)
+ * activerecord (4.2.7.1)
+ * net-ssh (4.2.0)
+ * net-scp (1.2.1)
+ * sshkit (1.14.0)
+ * airbrussh (1.3.0)
+ * bcrypt (3.1.11)
+ * debug_inspector (0.0.3)
+ * binding_of_caller (0.7.2)
+ * byebug (9.1.0)
+ * capistrano (3.9.1)
+ * capistrano-bundler (1.3.0)
+ * capistrano-rails (1.3.0)
+ * capistrano-rbenv (2.1.2)
+ * carrierwave (1.2.1)
+ * coderay (1.1.2)
+ * coffee-script-source (1.12.2)
+ * execjs (2.7.0)
+ * coffee-script (2.4.1)
+ * thor (0.20.0)
+ * railties (4.2.7.1)
+ * coffee-rails (4.1.1)
+ * ffi (1.9.18)
+ * multi_json (1.12.2)
+ * jbuilder (2.7.0)
+ * jquery-rails (4.3.1)
+ * kgio (2.11.0)
+ * libv8 (3.16.14.19)
+ * method_source (0.9.0)
+ * pg (0.21.0)
+ * pry (0.11.2)
+ * puma (3.10.0)
+ * sprockets (3.7.1)
+ * sprockets-rails (3.2.1)
+ * rails (4.2.7.1)
+ * rails_serve_static_assets (0.0.5)
+ * rails_stdout_logging (0.0.5)
+ * rails_12factor (0.0.3)
+ * raindrops (0.19.0)
+ * rb-fsevent (0.10.2)
+ * rb-inotify (0.9.10)
+ * rdoc (4.3.0)
+ * ref (2.0.0)
+ * sass-listen (4.0.0)
+ * sass (3.5.2)
+ * tilt (2.0.8)
+ * sass-rails (5.0.6)
+ * sdoc (0.4.2)
+ * spring (2.0.2)
+ * therubyracer (0.12.3)
+ * turbolinks-source (5.0.3)
+ * turbolinks (5.0.1)
+ * uglifier (3.2.0)
+ * unicorn (5.3.1)
+ * web-console (2.3.0)
+Install missing gems with `bundle install`
+ DEBUG [ed5b0a26] Finished in 1.381 seconds with exit status 1 (failed).
+  INFO [ca25b0fb] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/u01/apps/qwinix/pictour/shared/bundle --without development test --deployment --quiet as deploy@52.90.14.191
+ DEBUG [ca25b0fb] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/u01/apps/qwinix/pictour/shared/bundle --without development test --deployment --quiet )
+  INFO [ca25b0fb] Finished in 96.746 seconds with exit status 0 (successful).
+ DEBUG [27a514bf] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [27a514bf] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010'" 1>&2; false; fi
+ DEBUG [27a514bf] Finished in 0.896 seconds with exit status 0 (successful).
+  INFO [7218919d] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@52.90.14.191
+ DEBUG [7218919d] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [7218919d] 	I, [2017-10-26T10:12:10.028736 #14133]  INFO -- : Writing /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/avatar-fb839452628eb0054276f60294a4a512288c6ba128b1502a8fb94392a85dfa28.jpg
+ DEBUG [7218919d] 	I, [2017-10-26T10:12:14.791988 #14133]  INFO -- : Writing /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/application-c853590305938913d94b912c4857d6d72772a4ea0f62c7f681b2fae1b0df8cd5.js
+I, [2017-10-26T10:12:14.792185 #14133]  INFO -- : Writing /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/application-c853590305938913d94b912c4857d6d72772a4ea0f62c7f681b2fae1b0df8cd5.js.gz
+ DEBUG [7218919d] 	I, [2017-10-26T10:12:16.597602 #14133]  INFO -- : Writing /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/application-b74a378ff59bb5a95a829adac2aed9ff503f63d7a237dabf96ec01c4796f7bff.css
+I, [2017-10-26T10:12:16.597748 #14133]  INFO -- : Writing /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/application-b74a378ff59bb5a95a829adac2aed9ff503f63d7a237dabf96ec01c4796f7bff.css.gz
+ DEBUG [7218919d] 	I, [2017-10-26T10:12:16.608689 #14133]  INFO -- : Writing /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/bootstrap.css-9cd84a2a5162c816a8bbbd79cf9dc0605bc0ea86e4cd2bab43aee069bb83d266.map
+  INFO [7218919d] Finished in 9.539 seconds with exit status 0 (successful).
+ DEBUG [5fb2a0b6] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [5fb2a0b6] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010'" 1>&2; false; fi
+ DEBUG [5fb2a0b6] Finished in 1.544 seconds with exit status 0 (successful).
+  INFO [5fd1323d] Running /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/assets_manifest_backup as deploy@52.90.14.191
+ DEBUG [5fd1323d] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/assets_manifest_backup )
+  INFO [5fd1323d] Finished in 0.928 seconds with exit status 0 (successful).
+ DEBUG [f48a6f45] Running /usr/bin/env ls /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/.sprockets-manifest* as deploy@52.90.14.191
+ DEBUG [f48a6f45] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/.sprockets-manifest* )
+ DEBUG [f48a6f45] 	/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/.sprockets-manifest-4fa3ae7354f9b053db81b62fc70ae228.json
+ DEBUG [f48a6f45] Finished in 0.871 seconds with exit status 0 (successful).
+ DEBUG [7643fd37] Running /usr/bin/env ls /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/.sprockets-manifest* as deploy@52.90.14.191
+ DEBUG [7643fd37] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/.sprockets-manifest* )
+ DEBUG [7643fd37] 	/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/.sprockets-manifest-4fa3ae7354f9b053db81b62fc70ae228.json
+ DEBUG [7643fd37] Finished in 0.831 seconds with exit status 0 (successful).
+  INFO [787949af] Running /usr/bin/env cp /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/.sprockets-manifest-4fa3ae7354f9b053db81b62fc70ae228.json /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/assets_manifest_backup as deploy@52.90.14.191
+ DEBUG [787949af] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/public/assets/.sprockets-manifest-4fa3ae7354f9b053db81b62fc70ae228.json /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010/assets_manifest_backup )
+  INFO [787949af] Finished in 0.877 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [c0b42844] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [c0b42844] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026101010'" 1>&2; false; fi
+ DEBUG [c0b42844] Finished in 0.847 seconds with exit status 0 (successful).
+  INFO [6ab507b6] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@52.90.14.191
+ DEBUG [6ab507b6] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026101010 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [6ab507b6] 	The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [6ab507b6] 	rake aborted!
+PG::ConnectionBad: FATAL:  password authentication failed for user "postgres"
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/connection_handling.rb:87:in `connection'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/migration.rb:916:in `initialize'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/migration.rb:823:in `new'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/migration.rb:823:in `up'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/migration.rb:801:in `migrate'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/tasks/database_tasks.rb:137:in `migrate'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.7.1/lib/active_record/railties/databases.rake:44:in `block (2 levels) in <top (required)>'
+/home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/rake-12.1.0/exe/rake:27:in `<top (required)>'
+/home/deploy/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/deploy/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-26 15:56:23 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2f122223] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deploy@52.90.14.191
+ DEBUG [2f122223] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [2f122223] Finished in 4.257 seconds with exit status 0 (successful).
+  INFO [9f52546b] Running /usr/bin/env mkdir -p /tmp as deploy@52.90.14.191
+ DEBUG [9f52546b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [9f52546b] Finished in 1.336 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-production-nimishamba.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-production-nimishamba.sh 100.0%
+  INFO [67791e80] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-nimishamba.sh as deploy@52.90.14.191
+ DEBUG [67791e80] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-nimishamba.sh )
+  INFO [67791e80] Finished in 1.415 seconds with exit status 0 (successful).
+  INFO [583f9c00] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as deploy@52.90.14.191
+ DEBUG [583f9c00] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [583f9c00] 	14351d8a2efc6ab86c07ae1e8083606a788962bb	HEAD
+  INFO [583f9c00] Finished in 1.410 seconds with exit status 0 (successful).
+  INFO [63bfe86d] Running /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/shared /home/deploy/u01/apps/qwinix/pictour/releases as deploy@52.90.14.191
+ DEBUG [63bfe86d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/shared /home/deploy/u01/apps/qwinix/pictour/releases )
+  INFO [63bfe86d] Finished in 1.092 seconds with exit status 0 (successful).
+  INFO [94d04964] Running /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/shared/public/assets as deploy@52.90.14.191
+ DEBUG [94d04964] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/shared/public/assets )
+  INFO [94d04964] Finished in 1.187 seconds with exit status 0 (successful).
+ DEBUG [a92dec42] Running [ -f /home/deploy/u01/apps/qwinix/pictour/current/REVISION ] as deploy@52.90.14.191
+ DEBUG [a92dec42] Command: [ -f /home/deploy/u01/apps/qwinix/pictour/current/REVISION ]
+ DEBUG [a92dec42] Finished in 1.041 seconds with exit status 1 (failed).
+ DEBUG [dbe8e5a1] Running [ -f /home/deploy/u01/apps/qwinix/pictour/repo/HEAD ] as deploy@52.90.14.191
+ DEBUG [dbe8e5a1] Command: [ -f /home/deploy/u01/apps/qwinix/pictour/repo/HEAD ]
+ DEBUG [dbe8e5a1] Finished in 0.891 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/u01/apps/qwinix/pictour/repo
+ DEBUG [52c0d602] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [52c0d602] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi
+ DEBUG [52c0d602] Finished in 1.028 seconds with exit status 0 (successful).
+  INFO [102b6ad2] Running /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event as deploy@52.90.14.191
+ DEBUG [102b6ad2] Command: cd /home/deploy/u01/apps/qwinix/pictour/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event )
+  INFO [102b6ad2] Finished in 1.081 seconds with exit status 0 (successful).
+  INFO [89f54782] Running /usr/bin/env git remote update --prune as deploy@52.90.14.191
+ DEBUG [89f54782] Command: cd /home/deploy/u01/apps/qwinix/pictour/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [89f54782] 	Fetching origin
+  INFO [89f54782] Finished in 1.008 seconds with exit status 0 (successful).
+ DEBUG [d6b76fe1] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [d6b76fe1] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi
+ DEBUG [d6b76fe1] Finished in 1.106 seconds with exit status 0 (successful).
+  INFO [aabbd3cf] Running /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 as deploy@52.90.14.191
+ DEBUG [aabbd3cf] Command: cd /home/deploy/u01/apps/qwinix/pictour/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 )
+  INFO [aabbd3cf] Finished in 0.942 seconds with exit status 0 (successful).
+  INFO [c017ccc8] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 as deploy@52.90.14.191
+ DEBUG [c017ccc8] Command: cd /home/deploy/u01/apps/qwinix/pictour/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 )
+  INFO [c017ccc8] Finished in 0.965 seconds with exit status 0 (successful).
+ DEBUG [4054e342] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [4054e342] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/repo; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/repo'" 1>&2; false; fi
+ DEBUG [4054e342] Finished in 1.009 seconds with exit status 0 (successful).
+ DEBUG [e1700368] Running /usr/bin/env git rev-list --max-count=1 master as deploy@52.90.14.191
+ DEBUG [e1700368] Command: cd /home/deploy/u01/apps/qwinix/pictour/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-nimishamba.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [e1700368] 	14351d8a2efc6ab86c07ae1e8083606a788962bb
+ DEBUG [e1700368] Finished in 0.820 seconds with exit status 0 (successful).
+ DEBUG [7489d0bc] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [7489d0bc] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637'" 1>&2; false; fi
+ DEBUG [7489d0bc] Finished in 0.823 seconds with exit status 0 (successful).
+  INFO [c6c2dfda] Running /usr/bin/env echo "14351d8a2efc6ab86c07ae1e8083606a788962bb" >> REVISION as deploy@52.90.14.191
+ DEBUG [c6c2dfda] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "14351d8a2efc6ab86c07ae1e8083606a788962bb" >> REVISION )
+  INFO [c6c2dfda] Finished in 0.875 seconds with exit status 0 (successful).
+  INFO [28ee9551] Running /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public as deploy@52.90.14.191
+ DEBUG [28ee9551] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public )
+  INFO [28ee9551] Finished in 0.915 seconds with exit status 0 (successful).
+ DEBUG [75eeb91a] Running [ -L /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets ] as deploy@52.90.14.191
+ DEBUG [75eeb91a] Command: [ -L /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets ]
+ DEBUG [75eeb91a] Finished in 0.961 seconds with exit status 1 (failed).
+ DEBUG [50207c5f] Running [ -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets ] as deploy@52.90.14.191
+ DEBUG [50207c5f] Command: [ -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets ]
+ DEBUG [50207c5f] Finished in 0.855 seconds with exit status 1 (failed).
+  INFO [b3fbdab7] Running /usr/bin/env ln -s /home/deploy/u01/apps/qwinix/pictour/shared/public/assets /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets as deploy@52.90.14.191
+ DEBUG [b3fbdab7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/u01/apps/qwinix/pictour/shared/public/assets /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets )
+  INFO [b3fbdab7] Finished in 0.881 seconds with exit status 0 (successful).
+ DEBUG [b2f75978] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [b2f75978] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637'" 1>&2; false; fi
+ DEBUG [b2f75978] Finished in 0.816 seconds with exit status 0 (successful).
+ DEBUG [ec0ddbff] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/u01/apps/qwinix/pictour/shared/bundle as deploy@52.90.14.191
+ DEBUG [ec0ddbff] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/u01/apps/qwinix/pictour/shared/bundle )
+ DEBUG [ec0ddbff] 	Warning: the running version of Bundler (1.15.4) is older than the version that created the lockfile (1.16.0.pre.2). We suggest you upgrade to the latest version of Bundler by running `gem install bundler --pre`.
+ DEBUG [ec0ddbff] 	The following gems are missing
+ * debug_inspector (0.0.3)
+ * binding_of_caller (0.7.2)
+ * byebug (9.1.0)
+ * coderay (1.1.2)
+ * method_source (0.9.0)
+ * pry (0.11.2)
+ * spring (2.0.2)
+ * web-console (2.3.0)
+Install missing gems with `bundle install`
+ DEBUG [ec0ddbff] Finished in 1.046 seconds with exit status 1 (failed).
+  INFO [acc80419] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/u01/apps/qwinix/pictour/shared/bundle --without development test --deployment --quiet as deploy@52.90.14.191
+ DEBUG [acc80419] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/u01/apps/qwinix/pictour/shared/bundle --without development test --deployment --quiet )
+ DEBUG [acc80419] 	The latest bundler is 1.16.0.pre.3, but you are currently running 1.15.4.
+To update, run `gem install bundler --pre`
+  INFO [acc80419] Finished in 2.858 seconds with exit status 0 (successful).
+ DEBUG [c0fc890d] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [c0fc890d] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637'" 1>&2; false; fi
+ DEBUG [c0fc890d] Finished in 0.815 seconds with exit status 0 (successful).
+  INFO [bf80309c] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@52.90.14.191
+ DEBUG [bf80309c] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [bf80309c] Finished in 9.326 seconds with exit status 0 (successful).
+ DEBUG [4b606dd4] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [4b606dd4] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637'" 1>&2; false; fi
+ DEBUG [4b606dd4] Finished in 0.867 seconds with exit status 0 (successful).
+  INFO [0d3a57d0] Running /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/assets_manifest_backup as deploy@52.90.14.191
+ DEBUG [0d3a57d0] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/assets_manifest_backup )
+  INFO [0d3a57d0] Finished in 0.814 seconds with exit status 0 (successful).
+ DEBUG [3e491bdd] Running /usr/bin/env ls /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets/.sprockets-manifest* as deploy@52.90.14.191
+ DEBUG [3e491bdd] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets/.sprockets-manifest* )
+ DEBUG [3e491bdd] 	/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets/.sprockets-manifest-4fa3ae7354f9b053db81b62fc70ae228.json
+ DEBUG [3e491bdd] Finished in 0.827 seconds with exit status 0 (successful).
+ DEBUG [72727608] Running /usr/bin/env ls /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets/.sprockets-manifest* as deploy@52.90.14.191
+ DEBUG [72727608] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets/.sprockets-manifest* )
+ DEBUG [72727608] 	/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets/.sprockets-manifest-4fa3ae7354f9b053db81b62fc70ae228.json
+ DEBUG [72727608] Finished in 0.976 seconds with exit status 0 (successful).
+  INFO [41e10ce0] Running /usr/bin/env cp /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets/.sprockets-manifest-4fa3ae7354f9b053db81b62fc70ae228.json /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/assets_manifest_backup as deploy@52.90.14.191
+ DEBUG [41e10ce0] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/public/assets/.sprockets-manifest-4fa3ae7354f9b053db81b62fc70ae228.json /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637/assets_manifest_backup )
+  INFO [41e10ce0] Finished in 1.039 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [e93202cc] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [e93202cc] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases/20171026102637'" 1>&2; false; fi
+ DEBUG [e93202cc] Finished in 1.117 seconds with exit status 0 (successful).
+  INFO [52acd77b] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@52.90.14.191
+ DEBUG [52acd77b] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [52acd77b] 	The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/u01/apps/qwinix/pictour/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.7.1/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [52acd77b] 	  [1m[36m (4.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+ DEBUG [52acd77b] 	  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+ DEBUG [52acd77b] 	  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+ DEBUG [52acd77b] 	Migrating to CreateUsers (20161111050619)
+ DEBUG [52acd77b] 	  [1m[35m (0.1ms)[0m  BEGIN
+== 20161111050619 CreateUsers: migrating ======================================
+-- create_table(:users)
+ DEBUG [52acd77b] 	  [1m[36m (4.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying, "lastname" character varying, "username" character varying, "email" character varying, "phone" character varying, "password_digest" character varying, "attachment" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+   -> 0.0054s
+== 20161111050619 CreateUsers: migrated (0.0055s) =============================
+
+ DEBUG [52acd77b] 	  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161111050619"]]
+ DEBUG [52acd77b] 	  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateEvents (20161111051926)
+ DEBUG [52acd77b] 	  [1m[35m (0.2ms)[0m  BEGIN
+== 20161111051926 CreateEvents: migrating =====================================
+-- create_table(:events)
+ DEBUG [52acd77b] 	  [1m[36m (16.0ms)[0m  [1mCREATE TABLE "events" ("id" serial primary key, "title" character varying, "venue" character varying, "date" character varying, "time" character varying, "desc" character varying, "status" boolean, "owner_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+   -> 0.0163s
+== 20161111051926 CreateEvents: migrated (0.0163s) ============================
+
+ DEBUG [52acd77b] 	  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161111051926"]]
+ DEBUG [52acd77b] 	  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateParticipents (20161111065810)
+ DEBUG [52acd77b] 	  [1m[35m (0.2ms)[0m  BEGIN
+== 20161111065810 CreateParticipents: migrating ===============================
+-- create_table(:participents)
+ DEBUG [52acd77b] 	  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "participents" ("id" serial primary key, "user_id" integer, "event_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+ DEBUG [52acd77b] 	  [1m[35m (1.5ms)[0m  CREATE  INDEX  "index_participents_on_user_id" ON "participents"  ("user_id")
+ DEBUG [52acd77b] 	  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX  "index_participents_on_event_id" ON "participents"  ("event_id")[0m
+ DEBUG [52acd77b] 	  [1m[35m (1.7ms)[0m  ALTER TABLE "participents" ADD CONSTRAINT "fk_rails_acc6c12d64"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+ DEBUG [52acd77b] 	  [1m[36m (0.7ms)[0m  [1mALTER TABLE "participents" ADD CONSTRAINT "fk_rails_cc7f15b85b"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+[0m
+   -> 0.0111s
+== 20161111065810 CreateParticipents: migrated (0.0112s) ======================
+
+ DEBUG [52acd77b] 	  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161111065810"]]
+ DEBUG [52acd77b] 	  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  INFO [52acd77b] Finished in 2.871 seconds with exit status 0 (successful).
+  INFO [33345f2a] Running /usr/bin/env ln -s /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 /home/deploy/u01/apps/qwinix/pictour/releases/current as deploy@52.90.14.191
+ DEBUG [33345f2a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/u01/apps/qwinix/pictour/releases/20171026102637 /home/deploy/u01/apps/qwinix/pictour/releases/current )
+  INFO [33345f2a] Finished in 0.892 seconds with exit status 0 (successful).
+  INFO [bf09b94d] Running /usr/bin/env mv /home/deploy/u01/apps/qwinix/pictour/releases/current /home/deploy/u01/apps/qwinix/pictour as deploy@52.90.14.191
+ DEBUG [bf09b94d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /home/deploy/u01/apps/qwinix/pictour/releases/current /home/deploy/u01/apps/qwinix/pictour )
+  INFO [bf09b94d] Finished in 0.840 seconds with exit status 0 (successful).
+ DEBUG [dcbd9800] Running /usr/bin/env ls -x /home/deploy/u01/apps/qwinix/pictour/releases as deploy@52.90.14.191
+ DEBUG [dcbd9800] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /home/deploy/u01/apps/qwinix/pictour/releases )
+ DEBUG [dcbd9800] 	20171026101010	20171026102637
+ DEBUG [dcbd9800] Finished in 0.821 seconds with exit status 0 (successful).
+ DEBUG [9d9af5e9] Running if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases'" 1>&2; false; fi as deploy@52.90.14.191
+ DEBUG [9d9af5e9] Command: if test ! -d /home/deploy/u01/apps/qwinix/pictour/releases; then echo "Directory does not exist '/home/deploy/u01/apps/qwinix/pictour/releases'" 1>&2; false; fi
+ DEBUG [9d9af5e9] Finished in 1.017 seconds with exit status 0 (successful).
+  INFO [abb27dc9] Running /usr/bin/env echo "Branch master (at 14351d8a2efc6ab86c07ae1e8083606a788962bb) deployed as release 20171026102637 by nimishamba" >> /home/deploy/u01/apps/qwinix/pictour/revisions.log as deploy@52.90.14.191
+ DEBUG [abb27dc9] Command: cd /home/deploy/u01/apps/qwinix/pictour/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 14351d8a2efc6ab86c07ae1e8083606a788962bb) deployed as release 20171026102637 by nimishamba" >> /home/deploy/u01/apps/qwinix/pictour/revisions.log )
+  INFO [abb27dc9] Finished in 1.074 seconds with exit status 0 (successful).
