@@ -1,5 +1,5 @@
 set :stage, :it
-set :branch, :demo_deployment
+set :branch, :nikhil
 set :rails_env, :it
 set :deploy_to, '/u02/apps/qwinix/vekatesh_event'
 set :log_level, :debug
