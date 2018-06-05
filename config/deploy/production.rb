@@ -1,7 +1,7 @@
 set :stage, :production
 set :branch, :demo_deployment
 set :rails_env, :it
-set :deploy_to, '/u01/apps/qwinix/bug_tracker'
+set :deploy_to, '/u02/apps/qwinix/vekatesh_event'
 set :log_level, :debug
 
 # Extended Server Syntax
