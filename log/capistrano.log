@@ -20015,3 +20015,179 @@ SystemStackError: stack level too deep
 /home/qwinix/.rbenv/versions/2.5.0/bin/bundle:23:in `<main>'
 Tasks: TOP => environment
 (See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-05 14:51:59 +0530 cap it deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [76f3335a] Running [ -d $HOME/.rbenv/versions/2.5.0 ] as qwinix@192.168.2.106
+ DEBUG [76f3335a] Command: [ -d $HOME/.rbenv/versions/2.5.0 ]
+ DEBUG [76f3335a] Finished in 1.044 seconds with exit status 0 (successful).
+  INFO [87b54b4c] Running /usr/bin/env mkdir -p /tmp as qwinix@192.168.2.106
+ DEBUG [87b54b4c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [87b54b4c] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh 100.0%
+  INFO [1492d9ad] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh as qwinix@192.168.2.106
+ DEBUG [1492d9ad] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh )
+  INFO [1492d9ad] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [212af283] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as qwinix@192.168.2.106
+ DEBUG [212af283] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [212af283] 	d2b79625e1a72ecbe8cff81d0ef1846c5cfa7a7b	HEAD
+  INFO [212af283] Finished in 2.025 seconds with exit status 0 (successful).
+  INFO [0d21171f] Running /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/shared /u02/apps/qwinix/vekatesh_event/releases as qwinix@192.168.2.106
+ DEBUG [0d21171f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/shared /u02/apps/qwinix/vekatesh_event/releases )
+  INFO [0d21171f] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO [a59cf753] Running /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/shared/public/assets as qwinix@192.168.2.106
+ DEBUG [a59cf753] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/shared/public/assets )
+  INFO [a59cf753] Finished in 0.071 seconds with exit status 0 (successful).
+ DEBUG [db0f10f2] Running [ -f /u02/apps/qwinix/vekatesh_event/current/REVISION ] as qwinix@192.168.2.106
+ DEBUG [db0f10f2] Command: [ -f /u02/apps/qwinix/vekatesh_event/current/REVISION ]
+ DEBUG [db0f10f2] Finished in 0.067 seconds with exit status 1 (failed).
+ DEBUG [e5d6d01d] Running [ -f /u02/apps/qwinix/vekatesh_event/repo/HEAD ] as qwinix@192.168.2.106
+ DEBUG [e5d6d01d] Command: [ -f /u02/apps/qwinix/vekatesh_event/repo/HEAD ]
+ DEBUG [e5d6d01d] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /u02/apps/qwinix/vekatesh_event/repo
+ DEBUG [b2652db0] Running if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi as qwinix@192.168.2.106
+ DEBUG [b2652db0] Command: if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi
+ DEBUG [b2652db0] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [1671a2a0] Running /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event as qwinix@192.168.2.106
+ DEBUG [1671a2a0] Command: cd /u02/apps/qwinix/vekatesh_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event )
+  INFO [1671a2a0] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [b24d370a] Running /usr/bin/env git remote update --prune as qwinix@192.168.2.106
+ DEBUG [b24d370a] Command: cd /u02/apps/qwinix/vekatesh_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b24d370a] 	Fetching origin
+ DEBUG [b24d370a] 	From https://github.com/sunil-ramesh/vekatesh_event
+   a373c9a..0cf4aae  nikhil     -> nikhil
+  INFO [b24d370a] Finished in 4.901 seconds with exit status 0 (successful).
+ DEBUG [51036efe] Running if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi as qwinix@192.168.2.106
+ DEBUG [51036efe] Command: if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi
+ DEBUG [51036efe] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [3c4a8c0d] Running /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/releases/20180605092203 as qwinix@192.168.2.106
+ DEBUG [3c4a8c0d] Command: cd /u02/apps/qwinix/vekatesh_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/releases/20180605092203 )
+  INFO [3c4a8c0d] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [cf2e61b3] Running /usr/bin/env git archive nikhil | /usr/bin/env tar -x -f - -C /u02/apps/qwinix/vekatesh_event/releases/20180605092203 as qwinix@192.168.2.106
+ DEBUG [cf2e61b3] Command: cd /u02/apps/qwinix/vekatesh_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env git archive nikhil | /usr/bin/env tar -x -f - -C /u02/apps/qwinix/vekatesh_event/releases/20180605092203 )
+  INFO [cf2e61b3] Finished in 0.271 seconds with exit status 0 (successful).
+ DEBUG [38d87ef6] Running if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi as qwinix@192.168.2.106
+ DEBUG [38d87ef6] Command: if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi
+ DEBUG [38d87ef6] Finished in 0.083 seconds with exit status 0 (successful).
+ DEBUG [2f65d014] Running /usr/bin/env git rev-list --max-count=1 nikhil as qwinix@192.168.2.106
+ DEBUG [2f65d014] Command: cd /u02/apps/qwinix/vekatesh_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env git rev-list --max-count=1 nikhil )
+ DEBUG [2f65d014] 	0cf4aae06525f751e6ec4ca995d3903ed1920cd2
+ DEBUG [2f65d014] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [00a87176] Running if test ! -d /u02/apps/qwinix/vekatesh_event/releases/20180605092203; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/releases/20180605092203'" 1>&2; false; fi as qwinix@192.168.2.106
+ DEBUG [00a87176] Command: if test ! -d /u02/apps/qwinix/vekatesh_event/releases/20180605092203; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/releases/20180605092203'" 1>&2; false; fi
+ DEBUG [00a87176] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [3d640848] Running /usr/bin/env echo "0cf4aae06525f751e6ec4ca995d3903ed1920cd2" > REVISION as qwinix@192.168.2.106
+ DEBUG [3d640848] Command: cd /u02/apps/qwinix/vekatesh_event/releases/20180605092203 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env echo "0cf4aae06525f751e6ec4ca995d3903ed1920cd2" > REVISION )
+  INFO [3d640848] Finished in 0.073 seconds with exit status 0 (successful).
+  INFO [27a184af] Running /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/releases/20180605092203/public as qwinix@192.168.2.106
+ DEBUG [27a184af] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/releases/20180605092203/public )
+  INFO [27a184af] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [1e94b62a] Running [ -L /u02/apps/qwinix/vekatesh_event/releases/20180605092203/public/assets ] as qwinix@192.168.2.106
+ DEBUG [1e94b62a] Command: [ -L /u02/apps/qwinix/vekatesh_event/releases/20180605092203/public/assets ]
+ DEBUG [1e94b62a] Finished in 0.071 seconds with exit status 1 (failed).
+ DEBUG [09f589ad] Running [ -d /u02/apps/qwinix/vekatesh_event/releases/20180605092203/public/assets ] as qwinix@192.168.2.106
+ DEBUG [09f589ad] Command: [ -d /u02/apps/qwinix/vekatesh_event/releases/20180605092203/public/assets ]
+ DEBUG [09f589ad] Finished in 0.125 seconds with exit status 1 (failed).
+  INFO [c73a349c] Running /usr/bin/env ln -s /u02/apps/qwinix/vekatesh_event/shared/public/assets /u02/apps/qwinix/vekatesh_event/releases/20180605092203/public/assets as qwinix@192.168.2.106
+ DEBUG [c73a349c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env ln -s /u02/apps/qwinix/vekatesh_event/shared/public/assets /u02/apps/qwinix/vekatesh_event/releases/20180605092203/public/assets )
+  INFO [c73a349c] Finished in 0.189 seconds with exit status 0 (successful).
+ DEBUG [38fd07a0] Running if test ! -d /u02/apps/qwinix/vekatesh_event/releases/20180605092203; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/releases/20180605092203'" 1>&2; false; fi as qwinix@192.168.2.106
+ DEBUG [38fd07a0] Command: if test ! -d /u02/apps/qwinix/vekatesh_event/releases/20180605092203; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/releases/20180605092203'" 1>&2; false; fi
+ DEBUG [38fd07a0] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG [c8e7b1bc] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /u02/apps/qwinix/vekatesh_event/shared/bundle as qwinix@192.168.2.106
+ DEBUG [c8e7b1bc] Command: cd /u02/apps/qwinix/vekatesh_event/releases/20180605092203 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /u02/apps/qwinix/vekatesh_event/shared/bundle )
+ DEBUG [c8e7b1bc] 	Bundler can't satisfy your Gemfile's dependencies.
+Install missing gems with `bundle install`.
+ DEBUG [c8e7b1bc] Finished in 0.462 seconds with exit status 1 (failed).
+  INFO [5142ecf8] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /u02/apps/qwinix/vekatesh_event/shared/bundle --without development test --deployment --quiet as qwinix@192.168.2.106
+ DEBUG [5142ecf8] Command: cd /u02/apps/qwinix/vekatesh_event/releases/20180605092203 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /u02/apps/qwinix/vekatesh_event/shared/bundle --without development test --deployment --quiet )
+ DEBUG [5142ecf8] 	The --deployment flag requires a Gemfile.lock. Please make sure you have checked
+your Gemfile.lock into version control before deploying.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-05 14:59:39 +0530 cap it deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ce1e4355] Running [ -d $HOME/.rbenv/versions/2.5.0 ] as qwinix@192.168.2.106
+ DEBUG [ce1e4355] Command: [ -d $HOME/.rbenv/versions/2.5.0 ]
+ DEBUG [ce1e4355] Finished in 0.845 seconds with exit status 0 (successful).
+  INFO [e07b158d] Running /usr/bin/env mkdir -p /tmp as qwinix@192.168.2.106
+ DEBUG [e07b158d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [e07b158d] Finished in 0.227 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh 100.0%
+  INFO [b30f5b48] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh as qwinix@192.168.2.106
+ DEBUG [b30f5b48] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh )
+  INFO [b30f5b48] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [8ca99048] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as qwinix@192.168.2.106
+ DEBUG [8ca99048] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [8ca99048] 	d2b79625e1a72ecbe8cff81d0ef1846c5cfa7a7b	HEAD
+  INFO [8ca99048] Finished in 1.360 seconds with exit status 0 (successful).
+  INFO [64a47669] Running /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/shared /u02/apps/qwinix/vekatesh_event/releases as qwinix@192.168.2.106
+ DEBUG [64a47669] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/shared /u02/apps/qwinix/vekatesh_event/releases )
+  INFO [64a47669] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [9d98c6a1] Running /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/shared/public/assets as qwinix@192.168.2.106
+ DEBUG [9d98c6a1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/shared/public/assets )
+  INFO [9d98c6a1] Finished in 0.213 seconds with exit status 0 (successful).
+ DEBUG [1d5fe765] Running [ -f /u02/apps/qwinix/vekatesh_event/current/REVISION ] as qwinix@192.168.2.106
+ DEBUG [1d5fe765] Command: [ -f /u02/apps/qwinix/vekatesh_event/current/REVISION ]
+ DEBUG [1d5fe765] Finished in 0.175 seconds with exit status 1 (failed).
+ DEBUG [55338aac] Running [ -f /u02/apps/qwinix/vekatesh_event/repo/HEAD ] as qwinix@192.168.2.106
+ DEBUG [55338aac] Command: [ -f /u02/apps/qwinix/vekatesh_event/repo/HEAD ]
+ DEBUG [55338aac] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /u02/apps/qwinix/vekatesh_event/repo
+ DEBUG [758eb81b] Running if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi as qwinix@192.168.2.106
+ DEBUG [758eb81b] Command: if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi
+ DEBUG [758eb81b] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [727bfb3b] Running /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event as qwinix@192.168.2.106
+ DEBUG [727bfb3b] Command: cd /u02/apps/qwinix/vekatesh_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event )
+  INFO [727bfb3b] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [49a52315] Running /usr/bin/env git remote update --prune as qwinix@192.168.2.106
+ DEBUG [49a52315] Command: cd /u02/apps/qwinix/vekatesh_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [49a52315] 	Fetching origin
+  INFO [49a52315] Finished in 1.230 seconds with exit status 0 (successful).
+ DEBUG [7b9b4ad5] Running if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi as qwinix@192.168.2.106
+ DEBUG [7b9b4ad5] Command: if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi
+ DEBUG [7b9b4ad5] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [860fc90f] Running /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/releases/20180605092943 as qwinix@192.168.2.106
+ DEBUG [860fc90f] Command: cd /u02/apps/qwinix/vekatesh_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/releases/20180605092943 )
+  INFO [860fc90f] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [73ac0d04] Running /usr/bin/env git archive nikhil | /usr/bin/env tar -x -f - -C /u02/apps/qwinix/vekatesh_event/releases/20180605092943 as qwinix@192.168.2.106
+ DEBUG [73ac0d04] Command: cd /u02/apps/qwinix/vekatesh_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env git archive nikhil | /usr/bin/env tar -x -f - -C /u02/apps/qwinix/vekatesh_event/releases/20180605092943 )
+  INFO [73ac0d04] Finished in 0.191 seconds with exit status 0 (successful).
+ DEBUG [3e509174] Running if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi as qwinix@192.168.2.106
+ DEBUG [3e509174] Command: if test ! -d /u02/apps/qwinix/vekatesh_event/repo; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/repo'" 1>&2; false; fi
+ DEBUG [3e509174] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [16419611] Running /usr/bin/env git rev-list --max-count=1 nikhil as qwinix@192.168.2.106
+ DEBUG [16419611] Command: cd /u02/apps/qwinix/vekatesh_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-it-qwinix-pc.sh" ; /usr/bin/env git rev-list --max-count=1 nikhil )
+ DEBUG [16419611] 	0cf4aae06525f751e6ec4ca995d3903ed1920cd2
+ DEBUG [16419611] Finished in 0.073 seconds with exit status 0 (successful).
+ DEBUG [7c31bb2c] Running if test ! -d /u02/apps/qwinix/vekatesh_event/releases/20180605092943; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/releases/20180605092943'" 1>&2; false; fi as qwinix@192.168.2.106
+ DEBUG [7c31bb2c] Command: if test ! -d /u02/apps/qwinix/vekatesh_event/releases/20180605092943; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/releases/20180605092943'" 1>&2; false; fi
+ DEBUG [7c31bb2c] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [271fa66b] Running /usr/bin/env echo "0cf4aae06525f751e6ec4ca995d3903ed1920cd2" > REVISION as qwinix@192.168.2.106
+ DEBUG [271fa66b] Command: cd /u02/apps/qwinix/vekatesh_event/releases/20180605092943 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env echo "0cf4aae06525f751e6ec4ca995d3903ed1920cd2" > REVISION )
+  INFO [271fa66b] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO [4d0f00d0] Running /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/releases/20180605092943/public as qwinix@192.168.2.106
+ DEBUG [4d0f00d0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env mkdir -p /u02/apps/qwinix/vekatesh_event/releases/20180605092943/public )
+  INFO [4d0f00d0] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [bfa3ad1a] Running [ -L /u02/apps/qwinix/vekatesh_event/releases/20180605092943/public/assets ] as qwinix@192.168.2.106
+ DEBUG [bfa3ad1a] Command: [ -L /u02/apps/qwinix/vekatesh_event/releases/20180605092943/public/assets ]
+ DEBUG [bfa3ad1a] Finished in 0.077 seconds with exit status 1 (failed).
+ DEBUG [3a9c167b] Running [ -d /u02/apps/qwinix/vekatesh_event/releases/20180605092943/public/assets ] as qwinix@192.168.2.106
+ DEBUG [3a9c167b] Command: [ -d /u02/apps/qwinix/vekatesh_event/releases/20180605092943/public/assets ]
+ DEBUG [3a9c167b] Finished in 0.104 seconds with exit status 1 (failed).
+  INFO [84d781a2] Running /usr/bin/env ln -s /u02/apps/qwinix/vekatesh_event/shared/public/assets /u02/apps/qwinix/vekatesh_event/releases/20180605092943/public/assets as qwinix@192.168.2.106
+ DEBUG [84d781a2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; /usr/bin/env ln -s /u02/apps/qwinix/vekatesh_event/shared/public/assets /u02/apps/qwinix/vekatesh_event/releases/20180605092943/public/assets )
+  INFO [84d781a2] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [67b289f8] Running if test ! -d /u02/apps/qwinix/vekatesh_event/releases/20180605092943; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/releases/20180605092943'" 1>&2; false; fi as qwinix@192.168.2.106
+ DEBUG [67b289f8] Command: if test ! -d /u02/apps/qwinix/vekatesh_event/releases/20180605092943; then echo "Directory does not exist '/u02/apps/qwinix/vekatesh_event/releases/20180605092943'" 1>&2; false; fi
+ DEBUG [67b289f8] Finished in 0.254 seconds with exit status 0 (successful).
+ DEBUG [228978df] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /u02/apps/qwinix/vekatesh_event/shared/bundle as qwinix@192.168.2.106
+ DEBUG [228978df] Command: cd /u02/apps/qwinix/vekatesh_event/releases/20180605092943 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /u02/apps/qwinix/vekatesh_event/shared/bundle )
+ DEBUG [228978df] 	Bundler can't satisfy your Gemfile's dependencies.
+ DEBUG [228978df] 	Install missing gems with `bundle install`.
+ DEBUG [228978df] Finished in 0.551 seconds with exit status 1 (failed).
+  INFO [9455c7a3] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /u02/apps/qwinix/vekatesh_event/shared/bundle --without development test --deployment --quiet as qwinix@192.168.2.106
+ DEBUG [9455c7a3] Command: cd /u02/apps/qwinix/vekatesh_event/releases/20180605092943 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.0" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /u02/apps/qwinix/vekatesh_event/shared/bundle --without development test --deployment --quiet )
+ DEBUG [9455c7a3] 	The --deployment flag requires a Gemfile.lock. Please make sure you have checked
+your Gemfile.lock into version control before deploying.
