@@ -47,3 +47,14 @@ production:
   database: event_production
   pool: 5
   host: postgres.crpivr7ida52.us-east-1.rds.amazonaws.com
+
+it:
+  adapter: postgresql
+  encoding: unicode
+  port: 5432
+  reconnect: false
+  username: postgres
+  password: password
+  database: event_scheduler
+  pool: 5
+  host: localhost
