@@ -16927,3 +16927,9 @@ Caused by:
 /home/deploy/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
  DEBUG [20c23390] 	Tasks: TOP => db:migrate => db:load_config
  DEBUG [20c23390] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-11 11:28:22 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [d35f32cc] Running /usr/bin/env mkdir -p /tmp as deploy@18.218.168.189
+ DEBUG [d35f32cc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
