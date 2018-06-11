@@ -23,7 +23,7 @@
 # role :db,  %w{deploy@example.com}
 set :stage, :production
 set :branch, :master
-set :deploy_to, '/home/deploy/u01/apps/qwinix/event'
+set :deploy_to, '/u01/apps/qwinix/bug_tracker'
 
 # Extended Server Syntax
 # ======================
@@ -31,10 +31,10 @@ set :deploy_to, '/home/deploy/u01/apps/qwinix/event'
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-role :app, %w{deploy@52.55.93.252}
-role :web, %w{deploy@52.55.93.252}
-role :db, %w{deploy@52.55.93.252}
-server '52.55.93.252', roles: %w{:web, :app, :db}, user: 'deploy'
+role :app, %w{deploy@18.218.168.189}
+role :web, %w{deploy@18.218.168.189}
+role :db, %w{deploy@18.218.168.189}
+server '18.218.168.189', roles: %w{:web, :app, :db}, user: 'deploy'
 
 set :ssh_options, {
    #verbose: :debug,
