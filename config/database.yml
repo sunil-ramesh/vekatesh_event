@@ -46,4 +46,4 @@ production:
   password: password
   database: event_production
   pool: 5
-  host: postgres.crpivr7ida52.us-east-1.rds.amazonaws.com
+  host: localhost

@@ -6871,3 +6871,10 @@ Called from /home/deploy/u01/apps/qwinix/event/shared/bundle/ruby/2.3.0/gems/act
  DEBUG [c582a5df] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
  DEBUG [c582a5df] Finished in 5.465 seconds with exit status 1 (failed).
   WARN rbenv: 2.3.1 is not installed or not found in $HOME/.rbenv/versions/2.3.1 on 18.218.168.189
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-11 09:56:14 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [138c45aa] Running [ -d $HOME/.rbenv/versions/2.5.1 ] as deploy@18.218.168.189
+ DEBUG [138c45aa] Command: [ -d $HOME/.rbenv/versions/2.5.1 ]
+ DEBUG [138c45aa] Finished in 13.698 seconds with exit status 1 (failed).
+  WARN rbenv: 2.5.1 is not installed or not found in $HOME/.rbenv/versions/2.5.1 on 18.218.168.189
