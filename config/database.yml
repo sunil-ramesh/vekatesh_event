@@ -47,3 +47,14 @@ production:
   database: event_scheduler
   pool: 5
   host: localhost
+
+it:
+  adapter: postgresql
+  encoding: unicode
+  port: 5432
+  reconnect: false
+  username: postgres
+  password: password
+  database: event_production
+  pool: 5
+  host: localhost

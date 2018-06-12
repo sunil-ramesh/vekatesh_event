@@ -31236,6 +31236,7 @@ Processing by EventsController#index as
   Rendered partials/_signup.html.erb (2.0ms)
   Rendered partials/_login.html.erb (1.7ms)
 Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 1.7ms)
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (12.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (5.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
@@ -31429,6 +31430,650 @@ ORDER BY c.conname
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (3.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
+
+
+Started GET "/" for ::1 at 2018-06-01 09:18:53 +0530
+
+ActiveRecord::NoDatabaseError (FATAL:  database "event_scheduler" does not exist
+):
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/postgresql_adapter.rb:661:in `rescue in connect'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.7.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.7.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (69.8ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 13:09:02 +0530
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.7.1) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (114.3ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 13:09:08 +0530
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.7.1) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (40.8ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 13:09:09 +0530
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.7.1) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (40.2ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 13:09:09 +0530
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.7.1) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (40.7ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 13:09:10 +0530
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.7.1) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.0ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.0ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (40.6ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 13:09:16 +0530
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.7.1) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.7ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 13:09:16 +0530
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.7.1) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.2ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 13:46:54 +0530
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.7.1) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (97.2ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (130.3ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 14:52:30 +0530
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.7.1) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (29.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (58.0ms)
+  [1m[36m (289.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (48.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20161111050619)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (186.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "firstname" character varying, "lastname" character varying, "username" character varying, "email" character varying, "phone" character varying, "password_digest" character varying, "attachment" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161111050619"]]
+  [1m[36m (23.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateEvents (20161111051926)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (66.9ms)[0m  [1mCREATE TABLE "events" ("id" serial primary key, "title" character varying, "venue" character varying, "date" character varying, "time" character varying, "desc" character varying, "status" boolean, "owner_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161111051926"]]
+  [1m[36m (15.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateParticipents (20161111065810)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (35.2ms)[0m  [1mCREATE TABLE "participents" ("id" serial primary key, "user_id" integer, "event_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (29.3ms)[0m  CREATE  INDEX  "index_participents_on_user_id" ON "participents"  ("user_id")
+  [1m[36m (30.9ms)[0m  [1mCREATE  INDEX  "index_participents_on_event_id" ON "participents"  ("event_id")[0m
+  [1m[35m (67.7ms)[0m  ALTER TABLE "participents" ADD CONSTRAINT "fk_rails_acc6c12d64"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (2.2ms)[0m  [1mALTER TABLE "participents" ADD CONSTRAINT "fk_rails_cc7f15b85b"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161111065810"]]
+  [1m[36m (6.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> 7d0dcc7fd62ac46c85deda4c275439df2691855f
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -31440,7 +32085,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+<<<<<<< HEAD
   [1m[35m (3.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
+  [1m[35m (3.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> 7d0dcc7fd62ac46c85deda4c275439df2691855f
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -31452,7 +32101,11 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+<<<<<<< HEAD
   [1m[36m (3.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
+  [1m[36m (3.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> 7d0dcc7fd62ac46c85deda4c275439df2691855f
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
@@ -31464,6 +32117,7 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (3.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
@@ -31540,3 +32194,1346 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+=======
+
+
+Started GET "/" for ::1 at 2018-06-01 14:57:02 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (2.3ms)
+  Rendered partials/_navbar.html.erb (1.2ms)
+  Rendered partials/_signup.html.erb (49.9ms)
+  Rendered partials/_login.html.erb (1.4ms)
+Completed 200 OK in 1453ms (Views: 1426.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/jquery-ui.self-34e6fc152285ed671a6e0ec5f0cc5d4ab2bc7ac619b067648746a4e09afeb21f.css?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/application.self-f2172a98e5acfd5c165ada384ede51a09b2d16a6bf03064d42e5cc28a8463def.css?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/jquery-ui.self-bac161e5cdca8c4d90a254b8a05bbf6fe02083b019e0ff9bf3d5602a918d6fbf.js?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/jquery.validate.min.self-ab4e76b9146880528a3c96ee9442eb915492cbb20b92edfcc274542c134a6fb4.js?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/application.self-02284963a877045abe969faccfa8d068cd7468e1b950c362cbbd541dd0c9da64.js?body=1" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started GET "/assets/avatar-fb839452628eb0054276f60294a4a512288c6ba128b1502a8fb94392a85dfa28.jpg" for ::1 at 2018-06-01 14:57:04 +0530
+
+
+Started POST "/users" for ::1 at 2018-06-01 14:59:14 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g//PGyxD/g/I8PsRc/4NgsLpb9yYJA+5f6RGkEdLTc1bbbJ3jJT6yono8V86S5snR4MU5Dfvje31v7nTBL4icQ==", "user"=>{"firstname"=>"nikhil", "lastname"=>"sp", "username"=>"nk", "email"=>"nk@gmail.com", "phone"=>"5565656555", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register User"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'nk@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("firstname", "lastname", "username", "email", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["firstname", "nikhil"], ["lastname", "sp"], ["username", "nk"], ["email", "nk@gmail.com"], ["phone", "5565656555"], ["password_digest", "$2a$10$rpzljTqHVxx7jVeUEHvuQuG2SfQY7sN5ptPVGUxKJHSUi4j4DbS2m"], ["created_at", "2018-06-01 09:29:14.958705"], ["updated_at", "2018-06-01 09:29:14.958705"]]
+  [1m[36m (12.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 299ms (ActiveRecord: 18.1ms)
+
+
+Started GET "/login" for ::1 at 2018-06-01 14:59:14 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (3.7ms)
+  Rendered partials/_login.html.erb (1.0ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2018-06-01 14:59:42 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZoZcOUo2oJKRayEgEgJeZm8jvOeT4r3/lZWPFvhvql++FCFV6uGkV9BzK25bt8jD6knH3zwpP6sfjnBVu5rF4w==", "login"=>{"email"=>"nk@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "nk@gmail.com"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/events.1
+Completed 302 Found in 172ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/events.1" for ::1 at 2018-06-01 14:59:42 +0530
+Processing by EventsController#index as 
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (15.4ms)
+  Rendered events/index.html.erb within layouts/application (23.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered partials/_navbar.html.erb (2.7ms)
+  Rendered partials/_signup.html.erb (5.2ms)
+  Rendered partials/_login.html.erb (1.8ms)
+Completed 200 OK in 86ms (Views: 71.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/images/ui-icons_444444_256x240.png" for ::1 at 2018-06-01 15:00:08 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-icons_444444_256x240.png"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (48.9ms)
+
+
+Started POST "/events" for ::1 at 2018-06-01 15:00:39 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fMgUsm7gcvoESMDD1nJ+9xhXmRQPwPoOxFOR7TbxtOSkWmnezjd2P0VQyo2fx+hSnT3iLKALeFpOSG6udQTbWA==", "event"=>{"title"=>"kkw", "venue"=>"mysore", "date"=>"06/15/2018", "time"=>"08:04", "desc"=>"fsdfsafdasfa"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from create at /home/qwinix-pc/vekatesh_event/app/controllers/events_controller.rb:22)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "events" ("title", "venue", "date", "time", "desc", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "kkw"], ["venue", "mysore"], ["date", "06/15/2018"], ["time", "08:04"], ["desc", "fsdfsafdasfa"], ["owner_id", 1], ["created_at", "2018-06-01 09:30:39.755758"], ["updated_at", "2018-06-01 09:30:39.755758"]]
+  [1m[36m (30.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 111ms (ActiveRecord: 32.4ms)
+
+
+Started GET "/events" for ::1 at 2018-06-01 15:00:39 +0530
+Processing by EventsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered partials/_create_event.html.erb (4.2ms)
+  Rendered events/index.html.erb within layouts/application (43.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_signup.html.erb (2.0ms)
+  Rendered partials/_login.html.erb (0.7ms)
+Completed 200 OK in 76ms (Views: 72.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 15:49:37 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered partials/_navbar.html.erb (2.9ms)
+  Rendered partials/_signup.html.erb (2.2ms)
+  Rendered partials/_login.html.erb (0.7ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 15:56:17 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered partials/_navbar.html.erb (2.7ms)
+  Rendered partials/_signup.html.erb (2.2ms)
+  Rendered partials/_login.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2018-06-01 15:57:41 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0DVVVmT1IRZRyTvNDoIwCa6MGvqUPpYopYfDejFhC5wIpyg6xCIl0xDRMYNHN6asK+Zhwjv1FHwvnDw5cpRkIA=="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2018-06-01 15:57:46 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cKVjL+NS28nc49eKX2zpdL6vYJWehyQfLrFI17JgClCoNx5DQ4XfDJ373cQW2X/RO8UbrTFMpkukqreU8ZVl7A=="}
+Redirected to http://localhost:3000/login
+Filter chain halted as :must_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2018-06-01 15:57:46 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (2.6ms)
+  Rendered partials/_login.html.erb (0.7ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2018-06-01 15:58:02 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wieXzJ3pMip04evZyPR8F8GTlju67V0ODWegiSXR94oateqgPT427zX54ZeBQeqyRPntAxUm31qHfF/KZiSYNg==", "login"=>{"email"=>"nk@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "nk@gmail.com"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/events.1
+Completed 302 Found in 91ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/events.1" for ::1 at 2018-06-01 15:58:02 +0530
+Processing by EventsController#index as 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (2.7ms)
+  Rendered events/index.html.erb within layouts/application (10.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_signup.html.erb (2.1ms)
+  Rendered partials/_login.html.erb (0.7ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2018-06-01 15:58:09 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RJl/Z57tyu0oaVoNjkX5p15r4elzFn8D1TrHuByrj3mcCwILPjrOKGlxUEPH8G8C2wGa0dzd/VdfITj7X17gxQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 15:58:09 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (2.7ms)
+  Rendered partials/_login.html.erb (0.7ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 16:03:12 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (2.9ms)
+  Rendered partials/_login.html.erb (0.7ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 16:03:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (1.2ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_signup.html.erb (20.9ms)
+  Rendered partials/_login.html.erb (1.4ms)
+Completed 200 OK in 247ms (Views: 237.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/jquery-ui.self-34e6fc152285ed671a6e0ec5f0cc5d4ab2bc7ac619b067648746a4e09afeb21f.css?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/application.self-f2172a98e5acfd5c165ada384ede51a09b2d16a6bf03064d42e5cc28a8463def.css?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/jquery-ui.self-bac161e5cdca8c4d90a254b8a05bbf6fe02083b019e0ff9bf3d5602a918d6fbf.js?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/jquery.validate.min.self-ab4e76b9146880528a3c96ee9442eb915492cbb20b92edfcc274542c134a6fb4.js?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/application.self-02284963a877045abe969faccfa8d068cd7468e1b950c362cbbd541dd0c9da64.js?body=1" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/assets/avatar-fb839452628eb0054276f60294a4a512288c6ba128b1502a8fb94392a85dfa28.jpg" for ::1 at 2018-06-01 16:03:17 +0530
+
+
+Started GET "/" for ::1 at 2018-06-01 16:24:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (15.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (12.1ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+  Rendered partials/_signup.html.erb (114.9ms)
+  Rendered partials/_login.html.erb (1.5ms)
+Completed 200 OK in 1159ms (Views: 1120.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2018-06-01 16:24:51 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TZlz6BIEcBIa3bihOCieRrDj/WEogsd76nzR8FIxcLaVCw6EstN011vFsu9xnQjjNYmGWYdJRS9gZy6zEcQfCg==", "login"=>{"email"=>"nk@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (25.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "nk@gmail.com"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/events.1
+Completed 302 Found in 329ms (ActiveRecord: 153.4ms)
+
+
+Started GET "/events.1" for ::1 at 2018-06-01 16:24:51 +0530
+Processing by EventsController#index as 
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (27.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (25.0ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered partials/_create_event.html.erb (22.9ms)
+  Rendered events/index.html.erb within layouts/application (194.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered partials/_navbar.html.erb (3.1ms)
+  Rendered partials/_signup.html.erb (3.9ms)
+  Rendered partials/_login.html.erb (2.4ms)
+Completed 200 OK in 332ms (Views: 216.2ms | ActiveRecord: 70.1ms)
+
+
+Started GET "/assets/images/ui-icons_444444_256x240.png" for ::1 at 2018-06-01 16:25:07 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-icons_444444_256x240.png"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (48.3ms)
+
+
+Started POST "/events" for ::1 at 2018-06-01 16:26:36 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pg/f+Ar5ytI089ybPji/ubr4Ns/+wMi9jI5pTp/RNp1+naKUqi7OF3Xr1tV3jSkcP5JN91ELSukGlZYN3CRZIQ==", "event"=>{"title"=>"new", "venue"=>"kk;lk", "date"=>"06/08/2018", "time"=>"01:04", "desc"=>"dfdsds"}, "commit"=>"Create Event"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from create at /home/qwinix-pc/vekatesh_event/app/controllers/events_controller.rb:22)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (23.5ms)[0m  [1mINSERT INTO "events" ("title", "venue", "date", "time", "desc", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "new"], ["venue", "kk;lk"], ["date", "06/08/2018"], ["time", "01:04"], ["desc", "dfdsds"], ["owner_id", 1], ["created_at", "2018-06-01 10:56:36.269682"], ["updated_at", "2018-06-01 10:56:36.269682"]]
+  [1m[35m (34.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/events
+Completed 302 Found in 77ms (ActiveRecord: 58.5ms)
+
+
+Started GET "/events" for ::1 at 2018-06-01 16:26:36 +0530
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered partials/_create_event.html.erb (4.2ms)
+  Rendered events/index.html.erb within layouts/application (14.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered partials/_navbar.html.erb (3.1ms)
+  Rendered partials/_signup.html.erb (4.0ms)
+  Rendered partials/_login.html.erb (1.5ms)
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2018-06-01 16:26:42 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1F/aq1OC78E8Jh4JAj+Lq1hCCllrOh7nWeaEMWnAPZ4MzafH81XrBH0+FEdLih0O3ShxYcTxnLPT/XtyKjVSIg=="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 16:26:42 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (5.6ms)
+  Rendered partials/_login.html.erb (1.4ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 16:35:33 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (4.2ms)
+  Rendered partials/_login.html.erb (1.5ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2018-06-01 16:47:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mCAZG9A1i9N5lIfcE63JNAoahuRogCTHmok6RCz+JmtAsmR3cOKPFjiMjZJaGF+Rj3D93MdLppMQksUHbwtJ1w==", "login"=>{"email"=>"nk@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "nk@gmail.com"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/events.1
+Completed 302 Found in 147ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/events.1" for ::1 at 2018-06-01 16:47:10 +0530
+Processing by EventsController#index as 
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 2]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (20.8ms)
+  Rendered events/index.html.erb within layouts/application (74.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered partials/_navbar.html.erb (2.6ms)
+  Rendered partials/_signup.html.erb (6.5ms)
+  Rendered partials/_login.html.erb (1.9ms)
+Completed 200 OK in 320ms (Views: 306.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/images/ui-icons_444444_256x240.png" for ::1 at 2018-06-01 16:47:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-icons_444444_256x240.png"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (46.2ms)
+
+
+Started POST "/events" for ::1 at 2018-06-01 16:47:46 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ghzF/KIZZWTdqwCqGj0HSZwT5pDGmjV6jAAxviF/KmhajriQAs5hoZyzCuRTiJHsGXmdqGlRty4GG879YopF1A==", "event"=>{"title"=>"lew", "venue"=>"kjw", "date"=>"06/22/2018", "time"=>"02:03", "desc"=>"ewqe"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from create at /home/qwinix-pc/vekatesh_event/app/controllers/events_controller.rb:22)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("title", "venue", "date", "time", "desc", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "lew"], ["venue", "kjw"], ["date", "06/22/2018"], ["time", "02:03"], ["desc", "ewqe"], ["owner_id", 1], ["created_at", "2018-06-01 11:17:46.652914"], ["updated_at", "2018-06-01 11:17:46.652914"]]
+  [1m[36m (46.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 61ms (ActiveRecord: 47.5ms)
+
+
+Started GET "/events" for ::1 at 2018-06-01 16:47:46 +0530
+Processing by EventsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered partials/_create_event.html.erb (5.9ms)
+  Rendered events/index.html.erb within layouts/application (16.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered partials/_navbar.html.erb (3.5ms)
+  Rendered partials/_signup.html.erb (4.5ms)
+  Rendered partials/_login.html.erb (2.3ms)
+Completed 200 OK in 85ms (Views: 78.5ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/logout" for ::1 at 2018-06-01 16:47:54 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bBHuyzoKFRH+BOLGYB0FPsrgmJqidAFsxEa3zvQirya0g5Onmt0R1L8c6IgpqJObT4rjog2/gzhOXUiNt9fAmg=="}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2018-06-01 16:47:54 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.4ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (3.1ms)
+  Rendered partials/_login.html.erb (1.4ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-04 13:19:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (21.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (12.1ms)
+  Rendered partials/_navbar.html.erb (1.1ms)
+  Rendered partials/_signup.html.erb (150.4ms)
+  Rendered partials/_login.html.erb (3.2ms)
+Completed 200 OK in 1720ms (Views: 1633.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-04 13:19:18 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (3.0ms)
+  Rendered partials/_login.html.erb (0.7ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui.self-bac161e5cdca8c4d90a254b8a05bbf6fe02083b019e0ff9bf3d5602a918d6fbf.js?body=1" for ::1 at 2018-06-04 13:19:18 +0530
+
+
+Started POST "/login" for ::1 at 2018-06-04 13:19:43 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QrbbUWo9baSGgTb7d4H1IKbL6lSiGDiThi+lF1s/BzBL2/a4haAZG5wB3KiiWkf9+rJ1c6cfn8nRIEid8Df5vA==", "login"=>{"email"=>"nk@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (71.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "nk@gmail.com"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/events.1
+Completed 302 Found in 913ms (ActiveRecord: 440.7ms)
+
+
+Started GET "/events.1" for ::1 at 2018-06-04 13:19:44 +0530
+Processing by EventsController#index as 
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (95.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (26.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered partials/_create_event.html.erb (41.6ms)
+  Rendered events/index.html.erb within layouts/application (314.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered partials/_navbar.html.erb (3.4ms)
+  Rendered partials/_signup.html.erb (6.4ms)
+  Rendered partials/_login.html.erb (1.6ms)
+Completed 200 OK in 501ms (Views: 280.6ms | ActiveRecord: 129.9ms)
+
+
+Started GET "/events/invitations" for ::1 at 2018-06-04 13:20:10 +0530
+Processing by EventsController#invitation as JS
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mParticipent Load (0.4ms)[0m  [1mSELECT "participents".* FROM "participents" WHERE "participents"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered events/_invitation.html.erb (0.7ms)
+  Rendered events/invitation.js.erb (14.6ms)
+Completed 200 OK in 42ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/events/1" for ::1 at 2018-06-04 13:20:31 +0530
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DVXom7cyB837c9ddOgG1S9CFOaV4IhDiGM+JmEBoV3IEOMVyWK9zcuHzPQ7v2geWjPymgn0lt7hPwGQS62Cp/g==", "id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mParticipent Load (0.3ms)[0m  [1mSELECT "participents".* FROM "participents" WHERE "participents"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 1]]
+  [1m[36m (108.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 118ms (ActiveRecord: 110.9ms)
+
+
+Started GET "/events" for ::1 at 2018-06-04 13:20:31 +0530
+Processing by EventsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 3]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (4.9ms)
+  Rendered events/index.html.erb within layouts/application (15.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_signup.html.erb (3.9ms)
+  Rendered partials/_login.html.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/events/3" for ::1 at 2018-06-04 13:20:41 +0530
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2ERQ5hsR6lz/qnfW3jpSA4/YS7vNifBEkJIiK6U9LC7RKX0P9Iye4+UqnYUL4eDe06HUnMiOVx7Hnc+hDjXSog==", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mParticipent Load (0.4ms)[0m  SELECT "participents".* FROM "participents" WHERE "participents"."event_id" = $1  [["event_id", 3]]
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 3]]
+  [1m[35m (69.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/events
+Completed 302 Found in 77ms (ActiveRecord: 71.1ms)
+
+
+Started GET "/events" for ::1 at 2018-06-04 13:20:41 +0530
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (3.4ms)
+  Rendered events/index.html.erb within layouts/application (9.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered partials/_navbar.html.erb (2.7ms)
+  Rendered partials/_signup.html.erb (3.1ms)
+  Rendered partials/_login.html.erb (1.2ms)
+Completed 200 OK in 71ms (Views: 67.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/images/ui-icons_444444_256x240.png" for ::1 at 2018-06-04 13:21:15 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-icons_444444_256x240.png"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (54.5ms)
+
+
+Started POST "/events" for ::1 at 2018-06-04 13:22:44 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aHH4QhJteSSdoqhzJQF2fnB4qbWz7Eh0GkxsR+i/M2RhHNWr/fANm4ciQiDw2sSjLAE2krbr7y5NQ4HNQ7fN6A==", "event"=>{"title"=>"festivals", "venue"=>"kusuma chandrashekar", "date"=>"06/10/2018", "time"=>"09:00", "desc"=>"on 10th organize the ganesha festivals "}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from create at /home/qwinix-pc/vekatesh_event/app/controllers/events_controller.rb:22)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (46.0ms)[0m  INSERT INTO "events" ("title", "venue", "date", "time", "desc", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "festivals"], ["venue", "kusuma chandrashekar"], ["date", "06/10/2018"], ["time", "09:00"], ["desc", "on 10th organize the ganesha festivals "], ["owner_id", 1], ["created_at", "2018-06-04 07:52:44.251341"], ["updated_at", "2018-06-04 07:52:44.251341"]]
+  [1m[36m (48.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 117ms (ActiveRecord: 95.9ms)
+
+
+Started GET "/events" for ::1 at 2018-06-04 13:22:44 +0530
+Processing by EventsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 4]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (3.6ms)
+  Rendered events/index.html.erb within layouts/application (11.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_signup.html.erb (2.1ms)
+  Rendered partials/_login.html.erb (0.9ms)
+Completed 200 OK in 64ms (Views: 58.7ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/events/4" for ::1 at 2018-06-04 13:23:18 +0530
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jkcPT6nNGIcg4vBM4isKZjnOM3MTH9XPK+zQax/+Yz+HKiKmRlBsODpiGh838Li7ZbesVBYYcpV84z3htPadsw==", "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mParticipent Load (0.4ms)[0m  SELECT "participents".* FROM "participents" WHERE "participents"."event_id" = $1  [["event_id", 4]]
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 4]]
+  [1m[35m (67.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/events
+Completed 302 Found in 75ms (ActiveRecord: 69.5ms)
+
+
+Started GET "/events" for ::1 at 2018-06-04 13:23:18 +0530
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 2]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (4.0ms)
+  Rendered events/index.html.erb within layouts/application (8.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_signup.html.erb (3.3ms)
+  Rendered partials/_login.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/images/ui-icons_444444_256x240.png" for ::1 at 2018-06-04 13:23:45 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-icons_444444_256x240.png"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (50.8ms)
+
+
+Started POST "/events" for ::1 at 2018-06-04 13:24:41 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F4PhQWZgYaC2nPpQZf0v7MaOy34/qX/jOPKIBFKa8SYe7syoif0VH6wcEAOwJp0xmvdUWTqu2Llv/WWO+ZIPqg==", "event"=>{"title"=>"Festivals", "venue"=>"maarigudi", "date"=>"06/12/2018", "time"=>"09:05", "desc"=>"we are celebreting ganesha festivals "}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from create at /home/qwinix-pc/vekatesh_event/app/controllers/events_controller.rb:22)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("title", "venue", "date", "time", "desc", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Festivals"], ["venue", "maarigudi"], ["date", "06/12/2018"], ["time", "09:05"], ["desc", "we are celebreting ganesha festivals "], ["owner_id", 1], ["created_at", "2018-06-04 07:54:41.407974"], ["updated_at", "2018-06-04 07:54:41.407974"]]
+  [1m[36m (34.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 43ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/events" for ::1 at 2018-06-04 13:24:41 +0530
+Processing by EventsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 5]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (3.8ms)
+  Rendered events/index.html.erb within layouts/application (11.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_signup.html.erb (2.6ms)
+  Rendered partials/_login.html.erb (0.9ms)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2018-06-04 13:27:11 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w6XsWqQyCxop5c56Xvp33rMZcHQda1ubaWTOl3OchgzKyMGzS69/pTNlJCmLIcUD72DvUxhs/ME+ayMd2JR4gA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2018-06-04 13:27:11 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (2.7ms)
+  Rendered partials/_login.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2018-06-04 13:29:09 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cGh6qhRSSQVkdqjuJZx5dTqnuzV377ca8Osp84pN0h95BVdD+889un72Qr3wR8uoZt4kEnLoEECn5MR5IUUskw==", "user"=>{"firstname"=>"tanu", "lastname"=>"m", "username"=>"komala", "email"=>"komal@gmail.com", "phone"=>"2232155165", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register User"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'komal@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (16.2ms)[0m  INSERT INTO "users" ("firstname", "lastname", "username", "email", "phone", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["firstname", "tanu"], ["lastname", "m"], ["username", "komala"], ["email", "komal@gmail.com"], ["phone", "2232155165"], ["password_digest", "$2a$10$PeSR3uWRNQFruWIXVk1NHe6lMjhXLgEZkpwU5SlNQA7cQD1XnfVuy"], ["created_at", "2018-06-04 07:59:10.020954"], ["updated_at", "2018-06-04 07:59:10.020954"]]
+  [1m[36m (21.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 148ms (ActiveRecord: 38.4ms)
+
+
+Started GET "/login" for ::1 at 2018-06-04 13:29:10 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (2.6ms)
+  Rendered partials/_login.html.erb (1.0ms)
+Completed 200 OK in 62ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2018-06-04 13:29:49 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6OtSZnhDxPFdeg9LZt3a5ZOH6yT5XaG7Js3fjMOBKoHhhn+Pl96wTkf65RizBmg4z/50A/xaBuFxwjIGaInUDQ==", "login"=>{"email"=>"komal@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "komal@gmail.com"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/events.2
+Completed 302 Found in 93ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/events.2" for ::1 at 2018-06-04 13:29:49 +0530
+Processing by EventsController#index as 
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 5]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (3.4ms)
+  Rendered events/index.html.erb within layouts/application (13.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered partials/_navbar.html.erb (2.2ms)
+  Rendered partials/_signup.html.erb (2.3ms)
+  Rendered partials/_login.html.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/images/ui-icons_444444_256x240.png" for ::1 at 2018-06-04 13:30:05 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-icons_444444_256x240.png"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.7ms)
+
+
+Started POST "/events" for ::1 at 2018-06-04 13:30:44 +0530
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l8RI8Pj1Ff1PNXcfzxU2QeUxseHhPV2dtXKTj0C46SCeqWUZF2hhQlW1nUwazoScuUguxuQ6+sfifX4F67AXrA==", "event"=>{"title"=>"end", "venue"=>"mysore", "date"=>"06/15/2018", "time"=>"06:05", "desc"=>"odd dkdkdop dkkdld`"}, "user_ids"=>["1"], "commit"=>"Create Event"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from create at /home/qwinix-pc/vekatesh_event/app/controllers/events_controller.rb:22)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("title", "venue", "date", "time", "desc", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "end"], ["venue", "mysore"], ["date", "06/15/2018"], ["time", "06:05"], ["desc", "odd dkdkdop dkkdld`"], ["owner_id", 2], ["created_at", "2018-06-04 08:00:44.330843"], ["updated_at", "2018-06-04 08:00:44.330843"]]
+  [1m[36m (81.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mEvent Load (0.9ms)[0m  SELECT  "events".* FROM "events"  ORDER BY "events"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (7.1ms)[0m  [1mINSERT INTO "participents" ("event_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["event_id", 6], ["user_id", 1], ["created_at", "2018-06-04 08:00:44.490111"], ["updated_at", "2018-06-04 08:00:44.490111"]]
+  [1m[35m (37.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/events
+Completed 302 Found in 212ms (ActiveRecord: 129.8ms)
+
+
+Started GET "/events" for ::1 at 2018-06-04 13:30:44 +0530
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (2.6ms)
+  Rendered events/index.html.erb within layouts/application (10.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_signup.html.erb (3.0ms)
+  Rendered partials/_login.html.erb (0.7ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/events/invitations" for ::1 at 2018-06-04 13:30:56 +0530
+Processing by EventsController#invitation as JS
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mParticipent Load (0.5ms)[0m  SELECT "participents".* FROM "participents" WHERE "participents"."user_id" = $1  [["user_id", 2]]
+  Rendered events/_invitation.html.erb (0.1ms)
+  Rendered events/invitation.js.erb (1.6ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for ::1 at 2018-06-04 13:31:01 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9KRsnRyOa87Oo3kjZR1IQylcDTR5k88AaqXDRuy5xKP9yUF08xMfcdQjk3CwxvqedSWSE3yUaFo9qi7MR7E6Lw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2018-06-04 13:31:01 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (2.7ms)
+  Rendered partials/_login.html.erb (0.8ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-05 11:00:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (24.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (31.6ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_signup.html.erb (116.4ms)
+  Rendered partials/_login.html.erb (3.5ms)
+Completed 200 OK in 1242ms (Views: 1215.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.self-ce4ff876691504f0f28b3c9bae0e691c640bbc9e2c4aa6dc2fe9fe0fe7e9bb1b.css?body=1" for ::1 at 2018-06-05 11:01:01 +0530
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2018-06-05 11:01:01 +0530
+
+
+Started GET "/assets/jquery-ui.self-bac161e5cdca8c4d90a254b8a05bbf6fe02083b019e0ff9bf3d5602a918d6fbf.js?body=1" for ::1 at 2018-06-05 11:01:01 +0530
+
+
+Started POST "/login" for ::1 at 2018-06-05 11:01:43 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"avfq0pH9mmT3djn4muURfdH0wrODO6UqJg/0UnO4Bozp7IXraDYzSU7dCncehD0ubDkkRofWMDBkZ1BTuQfuAQ==", "login"=>{"email"=>"nk@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (27.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "nk@gmail.com"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/events.1
+Completed 302 Found in 489ms (ActiveRecord: 207.2ms)
+
+
+Started GET "/events.1" for ::1 at 2018-06-05 11:01:44 +0530
+Processing by EventsController#index as 
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (51.6ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (47.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 5]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (17.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 6]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered partials/_create_event.html.erb (22.2ms)
+  Rendered events/index.html.erb within layouts/application (250.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered partials/_navbar.html.erb (2.8ms)
+  Rendered partials/_signup.html.erb (3.5ms)
+  Rendered partials/_login.html.erb (2.2ms)
+Completed 200 OK in 353ms (Views: 184.5ms | ActiveRecord: 122.9ms)
+
+
+Started DELETE "/logout" for ::1 at 2018-06-05 11:05:35 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VaDX21R4Ib2DBEzAuh06b0OxmvhEFLoDL5u2fmjbOoXWu7jirbOIkDqvf08+fBY8/nx8DUD5Lxlt8xJ/omTSCA=="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2018-06-05 11:05:35 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (3.1ms)
+  Rendered partials/_login.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-05 11:07:01 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (4.0ms)
+  Rendered partials/_login.html.erb (0.9ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2018-06-05 11:07:28 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kQfRlQOng7AD+WnfFSuBnDJpQ9ZsxXl4PiJC8A9ltKASHL6s+mwqnbpSWlCRSq3Pj6SlI2go7GJ8SubxxdpcLQ==", "login"=>{"email"=>"nk@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "nk@gmail.com"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/events.1
+Completed 302 Found in 92ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/events.1" for ::1 at 2018-06-05 11:07:28 +0530
+Processing by EventsController#index as 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1  [["event_id", 5]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "participents" ON "users"."id" = "participents"."user_id" WHERE "participents"."event_id" = $1[0m  [["event_id", 6]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered partials/_create_event.html.erb (3.8ms)
+  Rendered events/index.html.erb within layouts/application (22.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered partials/_navbar.html.erb (2.6ms)
+  Rendered partials/_signup.html.erb (10.8ms)
+  Rendered partials/_login.html.erb (1.2ms)
+Completed 200 OK in 85ms (Views: 77.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/images/ui-icons_444444_256x240.png" for ::1 at 2018-06-05 11:07:58 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/ui-icons_444444_256x240.png"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (67.9ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.6ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/qwinix-pc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (59.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2018-06-05 11:08:59 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mMr1p7A+zJOcvSEJFcLIXJfxwZX+D941pO3E4A3GgKwb0ZqeSfVlviUWEoaRo+QPKjwnYPriSy/mhWDhx3loIQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2018-06-05 11:08:59 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.1ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (5.8ms)
+  Rendered partials/_login.html.erb (1.7ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-05 11:36:42 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (14.8ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_signup.html.erb (19.1ms)
+  Rendered partials/_login.html.erb (1.5ms)
+Completed 200 OK in 266ms (Views: 255.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2018-06-05 11:37:13 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XrcOESo/5MJabGxtQKgboOPsgLbGl64XEZ+sJVcnIVrdrGEo0/RN7+PHX+LEyTfzXiFmQ8J6Ow1T9wgknZjJ1w==", "login"=>{"email"=>"komal@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "komal@gmail.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 119ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2018-06-05 11:37:13 +0530
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (0.0ms)
+  Rendered partials/_navbar.html.erb (0.1ms)
+  Rendered partials/_signup.html.erb (3.2ms)
+  Rendered partials/_login.html.erb (0.8ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-05 11:43:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (1.4ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_signup.html.erb (18.4ms)
+  Rendered partials/_login.html.erb (1.4ms)
+Completed 200 OK in 256ms (Views: 246.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-06-05 14:47:25 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#welcome as HTML
+  Rendered users/welcome.html.erb within layouts/application (15.5ms)
+  Rendered partials/_navbar.html.erb (2.2ms)
+  Rendered partials/_signup.html.erb (181.7ms)
+  Rendered partials/_login.html.erb (1.6ms)
+Completed 200 OK in 851ms (Views: 824.2ms | ActiveRecord: 0.0ms)
+>>>>>>> 7d0dcc7fd62ac46c85deda4c275439df2691855f
