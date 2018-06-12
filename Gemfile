@@ -11,7 +11,7 @@ gem 'rails', '4.2.7.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # gem 'pg'
-gem 'pg', '~> 0.18.1'
+gem 'pg', '0.20.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
@@ -22,7 +22,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
-# gem 'rails', '4.0.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -45,14 +44,14 @@ gem 'puma'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-	gem 'pry'
+  gem 'pry'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
 
 group :development do
-	# gem 'pg'
+  # gem 'pg'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -62,6 +61,6 @@ group :development do
 end
 
 group :production do
-	# gem 'pg', '1.0.0'
-	gem 'rails_12factor'
+  gem 'pg', '0.20.0'
+  gem 'rails_12factor'
 end
