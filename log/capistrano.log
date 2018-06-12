@@ -18702,3 +18702,412 @@ PG::ConnectionBad: FATAL:  Ident authentication failed for user "postgres"
 /home/deploy/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
 Tasks: TOP => db:migrate
 (See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-12 16:29:49 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [7eddc89a] Running /usr/bin/env mkdir -p /tmp as deploy@35.154.244.179
+ DEBUG [7eddc89a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [7eddc89a] Finished in 0.953 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-production-qwinix.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-production-qwinix.sh 100.0%
+  INFO [fbee156d] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix.sh as deploy@35.154.244.179
+ DEBUG [fbee156d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix.sh )
+  INFO [fbee156d] Finished in 0.579 seconds with exit status 0 (successful).
+  INFO [ab056b51] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as deploy@35.154.244.179
+ DEBUG [ab056b51] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [ab056b51] 	6381d885c06274d30a4bee1cf910147fbc30b523	HEAD
+  INFO [ab056b51] Finished in 1.566 seconds with exit status 0 (successful).
+  INFO [7160f141] Running /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/shared /u01/apps/qwinix/event_scheduler/releases as deploy@35.154.244.179
+ DEBUG [7160f141] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/shared /u01/apps/qwinix/event_scheduler/releases )
+  INFO [7160f141] Finished in 0.520 seconds with exit status 0 (successful).
+  INFO [7a532fca] Running /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/shared/public/assets as deploy@35.154.244.179
+ DEBUG [7a532fca] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/shared/public/assets )
+  INFO [7a532fca] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG [dc843f84] Running [ -f /u01/apps/qwinix/event_scheduler/current/REVISION ] as deploy@35.154.244.179
+ DEBUG [dc843f84] Command: [ -f /u01/apps/qwinix/event_scheduler/current/REVISION ]
+ DEBUG [dc843f84] Finished in 0.521 seconds with exit status 1 (failed).
+ DEBUG [4524e549] Running [ -f /u01/apps/qwinix/event_scheduler/repo/HEAD ] as deploy@35.154.244.179
+ DEBUG [4524e549] Command: [ -f /u01/apps/qwinix/event_scheduler/repo/HEAD ]
+ DEBUG [4524e549] Finished in 0.630 seconds with exit status 1 (failed).
+ DEBUG [52f8a465] Running if test ! -d /u01/apps/qwinix/event_scheduler; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [52f8a465] Command: if test ! -d /u01/apps/qwinix/event_scheduler; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler'" 1>&2; false; fi
+ DEBUG [52f8a465] Finished in 0.830 seconds with exit status 0 (successful).
+  INFO [1520a160] Running /usr/bin/env git clone --mirror https://github.com/sunil-ramesh/vekatesh_event /u01/apps/qwinix/event_scheduler/repo as deploy@35.154.244.179
+ DEBUG [1520a160] Command: cd /u01/apps/qwinix/event_scheduler && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git clone --mirror https://github.com/sunil-ramesh/vekatesh_event /u01/apps/qwinix/event_scheduler/repo )
+ DEBUG [1520a160] 	Cloning into bare repository '/u01/apps/qwinix/event_scheduler/repo'...
+  INFO [1520a160] Finished in 7.728 seconds with exit status 0 (successful).
+ DEBUG [e6eb7cfd] Running if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [e6eb7cfd] Command: if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi
+ DEBUG [e6eb7cfd] Finished in 0.520 seconds with exit status 0 (successful).
+  INFO [00f21853] Running /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event as deploy@35.154.244.179
+ DEBUG [00f21853] Command: cd /u01/apps/qwinix/event_scheduler/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event )
+  INFO [00f21853] Finished in 0.522 seconds with exit status 0 (successful).
+  INFO [e22adc49] Running /usr/bin/env git remote update --prune as deploy@35.154.244.179
+ DEBUG [e22adc49] Command: cd /u01/apps/qwinix/event_scheduler/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e22adc49] 	Fetching origin
+  INFO [e22adc49] Finished in 3.251 seconds with exit status 0 (successful).
+ DEBUG [958662d4] Running if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [958662d4] Command: if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi
+ DEBUG [958662d4] Finished in 0.508 seconds with exit status 0 (successful).
+  INFO [2cd536e1] Running /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/releases/20180612105954 as deploy@35.154.244.179
+ DEBUG [2cd536e1] Command: cd /u01/apps/qwinix/event_scheduler/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/releases/20180612105954 )
+  INFO [2cd536e1] Finished in 0.520 seconds with exit status 0 (successful).
+  INFO [4fa37407] Running /usr/bin/env git archive harsha | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/event_scheduler/releases/20180612105954 as deploy@35.154.244.179
+ DEBUG [4fa37407] Command: cd /u01/apps/qwinix/event_scheduler/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git archive harsha | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/event_scheduler/releases/20180612105954 )
+  INFO [4fa37407] Finished in 0.730 seconds with exit status 0 (successful).
+ DEBUG [7ce3cc40] Running if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [7ce3cc40] Command: if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi
+ DEBUG [7ce3cc40] Finished in 0.506 seconds with exit status 0 (successful).
+ DEBUG [af325ce9] Running /usr/bin/env git rev-list --max-count=1 harsha as deploy@35.154.244.179
+ DEBUG [af325ce9] Command: cd /u01/apps/qwinix/event_scheduler/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git rev-list --max-count=1 harsha )
+ DEBUG [af325ce9] 	7d0dcc7fd62ac46c85deda4c275439df2691855f
+ DEBUG [af325ce9] Finished in 0.504 seconds with exit status 0 (successful).
+ DEBUG [9a97d7a3] Running if test ! -d /u01/apps/qwinix/event_scheduler/releases/20180612105954; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/releases/20180612105954'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [9a97d7a3] Command: if test ! -d /u01/apps/qwinix/event_scheduler/releases/20180612105954; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/releases/20180612105954'" 1>&2; false; fi
+ DEBUG [9a97d7a3] Finished in 0.500 seconds with exit status 0 (successful).
+  INFO [294d70ac] Running /usr/bin/env echo "7d0dcc7fd62ac46c85deda4c275439df2691855f" > REVISION as deploy@35.154.244.179
+ DEBUG [294d70ac] Command: cd /u01/apps/qwinix/event_scheduler/releases/20180612105954 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "7d0dcc7fd62ac46c85deda4c275439df2691855f" > REVISION )
+  INFO [294d70ac] Finished in 0.575 seconds with exit status 0 (successful).
+  INFO [9ef88ac2] Running /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/releases/20180612105954/public as deploy@35.154.244.179
+ DEBUG [9ef88ac2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/releases/20180612105954/public )
+  INFO [9ef88ac2] Finished in 0.519 seconds with exit status 0 (successful).
+ DEBUG [0a2eb15b] Running [ -L /u01/apps/qwinix/event_scheduler/releases/20180612105954/public/assets ] as deploy@35.154.244.179
+ DEBUG [0a2eb15b] Command: [ -L /u01/apps/qwinix/event_scheduler/releases/20180612105954/public/assets ]
+ DEBUG [0a2eb15b] Finished in 0.522 seconds with exit status 1 (failed).
+ DEBUG [d28bec5b] Running [ -d /u01/apps/qwinix/event_scheduler/releases/20180612105954/public/assets ] as deploy@35.154.244.179
+ DEBUG [d28bec5b] Command: [ -d /u01/apps/qwinix/event_scheduler/releases/20180612105954/public/assets ]
+ DEBUG [d28bec5b] Finished in 0.522 seconds with exit status 1 (failed).
+  INFO [cc99613e] Running /usr/bin/env ln -s /u01/apps/qwinix/event_scheduler/shared/public/assets /u01/apps/qwinix/event_scheduler/releases/20180612105954/public/assets as deploy@35.154.244.179
+ DEBUG [cc99613e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /u01/apps/qwinix/event_scheduler/shared/public/assets /u01/apps/qwinix/event_scheduler/releases/20180612105954/public/assets )
+  INFO [cc99613e] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG [5266a7e5] Running if test ! -d /u01/apps/qwinix/event_scheduler/releases/20180612105954; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/releases/20180612105954'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [5266a7e5] Command: if test ! -d /u01/apps/qwinix/event_scheduler/releases/20180612105954; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/releases/20180612105954'" 1>&2; false; fi
+ DEBUG [5266a7e5] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG [2f9efca0] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/event_scheduler/shared/bundle as deploy@35.154.244.179
+ DEBUG [2f9efca0] Command: cd /u01/apps/qwinix/event_scheduler/releases/20180612105954 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/event_scheduler/shared/bundle )
+ DEBUG [2f9efca0] 	The following gems are missing
+ DEBUG [2f9efca0] 	 * rake (12.3.1)
+ DEBUG [2f9efca0] 	 * concurrent-ruby (1.0.5)
+ DEBUG [2f9efca0] 	 * i18n (0.9.5)
+ DEBUG [2f9efca0] 	 * json (1.8.6)
+ DEBUG [2f9efca0] 	 * minitest (5.11.3)
+ DEBUG [2f9efca0] 	 * thread_safe (0.3.6)
+ DEBUG [2f9efca0] 	 * tzinfo (1.2.5)
+ DEBUG [2f9efca0] 	 * activesupport (4.2.7.1)
+ DEBUG [2f9efca0] 	 * builder (3.2.3)
+ DEBUG [2f9efca0] 	 * erubis (2.7.0)
+ DEBUG [2f9efca0] 	 * mini_portile2 (2.3.0)
+ DEBUG [2f9efca0] 	 * nokogiri (1.8.2)
+ DEBUG [2f9efca0] 	 * rails-deprecated_sanitizer (1.0.3)
+ DEBUG [2f9efca0] 	 * rails-dom-testing (1.0.9)
+ DEBUG [2f9efca0] 	 * crass (1.0.4)
+ DEBUG [2f9efca0] 	 * loofah (2.2.2)
+ DEBUG [2f9efca0] 	 * rails-html-sanitizer (1.0.4)
+ DEBUG [2f9efca0] 	 * actionview (4.2.7.1)
+ DEBUG [2f9efca0] 	 * rack (1.6.10)
+ DEBUG [2f9efca0] 	 * rack-test (0.6.3)
+ DEBUG [2f9efca0] 	 * actionpack (4.2.7.1)
+ DEBUG [2f9efca0] 	 * globalid (0.4.1)
+ DEBUG [2f9efca0] 	 * activejob (4.2.7.1)
+ DEBUG [2f9efca0] 	 * mini_mime (1.0.0)
+ DEBUG [2f9efca0] 	 * mail (2.7.0)
+ DEBUG [2f9efca0] 	 * actionmailer (4.2.7.1)
+ DEBUG [2f9efca0] 	 * activemodel (4.2.7.1)
+ DEBUG [2f9efca0] 	 * arel (6.0.4)
+ DEBUG [2f9efca0] 	 * activerecord (4.2.7.1)
+ DEBUG [2f9efca0] 	 * net-ssh (5.0.1)
+ DEBUG [2f9efca0] 	 * net-scp (1.2.1)
+ DEBUG [2f9efca0] 	 * sshkit (1.16.1)
+ DEBUG [2f9efca0] 	 * airbrussh (1.3.0)
+ DEBUG [2f9efca0] 	 * bcrypt (3.1.12)
+ DEBUG [2f9efca0] 	 * debug_inspector (0.0.3)
+ DEBUG [2f9efca0] 	 * binding_of_caller (0.8.0)
+ DEBUG [2f9efca0] 	 * byebug (10.0.2)
+ DEBUG [2f9efca0] 	 * capistrano (3.11.0)
+ DEBUG [2f9efca0] 	 * capistrano-bundler (1.3.0)
+ DEBUG [2f9efca0] 	 * capistrano-rails (1.4.0)
+ DEBUG [2f9efca0] 	 * capistrano-rbenv (2.1.3)
+ DEBUG [2f9efca0] 	 * mime-types-data (3.2016.0521)
+ DEBUG [2f9efca0] 	 * mime-types (3.1)
+ DEBUG [2f9efca0] 	 * carrierwave (1.2.2)
+ DEBUG [2f9efca0] 	 * coderay (1.1.2)
+ DEBUG [2f9efca0] 	 * coffee-script-source (1.12.2)
+ DEBUG [2f9efca0] 	 * execjs (2.7.0)
+ DEBUG [2f9efca0] 	 * coffee-script (2.4.1)
+ DEBUG [2f9efca0] 	 * thor (0.20.0)
+ DEBUG [2f9efca0] 	 * railties (4.2.7.1)
+ DEBUG [2f9efca0] 	 * coffee-rails (4.1.1)
+ DEBUG [2f9efca0] 	 * ffi (1.9.25)
+ DEBUG [2f9efca0] 	 * multi_json (1.13.1)
+ DEBUG [2f9efca0] 	 * jbuilder (2.7.0)
+ DEBUG [2f9efca0] 	 * jquery-rails (4.3.3)
+ DEBUG [2f9efca0] 	 * kgio (2.11.2)
+ DEBUG [2f9efca0] 	 * libv8 (3.16.14.19)
+ DEBUG [2f9efca0] 	 * method_source (0.9.0)
+ DEBUG [2f9efca0] 	 * pg (1.0.0)
+ DEBUG [2f9efca0] 	 * pry (0.11.3)
+ DEBUG [2f9efca0] 	 * puma (3.11.4)
+ DEBUG [2f9efca0] 	 * sprockets (3.7.1)
+ DEBUG [2f9efca0] 	 * sprockets-rails (3.2.1)
+ DEBUG [2f9efca0] 	 * rails (4.2.7.1)
+ DEBUG [2f9efca0] 	 * rails_serve_static_assets (0.0.5)
+ DEBUG [2f9efca0] 	 * rails_stdout_logging (0.0.5)
+ DEBUG [2f9efca0] 	 * rails_12factor (0.0.3)
+ DEBUG [2f9efca0] 	 * raindrops (0.19.0)
+ DEBUG [2f9efca0] 	 * rb-fsevent (0.10.3)
+ DEBUG [2f9efca0] 	 * rb-inotify (0.9.10)
+ DEBUG [2f9efca0] 	 * rdoc (4.3.0)
+ DEBUG [2f9efca0] 	 * ref (2.0.0)
+ DEBUG [2f9efca0] 	 * sass-listen (4.0.0)
+ DEBUG [2f9efca0] 	 * sass (3.5.6)
+ DEBUG [2f9efca0] 	 * tilt (2.0.8)
+ DEBUG [2f9efca0] 	 * sass-rails (5.0.7)
+ DEBUG [2f9efca0] 	 * sdoc (0.4.2)
+ DEBUG [2f9efca0] 	 * spring (2.0.2)
+ DEBUG [2f9efca0] 	 * therubyracer (0.12.3)
+ DEBUG [2f9efca0] 	 * turbolinks-source (5.1.0)
+ DEBUG [2f9efca0] 	 * turbolinks (5.1.1)
+ DEBUG [2f9efca0] 	 * uglifier (4.1.11)
+ DEBUG [2f9efca0] 	 * unicorn (5.4.0)
+ DEBUG [2f9efca0] 	 * web-console (2.3.0)
+ DEBUG [2f9efca0] 	Install missing gems with `bundle install`
+ DEBUG [2f9efca0] Finished in 0.875 seconds with exit status 1 (failed).
+  INFO [30593e93] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/event_scheduler/shared/bundle --without development test --deployment --quiet as deploy@35.154.244.179
+ DEBUG [30593e93] Command: cd /u01/apps/qwinix/event_scheduler/releases/20180612105954 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/event_scheduler/shared/bundle --without development test --deployment --quiet )
+ DEBUG [30593e93] 	Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+current directory:
+/u01/apps/qwinix/event_scheduler/shared/bundle/ruby/2.3.0/gems/pg-1.0.0/ext
+/home/deploy/.rbenv/versions/2.3.1/bin/ruby -r
+./siteconf20180612-16363-54rmq0.rb extconf.rb
+checking for pg_config... yes
+Using config values from /usr/bin/pg_config
+checking for libpq-fe.h... no
+Can't find the 'libpq-fe.h header
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/home/deploy/.rbenv/versions/2.3.1/bin/$(RUBY_BASE_NAME)
+	--with-pg
+	--without-pg
+	--enable-windows-cross
+	--disable-windows-cross
+	--with-pg-config
+	--without-pg-config
+	--with-pg_config
+	--without-pg_config
+	--with-pg-dir
+	--without-pg-dir
+	--with-pg-include
+	--without-pg-include=${pg-dir}/include
+	--with-pg-lib
+	--without-pg-lib=${pg-dir}/lib
+
+To see why this extension failed to compile, please check the mkmf.log which can
+be found here:
+
+/u01/apps/qwinix/event_scheduler/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/pg-1.0.0/mkmf.log
+
+extconf failed, exit code 1
+
+Gem files will remain installed in
+/u01/apps/qwinix/event_scheduler/shared/bundle/ruby/2.3.0/gems/pg-1.0.0 for
+inspection.
+Results logged to
+/u01/apps/qwinix/event_scheduler/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/pg-1.0.0/gem_make.out
+
+An error occurred while installing pg (1.0.0), and Bundler cannot continue.
+Make sure that `gem install pg -v '1.0.0' --source 'https://rubygems.org/'`
+succeeds before bundling.
+
+In Gemfile:
+  pg
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-12 16:33:59 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [bd59625b] Running /usr/bin/env mkdir -p /tmp as deploy@35.154.244.179
+ DEBUG [bd59625b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [bd59625b] Finished in 0.957 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-production-qwinix.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-production-qwinix.sh 100.0%
+  INFO [d5c095bf] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix.sh as deploy@35.154.244.179
+ DEBUG [d5c095bf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix.sh )
+  INFO [d5c095bf] Finished in 0.575 seconds with exit status 0 (successful).
+  INFO [dfd73275] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as deploy@35.154.244.179
+ DEBUG [dfd73275] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [dfd73275] 	6381d885c06274d30a4bee1cf910147fbc30b523	HEAD
+  INFO [dfd73275] Finished in 2.511 seconds with exit status 0 (successful).
+  INFO [5172eece] Running /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/shared /u01/apps/qwinix/event_scheduler/releases as deploy@35.154.244.179
+ DEBUG [5172eece] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/shared /u01/apps/qwinix/event_scheduler/releases )
+  INFO [5172eece] Finished in 0.515 seconds with exit status 0 (successful).
+  INFO [cc18aca5] Running /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/shared/public/assets as deploy@35.154.244.179
+ DEBUG [cc18aca5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/shared/public/assets )
+  INFO [cc18aca5] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG [96b0f15a] Running [ -f /u01/apps/qwinix/event_scheduler/current/REVISION ] as deploy@35.154.244.179
+ DEBUG [96b0f15a] Command: [ -f /u01/apps/qwinix/event_scheduler/current/REVISION ]
+ DEBUG [96b0f15a] Finished in 0.521 seconds with exit status 1 (failed).
+ DEBUG [9c668971] Running [ -f /u01/apps/qwinix/event_scheduler/repo/HEAD ] as deploy@35.154.244.179
+ DEBUG [9c668971] Command: [ -f /u01/apps/qwinix/event_scheduler/repo/HEAD ]
+ DEBUG [9c668971] Finished in 0.523 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /u01/apps/qwinix/event_scheduler/repo
+ DEBUG [83cfddcb] Running if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [83cfddcb] Command: if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi
+ DEBUG [83cfddcb] Finished in 0.533 seconds with exit status 0 (successful).
+  INFO [39301c40] Running /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event as deploy@35.154.244.179
+ DEBUG [39301c40] Command: cd /u01/apps/qwinix/event_scheduler/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event )
+  INFO [39301c40] Finished in 0.608 seconds with exit status 0 (successful).
+  INFO [890d9852] Running /usr/bin/env git remote update --prune as deploy@35.154.244.179
+ DEBUG [890d9852] Command: cd /u01/apps/qwinix/event_scheduler/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [890d9852] 	Fetching origin
+  INFO [890d9852] Finished in 1.988 seconds with exit status 0 (successful).
+ DEBUG [31548652] Running if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [31548652] Command: if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi
+ DEBUG [31548652] Finished in 0.516 seconds with exit status 0 (successful).
+  INFO [5d1147d5] Running /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/releases/20180612110406 as deploy@35.154.244.179
+ DEBUG [5d1147d5] Command: cd /u01/apps/qwinix/event_scheduler/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/releases/20180612110406 )
+  INFO [5d1147d5] Finished in 0.520 seconds with exit status 0 (successful).
+  INFO [9bbb4fab] Running /usr/bin/env git archive harsha | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/event_scheduler/releases/20180612110406 as deploy@35.154.244.179
+ DEBUG [9bbb4fab] Command: cd /u01/apps/qwinix/event_scheduler/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git archive harsha | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/event_scheduler/releases/20180612110406 )
+  INFO [9bbb4fab] Finished in 0.736 seconds with exit status 0 (successful).
+ DEBUG [b9e04c41] Running if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [b9e04c41] Command: if test ! -d /u01/apps/qwinix/event_scheduler/repo; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/repo'" 1>&2; false; fi
+ DEBUG [b9e04c41] Finished in 0.620 seconds with exit status 0 (successful).
+ DEBUG [0a5aaf6d] Running /usr/bin/env git rev-list --max-count=1 harsha as deploy@35.154.244.179
+ DEBUG [0a5aaf6d] Command: cd /u01/apps/qwinix/event_scheduler/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix.sh" ; /usr/bin/env git rev-list --max-count=1 harsha )
+ DEBUG [0a5aaf6d] 	7d0dcc7fd62ac46c85deda4c275439df2691855f
+ DEBUG [0a5aaf6d] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG [8dda6658] Running if test ! -d /u01/apps/qwinix/event_scheduler/releases/20180612110406; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/releases/20180612110406'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [8dda6658] Command: if test ! -d /u01/apps/qwinix/event_scheduler/releases/20180612110406; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/releases/20180612110406'" 1>&2; false; fi
+ DEBUG [8dda6658] Finished in 0.521 seconds with exit status 0 (successful).
+  INFO [b0822b79] Running /usr/bin/env echo "7d0dcc7fd62ac46c85deda4c275439df2691855f" > REVISION as deploy@35.154.244.179
+ DEBUG [b0822b79] Command: cd /u01/apps/qwinix/event_scheduler/releases/20180612110406 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "7d0dcc7fd62ac46c85deda4c275439df2691855f" > REVISION )
+  INFO [b0822b79] Finished in 0.522 seconds with exit status 0 (successful).
+  INFO [9755e3a5] Running /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/releases/20180612110406/public as deploy@35.154.244.179
+ DEBUG [9755e3a5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/event_scheduler/releases/20180612110406/public )
+  INFO [9755e3a5] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG [40732fd2] Running [ -L /u01/apps/qwinix/event_scheduler/releases/20180612110406/public/assets ] as deploy@35.154.244.179
+ DEBUG [40732fd2] Command: [ -L /u01/apps/qwinix/event_scheduler/releases/20180612110406/public/assets ]
+ DEBUG [40732fd2] Finished in 0.626 seconds with exit status 1 (failed).
+ DEBUG [8c3a4890] Running [ -d /u01/apps/qwinix/event_scheduler/releases/20180612110406/public/assets ] as deploy@35.154.244.179
+ DEBUG [8c3a4890] Command: [ -d /u01/apps/qwinix/event_scheduler/releases/20180612110406/public/assets ]
+ DEBUG [8c3a4890] Finished in 0.522 seconds with exit status 1 (failed).
+  INFO [20f6b87a] Running /usr/bin/env ln -s /u01/apps/qwinix/event_scheduler/shared/public/assets /u01/apps/qwinix/event_scheduler/releases/20180612110406/public/assets as deploy@35.154.244.179
+ DEBUG [20f6b87a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /u01/apps/qwinix/event_scheduler/shared/public/assets /u01/apps/qwinix/event_scheduler/releases/20180612110406/public/assets )
+  INFO [20f6b87a] Finished in 0.522 seconds with exit status 0 (successful).
+ DEBUG [4bb7fc25] Running if test ! -d /u01/apps/qwinix/event_scheduler/releases/20180612110406; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/releases/20180612110406'" 1>&2; false; fi as deploy@35.154.244.179
+ DEBUG [4bb7fc25] Command: if test ! -d /u01/apps/qwinix/event_scheduler/releases/20180612110406; then echo "Directory does not exist '/u01/apps/qwinix/event_scheduler/releases/20180612110406'" 1>&2; false; fi
+ DEBUG [4bb7fc25] Finished in 0.522 seconds with exit status 0 (successful).
+ DEBUG [a049ea90] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/event_scheduler/shared/bundle as deploy@35.154.244.179
+ DEBUG [a049ea90] Command: cd /u01/apps/qwinix/event_scheduler/releases/20180612110406 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/event_scheduler/shared/bundle )
+ DEBUG [a049ea90] 	The following gems are missing
+ DEBUG [a049ea90] 	 * debug_inspector (0.0.3)
+ DEBUG [a049ea90] 	 * binding_of_caller (0.8.0)
+ DEBUG [a049ea90] 	 * byebug (10.0.2)
+ DEBUG [a049ea90] 	 * coderay (1.1.2)
+ DEBUG [a049ea90] 	 * method_source (0.9.0)
+ DEBUG [a049ea90] 	 * pg (1.0.0)
+ DEBUG [a049ea90] 	 * pry (0.11.3)
+ DEBUG [a049ea90] 	 * puma (3.11.4)
+ DEBUG [a049ea90] 	 * sprockets (3.7.1)
+ DEBUG [a049ea90] 	 * sprockets-rails (3.2.1)
+ DEBUG [a049ea90] 	 * rails (4.2.7.1)
+ DEBUG [a049ea90] 	 * rails_serve_static_assets (0.0.5)
+ DEBUG [a049ea90] 	 * rails_stdout_logging (0.0.5)
+ DEBUG [a049ea90] 	 * rails_12factor (0.0.3)
+ DEBUG [a049ea90] 	 * raindrops (0.19.0)
+ DEBUG [a049ea90] 	 * rb-fsevent (0.10.3)
+ DEBUG [a049ea90] 	 * rb-inotify (0.9.10)
+ DEBUG [a049ea90] 	 * rdoc (4.3.0)
+ DEBUG [a049ea90] 	 * ref (2.0.0)
+ DEBUG [a049ea90] 	 * sass-listen (4.0.0)
+ DEBUG [a049ea90] 	 * sass (3.5.6)
+ DEBUG [a049ea90] 	 * tilt (2.0.8)
+ DEBUG [a049ea90] 	 * sass-rails (5.0.7)
+ DEBUG [a049ea90] 	 * sdoc (0.4.2)
+ DEBUG [a049ea90] 	 * spring (2.0.2)
+ DEBUG [a049ea90] 	 * therubyracer (0.12.3)
+ DEBUG [a049ea90] 	 * turbolinks-source (5.1.0)
+ DEBUG [a049ea90] 	 * turbolinks (5.1.1)
+ DEBUG [a049ea90] 	 * uglifier (4.1.11)
+ DEBUG [a049ea90] 	 * unicorn (5.4.0)
+ DEBUG [a049ea90] 	 * web-console (2.3.0)
+ DEBUG [a049ea90] 	Install missing gems with `bundle install`
+ DEBUG [a049ea90] Finished in 0.970 seconds with exit status 1 (failed).
+  INFO [809ab086] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/event_scheduler/shared/bundle --without development test --deployment --quiet as deploy@35.154.244.179
+ DEBUG [809ab086] Command: cd /u01/apps/qwinix/event_scheduler/releases/20180612110406 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/event_scheduler/shared/bundle --without development test --deployment --quiet )
+ DEBUG [809ab086] 	Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+current directory:
+/u01/apps/qwinix/event_scheduler/shared/bundle/ruby/2.3.0/gems/pg-1.0.0/ext
+/home/deploy/.rbenv/versions/2.3.1/bin/ruby -r
+./siteconf20180612-32011-1un55qj.rb extconf.rb
+checking for pg_config... yes
+Using config values from /usr/bin/pg_config
+checking for libpq-fe.h... no
+Can't find the 'libpq-fe.h header
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/home/deploy/.rbenv/versions/2.3.1/bin/$(RUBY_BASE_NAME)
+	--with-pg
+	--without-pg
+	--enable-windows-cross
+	--disable-windows-cross
+	--with-pg-config
+	--without-pg-config
+	--with-pg_config
+	--without-pg_config
+	--with-pg-dir
+	--without-pg-dir
+	--with-pg-include
+	--without-pg-include=${pg-dir}/include
+	--with-pg-lib
+	--without-pg-lib=${pg-dir}/lib
+
+To see why this extension failed to compile, please check the mkmf.log which can
+be found here:
+
+/u01/apps/qwinix/event_scheduler/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/pg-1.0.0/mkmf.log
+
+extconf failed, exit code 1
+
+Gem files will remain installed in
+/u01/apps/qwinix/event_scheduler/shared/bundle/ruby/2.3.0/gems/pg-1.0.0 for
+inspection.
+Results logged to
+/u01/apps/qwinix/event_scheduler/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/pg-1.0.0/gem_make.out
+
+An error occurred while installing pg (1.0.0), and Bundler cannot continue.
+Make sure that `gem install pg -v '1.0.0' --source 'https://rubygems.org/'`
+succeeds before bundling.
+
+In Gemfile:
+  pg
