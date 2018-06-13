@@ -54,7 +54,7 @@ it:
   port: 5432
   reconnect: false
   username: postgres
-  password: qwinix
+  password: password
   database: event_scheduler
   pool: 5
   host: localhost
