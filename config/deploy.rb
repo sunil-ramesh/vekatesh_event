@@ -3,7 +3,7 @@
 
 set :application, "venkatesh_event"
 set :repo_url, "https://github.com/sunil-ramesh/vekatesh_event"
-# set :rbenv_ruby, '2.3.1'
+set :rbenv_ruby, '2.3.1'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
