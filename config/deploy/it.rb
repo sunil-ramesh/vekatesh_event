@@ -1,7 +1,7 @@
 set :stage, :it
 set :branch, :harsha
 # set :rails_env, :it
-set :deploy_to, '/u01/apps/qwinix/bug_tracker'
+set :deploy_to, '/u01/apps/qwinix/event_scheduler'
 # set :log_level, :debug
 
 # Extended Server Syntax
@@ -10,10 +10,10 @@ set :deploy_to, '/u01/apps/qwinix/bug_tracker'
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-role :app, %w{deploy@13.126.48.27}
-role :web, %w{deploy@13.126.48.27}
-role :db, %w{deploy@13.126.48.27}
-server '13.126.48.27', roles: %w{:web, :app, :db}, user: 'deploy'
+role :app, %w{deploy@35.154.244.179}
+role :web, %w{deploy@35.154.244.179}
+role :db, %w{deploy@35.154.244.179}
+server '35.154.244.179', roles: %w{:web, :app, :db}, user: 'deploy'
 
 set :ssh_options, {
    #verbose: :debug,
