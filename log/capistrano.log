@@ -21210,3 +21210,464 @@ While it's not a problem now, it could cause errors if you change the version of
   INFO [1a1c36fe] Running /usr/bin/env echo "Branch master (at 6381d885c06274d30a4bee1cf910147fbc30b523) deployed as release 20180615112750 by qwinix-pc" >> /u01/apps/qwinix/events_deploy/revisions.log as deploy@18.191.228.32
  DEBUG [1a1c36fe] Command: cd /u01/apps/qwinix/events_deploy/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "Branch master (at 6381d885c06274d30a4bee1cf910147fbc30b523) deployed as release 20180615112750 by qwinix-pc" >> /u01/apps/qwinix/events_deploy/revisions.log )
   INFO [1a1c36fe] Finished in 0.779 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-15 17:16:58 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [b60df8ef] Running /usr/bin/env mkdir -p /tmp as deploy@18.191.228.32
+ DEBUG [b60df8ef] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [b60df8ef] Finished in 3.715 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh 100.0%
+  INFO [8d3b601f] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh as deploy@18.191.228.32
+ DEBUG [8d3b601f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh )
+  INFO [8d3b601f] Finished in 0.838 seconds with exit status 0 (successful).
+  INFO [4c33edf5] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as deploy@18.191.228.32
+ DEBUG [4c33edf5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [4c33edf5] 	6381d885c06274d30a4bee1cf910147fbc30b523	HEAD
+  INFO [4c33edf5] Finished in 1.282 seconds with exit status 0 (successful).
+  INFO [31b12ed8] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared /u01/apps/qwinix/events_deploy/releases as deploy@18.191.228.32
+ DEBUG [31b12ed8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared /u01/apps/qwinix/events_deploy/releases )
+  INFO [31b12ed8] Finished in 0.832 seconds with exit status 0 (successful).
+  INFO [a40b66ea] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared/public/assets as deploy@18.191.228.32
+ DEBUG [a40b66ea] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared/public/assets )
+  INFO [a40b66ea] Finished in 0.906 seconds with exit status 0 (successful).
+ DEBUG [aca93e9d] Running [ -f /u01/apps/qwinix/events_deploy/current/REVISION ] as deploy@18.191.228.32
+ DEBUG [aca93e9d] Command: [ -f /u01/apps/qwinix/events_deploy/current/REVISION ]
+ DEBUG [aca93e9d] Finished in 0.826 seconds with exit status 0 (successful).
+ DEBUG [b8f9c95c] Running /usr/bin/env cat /u01/apps/qwinix/events_deploy/current/REVISION 2>/dev/null as deploy@18.191.228.32
+ DEBUG [b8f9c95c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cat /u01/apps/qwinix/events_deploy/current/REVISION 2>/dev/null )
+ DEBUG [b8f9c95c] 	6381d885c06274d30a4bee1cf910147fbc30b523
+ DEBUG [b8f9c95c] Finished in 0.832 seconds with exit status 0 (successful).
+ DEBUG [cbfb7f5d] Running [ -f /u01/apps/qwinix/events_deploy/repo/HEAD ] as deploy@18.191.228.32
+ DEBUG [cbfb7f5d] Command: [ -f /u01/apps/qwinix/events_deploy/repo/HEAD ]
+ DEBUG [cbfb7f5d] Finished in 0.873 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /u01/apps/qwinix/events_deploy/repo
+ DEBUG [4a4fed78] Running if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [4a4fed78] Command: if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi
+ DEBUG [4a4fed78] Finished in 0.829 seconds with exit status 0 (successful).
+  INFO [4784460c] Running /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event as deploy@18.191.228.32
+ DEBUG [4784460c] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event )
+  INFO [4784460c] Finished in 0.885 seconds with exit status 0 (successful).
+  INFO [fa088708] Running /usr/bin/env git remote update --prune as deploy@18.191.228.32
+ DEBUG [fa088708] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [fa088708] 	Fetching origin
+ DEBUG [fa088708] 	From https://github.com/sunil-ramesh/vekatesh_event
+   9550731..224b6ee  events     -> events
+  INFO [fa088708] Finished in 1.141 seconds with exit status 0 (successful).
+ DEBUG [5c55ea9d] Running if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [5c55ea9d] Command: if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi
+ DEBUG [5c55ea9d] Finished in 0.836 seconds with exit status 0 (successful).
+  INFO [2852572c] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615114709 as deploy@18.191.228.32
+ DEBUG [2852572c] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615114709 )
+  INFO [2852572c] Finished in 0.830 seconds with exit status 0 (successful).
+  INFO [1c426ffc] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/events_deploy/releases/20180615114709 as deploy@18.191.228.32
+ DEBUG [1c426ffc] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/events_deploy/releases/20180615114709 )
+  INFO [1c426ffc] Finished in 0.959 seconds with exit status 0 (successful).
+ DEBUG [307a1a42] Running if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [307a1a42] Command: if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi
+ DEBUG [307a1a42] Finished in 0.859 seconds with exit status 0 (successful).
+ DEBUG [ff229635] Running /usr/bin/env git rev-list --max-count=1 master as deploy@18.191.228.32
+ DEBUG [ff229635] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ff229635] 	6381d885c06274d30a4bee1cf910147fbc30b523
+ DEBUG [ff229635] Finished in 0.921 seconds with exit status 0 (successful).
+ DEBUG [f98d091a] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615114709; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615114709'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [f98d091a] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615114709; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615114709'" 1>&2; false; fi
+ DEBUG [f98d091a] Finished in 0.840 seconds with exit status 0 (successful).
+  INFO [69a22cee] Running /usr/bin/env echo "6381d885c06274d30a4bee1cf910147fbc30b523" > REVISION as deploy@18.191.228.32
+ DEBUG [69a22cee] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615114709 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "6381d885c06274d30a4bee1cf910147fbc30b523" > REVISION )
+  INFO [69a22cee] Finished in 0.860 seconds with exit status 0 (successful).
+  INFO [ba39172e] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615114709/public as deploy@18.191.228.32
+ DEBUG [ba39172e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615114709/public )
+  INFO [ba39172e] Finished in 0.995 seconds with exit status 0 (successful).
+ DEBUG [cbee593f] Running [ -L /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets ] as deploy@18.191.228.32
+ DEBUG [cbee593f] Command: [ -L /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets ]
+ DEBUG [cbee593f] Finished in 1.687 seconds with exit status 1 (failed).
+ DEBUG [a190e37f] Running [ -d /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets ] as deploy@18.191.228.32
+ DEBUG [a190e37f] Command: [ -d /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets ]
+ DEBUG [a190e37f] Finished in 2.485 seconds with exit status 1 (failed).
+  INFO [501d14a1] Running /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/shared/public/assets /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets as deploy@18.191.228.32
+ DEBUG [501d14a1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/shared/public/assets /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets )
+  INFO [501d14a1] Finished in 1.083 seconds with exit status 0 (successful).
+ DEBUG [4defcd5b] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615114709; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615114709'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [4defcd5b] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615114709; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615114709'" 1>&2; false; fi
+ DEBUG [4defcd5b] Finished in 1.025 seconds with exit status 0 (successful).
+ DEBUG [a9fc3e85] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/events_deploy/shared/bundle as deploy@18.191.228.32
+ DEBUG [a9fc3e85] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615114709 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/events_deploy/shared/bundle )
+ DEBUG [a9fc3e85] 	Your Gemfile lists the gem pg (= 0.20.0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [a9fc3e85] 	The following gems are missing
+ DEBUG [a9fc3e85] 	 * debug_inspector (0.0.3)
+ DEBUG [a9fc3e85] 	 * binding_of_caller (0.8.0)
+ DEBUG [a9fc3e85] 	 * byebug (10.0.2)
+ DEBUG [a9fc3e85] 	 * coderay (1.1.2)
+ DEBUG [a9fc3e85] 	 * method_source (0.9.0)
+ DEBUG [a9fc3e85] 	 * pry (0.11.3)
+ DEBUG [a9fc3e85] 	 * spring (2.0.2)
+ DEBUG [a9fc3e85] 	 * web-console (2.3.0)
+ DEBUG [a9fc3e85] 	Install missing gems with `bundle install`
+ DEBUG [a9fc3e85] Finished in 1.520 seconds with exit status 1 (failed).
+  INFO [5c80077e] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/events_deploy/shared/bundle --without development test --deployment --quiet as deploy@18.191.228.32
+ DEBUG [5c80077e] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615114709 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/events_deploy/shared/bundle --without development test --deployment --quiet )
+  INFO [5c80077e] Finished in 2.077 seconds with exit status 0 (successful).
+ DEBUG [b515f51a] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615114709; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615114709'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [b515f51a] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615114709; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615114709'" 1>&2; false; fi
+ DEBUG [b515f51a] Finished in 1.220 seconds with exit status 0 (successful).
+  INFO [0a40abf4] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@18.191.228.32
+ DEBUG [0a40abf4] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615114709 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [0a40abf4] Finished in 12.168 seconds with exit status 0 (successful).
+ DEBUG [a39c203d] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615114709; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615114709'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [a39c203d] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615114709; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615114709'" 1>&2; false; fi
+ DEBUG [a39c203d] Finished in 2.029 seconds with exit status 0 (successful).
+  INFO [19a8f1ae] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615114709/assets_manifest_backup as deploy@18.191.228.32
+ DEBUG [19a8f1ae] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615114709 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615114709/assets_manifest_backup )
+  INFO [19a8f1ae] Finished in 0.840 seconds with exit status 0 (successful).
+ DEBUG [bec777d6] Running /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets/.sprockets-manifest* as deploy@18.191.228.32
+ DEBUG [bec777d6] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615114709 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets/.sprockets-manifest* )
+ DEBUG [bec777d6] 	/u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json
+ DEBUG [bec777d6] Finished in 0.836 seconds with exit status 0 (successful).
+ DEBUG [459bd1b8] Running /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets/.sprockets-manifest* as deploy@18.191.228.32
+ DEBUG [459bd1b8] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615114709 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets/.sprockets-manifest* )
+ DEBUG [459bd1b8] 	/u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json
+ DEBUG [459bd1b8] Finished in 0.858 seconds with exit status 0 (successful).
+  INFO [6b10e65d] Running /usr/bin/env cp /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json /u01/apps/qwinix/events_deploy/releases/20180615114709/assets_manifest_backup as deploy@18.191.228.32
+ DEBUG [6b10e65d] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615114709 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cp /u01/apps/qwinix/events_deploy/releases/20180615114709/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json /u01/apps/qwinix/events_deploy/releases/20180615114709/assets_manifest_backup )
+  INFO [6b10e65d] Finished in 0.908 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [78f48b98] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615114709; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615114709'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [78f48b98] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615114709; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615114709'" 1>&2; false; fi
+ DEBUG [78f48b98] Finished in 0.874 seconds with exit status 0 (successful).
+  INFO [76bb4b53] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@18.191.228.32
+ DEBUG [76bb4b53] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615114709 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [76bb4b53] 	  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  INFO [76bb4b53] Finished in 2.696 seconds with exit status 0 (successful).
+  INFO [f9eca611] Running /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/releases/20180615114709 /u01/apps/qwinix/events_deploy/releases/current as deploy@18.191.228.32
+ DEBUG [f9eca611] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/releases/20180615114709 /u01/apps/qwinix/events_deploy/releases/current )
+  INFO [f9eca611] Finished in 0.834 seconds with exit status 0 (successful).
+  INFO [476df149] Running /usr/bin/env mv /u01/apps/qwinix/events_deploy/releases/current /u01/apps/qwinix/events_deploy as deploy@18.191.228.32
+ DEBUG [476df149] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mv /u01/apps/qwinix/events_deploy/releases/current /u01/apps/qwinix/events_deploy )
+  INFO [476df149] Finished in 0.829 seconds with exit status 0 (successful).
+ DEBUG [42685eae] Running /usr/bin/env ls -x /u01/apps/qwinix/events_deploy/releases as deploy@18.191.228.32
+ DEBUG [42685eae] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls -x /u01/apps/qwinix/events_deploy/releases )
+ DEBUG [42685eae] 	20180615105016	20180615105741	20180615112750	20180615114709
+ DEBUG [42685eae] Finished in 0.909 seconds with exit status 0 (successful).
+ DEBUG [5f128cb6] Running if test ! -d /u01/apps/qwinix/events_deploy/releases; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [5f128cb6] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases'" 1>&2; false; fi
+ DEBUG [5f128cb6] Finished in 0.833 seconds with exit status 0 (successful).
+  INFO [1bd1597e] Running /usr/bin/env echo "Branch master (at 6381d885c06274d30a4bee1cf910147fbc30b523) deployed as release 20180615114709 by qwinix-pc" >> /u01/apps/qwinix/events_deploy/revisions.log as deploy@18.191.228.32
+ DEBUG [1bd1597e] Command: cd /u01/apps/qwinix/events_deploy/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "Branch master (at 6381d885c06274d30a4bee1cf910147fbc30b523) deployed as release 20180615114709 by qwinix-pc" >> /u01/apps/qwinix/events_deploy/revisions.log )
+  INFO [1bd1597e] Finished in 0.852 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-15 17:23:42 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [7977bf1c] Running /usr/bin/env mkdir -p /tmp as deploy@18.191.228.32
+ DEBUG [7977bf1c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [7977bf1c] Finished in 10.912 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh 100.0%
+  INFO [8d0748a0] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh as deploy@18.191.228.32
+ DEBUG [8d0748a0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh )
+  INFO [8d0748a0] Finished in 3.197 seconds with exit status 0 (successful).
+  INFO [d1c51688] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as deploy@18.191.228.32
+ DEBUG [d1c51688] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [d1c51688] 	6381d885c06274d30a4bee1cf910147fbc30b523	HEAD
+  INFO [d1c51688] Finished in 4.488 seconds with exit status 0 (successful).
+  INFO [b36be0a8] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared /u01/apps/qwinix/events_deploy/releases as deploy@18.191.228.32
+ DEBUG [b36be0a8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared /u01/apps/qwinix/events_deploy/releases )
+  INFO [b36be0a8] Finished in 3.174 seconds with exit status 0 (successful).
+  INFO [e7fb98dc] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared/public/assets as deploy@18.191.228.32
+ DEBUG [e7fb98dc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared/public/assets )
+  INFO [e7fb98dc] Finished in 0.908 seconds with exit status 0 (successful).
+ DEBUG [b261acf8] Running [ -f /u01/apps/qwinix/events_deploy/current/REVISION ] as deploy@18.191.228.32
+ DEBUG [b261acf8] Command: [ -f /u01/apps/qwinix/events_deploy/current/REVISION ]
+ DEBUG [b261acf8] Finished in 3.148 seconds with exit status 0 (successful).
+ DEBUG [16f6cacb] Running /usr/bin/env cat /u01/apps/qwinix/events_deploy/current/REVISION 2>/dev/null as deploy@18.191.228.32
+ DEBUG [16f6cacb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cat /u01/apps/qwinix/events_deploy/current/REVISION 2>/dev/null )
+ DEBUG [16f6cacb] 	6381d885c06274d30a4bee1cf910147fbc30b523
+ DEBUG [16f6cacb] Finished in 2.290 seconds with exit status 0 (successful).
+ DEBUG [a8e4c454] Running [ -f /u01/apps/qwinix/events_deploy/repo/HEAD ] as deploy@18.191.228.32
+ DEBUG [a8e4c454] Command: [ -f /u01/apps/qwinix/events_deploy/repo/HEAD ]
+ DEBUG [a8e4c454] Finished in 1.091 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /u01/apps/qwinix/events_deploy/repo
+ DEBUG [3ec34b65] Running if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [3ec34b65] Command: if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi
+ DEBUG [3ec34b65] Finished in 0.936 seconds with exit status 0 (successful).
+  INFO [eca9213c] Running /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event as deploy@18.191.228.32
+ DEBUG [eca9213c] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event )
+  INFO [eca9213c] Finished in 0.887 seconds with exit status 0 (successful).
+  INFO [afabcd4a] Running /usr/bin/env git remote update --prune as deploy@18.191.228.32
+ DEBUG [afabcd4a] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [afabcd4a] 	Fetching origin
+  INFO [afabcd4a] Finished in 1.356 seconds with exit status 0 (successful).
+ DEBUG [031e748d] Running if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [031e748d] Command: if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi
+ DEBUG [031e748d] Finished in 0.932 seconds with exit status 0 (successful).
+  INFO [fb8c9e56] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615115416 as deploy@18.191.228.32
+ DEBUG [fb8c9e56] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615115416 )
+  INFO [fb8c9e56] Finished in 0.955 seconds with exit status 0 (successful).
+  INFO [d14aa2ab] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/events_deploy/releases/20180615115416 as deploy@18.191.228.32
+ DEBUG [d14aa2ab] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/events_deploy/releases/20180615115416 )
+  INFO [d14aa2ab] Finished in 1.082 seconds with exit status 0 (successful).
+ DEBUG [44078cce] Running if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [44078cce] Command: if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi
+ DEBUG [44078cce] Finished in 1.393 seconds with exit status 0 (successful).
+ DEBUG [f2115b78] Running /usr/bin/env git rev-list --max-count=1 master as deploy@18.191.228.32
+ DEBUG [f2115b78] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f2115b78] 	6381d885c06274d30a4bee1cf910147fbc30b523
+ DEBUG [f2115b78] Finished in 1.990 seconds with exit status 0 (successful).
+ DEBUG [eaf1b808] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615115416; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615115416'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [eaf1b808] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615115416; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615115416'" 1>&2; false; fi
+ DEBUG [eaf1b808] Finished in 1.416 seconds with exit status 0 (successful).
+  INFO [465f75f7] Running /usr/bin/env echo "6381d885c06274d30a4bee1cf910147fbc30b523" > REVISION as deploy@18.191.228.32
+ DEBUG [465f75f7] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615115416 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "6381d885c06274d30a4bee1cf910147fbc30b523" > REVISION )
+  INFO [465f75f7] Finished in 0.936 seconds with exit status 0 (successful).
+  INFO [fa47445a] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615115416/public as deploy@18.191.228.32
+ DEBUG [fa47445a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615115416/public )
+  INFO [fa47445a] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [88c91990] Running [ -L /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets ] as deploy@18.191.228.32
+ DEBUG [88c91990] Command: [ -L /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets ]
+ DEBUG [88c91990] Finished in 1.566 seconds with exit status 1 (failed).
+ DEBUG [b44626e1] Running [ -d /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets ] as deploy@18.191.228.32
+ DEBUG [b44626e1] Command: [ -d /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets ]
+ DEBUG [b44626e1] Finished in 1.139 seconds with exit status 1 (failed).
+  INFO [86c377b2] Running /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/shared/public/assets /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets as deploy@18.191.228.32
+ DEBUG [86c377b2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/shared/public/assets /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets )
+  INFO [86c377b2] Finished in 1.100 seconds with exit status 0 (successful).
+ DEBUG [675dde86] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615115416; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615115416'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [675dde86] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615115416; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615115416'" 1>&2; false; fi
+ DEBUG [675dde86] Finished in 1.651 seconds with exit status 0 (successful).
+ DEBUG [a7f7956c] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/events_deploy/shared/bundle as deploy@18.191.228.32
+ DEBUG [a7f7956c] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615115416 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/events_deploy/shared/bundle )
+ DEBUG [a7f7956c] 	Your Gemfile lists the gem pg (= 0.20.0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [a7f7956c] 	The following gems are missing
+ DEBUG [a7f7956c] 	 * debug_inspector (0.0.3)
+ DEBUG [a7f7956c] 	 * binding_of_caller (0.8.0)
+ DEBUG [a7f7956c] 	 * byebug (10.0.2)
+ DEBUG [a7f7956c] 	 * coderay (1.1.2)
+ DEBUG [a7f7956c] 	 * method_source (0.9.0)
+ DEBUG [a7f7956c] 	 * pry (0.11.3)
+ DEBUG [a7f7956c] 	 * spring (2.0.2)
+ DEBUG [a7f7956c] 	 * web-console (2.3.0)
+ DEBUG [a7f7956c] 	Install missing gems with `bundle install`
+ DEBUG [a7f7956c] Finished in 1.533 seconds with exit status 1 (failed).
+  INFO [b629c616] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/events_deploy/shared/bundle --without development test --deployment --quiet as deploy@18.191.228.32
+ DEBUG [b629c616] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615115416 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/events_deploy/shared/bundle --without development test --deployment --quiet )
+  INFO [b629c616] Finished in 2.193 seconds with exit status 0 (successful).
+ DEBUG [90175638] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615115416; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615115416'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [90175638] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615115416; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615115416'" 1>&2; false; fi
+ DEBUG [90175638] Finished in 0.887 seconds with exit status 0 (successful).
+  INFO [69e49070] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@18.191.228.32
+ DEBUG [69e49070] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615115416 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [69e49070] Finished in 12.650 seconds with exit status 0 (successful).
+ DEBUG [9dee5b48] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615115416; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615115416'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [9dee5b48] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615115416; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615115416'" 1>&2; false; fi
+ DEBUG [9dee5b48] Finished in 1.222 seconds with exit status 0 (successful).
+  INFO [6dca4cce] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615115416/assets_manifest_backup as deploy@18.191.228.32
+ DEBUG [6dca4cce] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615115416 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615115416/assets_manifest_backup )
+  INFO [6dca4cce] Finished in 1.040 seconds with exit status 0 (successful).
+ DEBUG [4bb3fdc9] Running /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets/.sprockets-manifest* as deploy@18.191.228.32
+ DEBUG [4bb3fdc9] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615115416 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets/.sprockets-manifest* )
+ DEBUG [4bb3fdc9] 	/u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json
+ DEBUG [4bb3fdc9] Finished in 2.349 seconds with exit status 0 (successful).
+ DEBUG [158402d9] Running /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets/.sprockets-manifest* as deploy@18.191.228.32
+ DEBUG [158402d9] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615115416 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets/.sprockets-manifest* )
+ DEBUG [158402d9] 	/u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json
+ DEBUG [158402d9] Finished in 1.177 seconds with exit status 0 (successful).
+  INFO [381fffe1] Running /usr/bin/env cp /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json /u01/apps/qwinix/events_deploy/releases/20180615115416/assets_manifest_backup as deploy@18.191.228.32
+ DEBUG [381fffe1] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615115416 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cp /u01/apps/qwinix/events_deploy/releases/20180615115416/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json /u01/apps/qwinix/events_deploy/releases/20180615115416/assets_manifest_backup )
+  INFO [381fffe1] Finished in 1.505 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [93aa5d1b] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615115416; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615115416'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [93aa5d1b] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615115416; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615115416'" 1>&2; false; fi
+ DEBUG [93aa5d1b] Finished in 1.196 seconds with exit status 0 (successful).
+  INFO [8974e72d] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@18.191.228.32
+ DEBUG [8974e72d] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615115416 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [8974e72d] 	  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  INFO [8974e72d] Finished in 2.623 seconds with exit status 0 (successful).
+  INFO [dc96e02f] Running /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/releases/20180615115416 /u01/apps/qwinix/events_deploy/releases/current as deploy@18.191.228.32
+ DEBUG [dc96e02f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/releases/20180615115416 /u01/apps/qwinix/events_deploy/releases/current )
+  INFO [dc96e02f] Finished in 0.867 seconds with exit status 0 (successful).
+  INFO [35926839] Running /usr/bin/env mv /u01/apps/qwinix/events_deploy/releases/current /u01/apps/qwinix/events_deploy as deploy@18.191.228.32
+ DEBUG [35926839] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mv /u01/apps/qwinix/events_deploy/releases/current /u01/apps/qwinix/events_deploy )
+  INFO [35926839] Finished in 1.559 seconds with exit status 0 (successful).
+ DEBUG [2cbf1849] Running /usr/bin/env ls -x /u01/apps/qwinix/events_deploy/releases as deploy@18.191.228.32
+ DEBUG [2cbf1849] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls -x /u01/apps/qwinix/events_deploy/releases )
+ DEBUG [2cbf1849] 	20180615105016	20180615105741	20180615112750	20180615114709	20180615115416
+ DEBUG [2cbf1849] Finished in 1.443 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 5 deployed releases on 18.191.228.32
+ DEBUG [c520848b] Running [ -d /u01/apps/qwinix/events_deploy/current ] as deploy@18.191.228.32
+ DEBUG [c520848b] Command: [ -d /u01/apps/qwinix/events_deploy/current ]
+ DEBUG [c520848b] Finished in 1.057 seconds with exit status 0 (successful).
+ DEBUG [7950d5aa] Running /usr/bin/env readlink /u01/apps/qwinix/events_deploy/current as deploy@18.191.228.32
+ DEBUG [7950d5aa] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env readlink /u01/apps/qwinix/events_deploy/current )
+ DEBUG [7950d5aa] 	/u01/apps/qwinix/events_deploy/releases/20180615115416
+ DEBUG [7950d5aa] Finished in 1.329 seconds with exit status 0 (successful).
+  INFO No old releases (keeping newest 5) on 18.191.228.32
+ DEBUG [f4fe93d3] Running if test ! -d /u01/apps/qwinix/events_deploy/releases; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [f4fe93d3] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases'" 1>&2; false; fi
+ DEBUG [f4fe93d3] Finished in 2.440 seconds with exit status 0 (successful).
+  INFO [c3d7d3d1] Running /usr/bin/env echo "Branch master (at 6381d885c06274d30a4bee1cf910147fbc30b523) deployed as release 20180615115416 by qwinix-pc" >> /u01/apps/qwinix/events_deploy/revisions.log as deploy@18.191.228.32
+ DEBUG [c3d7d3d1] Command: cd /u01/apps/qwinix/events_deploy/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "Branch master (at 6381d885c06274d30a4bee1cf910147fbc30b523) deployed as release 20180615115416 by qwinix-pc" >> /u01/apps/qwinix/events_deploy/revisions.log )
+  INFO [c3d7d3d1] Finished in 0.956 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-15 17:37:33 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [e310b0fe] Running /usr/bin/env mkdir -p /tmp as deploy@18.191.228.32
+ DEBUG [e310b0fe] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [e310b0fe] Finished in 3.660 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh 100.0%
+  INFO [c507a54d] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh as deploy@18.191.228.32
+ DEBUG [c507a54d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh )
+  INFO [c507a54d] Finished in 0.829 seconds with exit status 0 (successful).
+  INFO [43ec864a] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as deploy@18.191.228.32
+ DEBUG [43ec864a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [43ec864a] 	6381d885c06274d30a4bee1cf910147fbc30b523	HEAD
+  INFO [43ec864a] Finished in 1.051 seconds with exit status 0 (successful).
+  INFO [9af2cbf4] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared /u01/apps/qwinix/events_deploy/releases as deploy@18.191.228.32
+ DEBUG [9af2cbf4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared /u01/apps/qwinix/events_deploy/releases )
+  INFO [9af2cbf4] Finished in 0.849 seconds with exit status 0 (successful).
+  INFO [29707559] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared/public/assets as deploy@18.191.228.32
+ DEBUG [29707559] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/shared/public/assets )
+  INFO [29707559] Finished in 0.837 seconds with exit status 0 (successful).
+ DEBUG [a95855bd] Running [ -f /u01/apps/qwinix/events_deploy/current/REVISION ] as deploy@18.191.228.32
+ DEBUG [a95855bd] Command: [ -f /u01/apps/qwinix/events_deploy/current/REVISION ]
+ DEBUG [a95855bd] Finished in 0.832 seconds with exit status 0 (successful).
+ DEBUG [2b3c1b4c] Running /usr/bin/env cat /u01/apps/qwinix/events_deploy/current/REVISION 2>/dev/null as deploy@18.191.228.32
+ DEBUG [2b3c1b4c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cat /u01/apps/qwinix/events_deploy/current/REVISION 2>/dev/null )
+ DEBUG [2b3c1b4c] 	6381d885c06274d30a4bee1cf910147fbc30b523
+ DEBUG [2b3c1b4c] Finished in 0.867 seconds with exit status 0 (successful).
+ DEBUG [0330731b] Running [ -f /u01/apps/qwinix/events_deploy/repo/HEAD ] as deploy@18.191.228.32
+ DEBUG [0330731b] Command: [ -f /u01/apps/qwinix/events_deploy/repo/HEAD ]
+ DEBUG [0330731b] Finished in 0.856 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /u01/apps/qwinix/events_deploy/repo
+ DEBUG [e217b9cb] Running if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [e217b9cb] Command: if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi
+ DEBUG [e217b9cb] Finished in 0.871 seconds with exit status 0 (successful).
+  INFO [32274e4e] Running /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event as deploy@18.191.228.32
+ DEBUG [32274e4e] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event )
+  INFO [32274e4e] Finished in 0.832 seconds with exit status 0 (successful).
+  INFO [721bc246] Running /usr/bin/env git remote update --prune as deploy@18.191.228.32
+ DEBUG [721bc246] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [721bc246] 	Fetching origin
+  INFO [721bc246] Finished in 1.066 seconds with exit status 0 (successful).
+ DEBUG [97d2f941] Running if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [97d2f941] Command: if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi
+ DEBUG [97d2f941] Finished in 0.912 seconds with exit status 0 (successful).
+  INFO [3525f63c] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615120744 as deploy@18.191.228.32
+ DEBUG [3525f63c] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615120744 )
+  INFO [3525f63c] Finished in 0.841 seconds with exit status 0 (successful).
+  INFO [21218c9f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/events_deploy/releases/20180615120744 as deploy@18.191.228.32
+ DEBUG [21218c9f] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/events_deploy/releases/20180615120744 )
+  INFO [21218c9f] Finished in 0.953 seconds with exit status 0 (successful).
+ DEBUG [2eb5841c] Running if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [2eb5841c] Command: if test ! -d /u01/apps/qwinix/events_deploy/repo; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/repo'" 1>&2; false; fi
+ DEBUG [2eb5841c] Finished in 0.860 seconds with exit status 0 (successful).
+ DEBUG [893a2a16] Running /usr/bin/env git rev-list --max-count=1 master as deploy@18.191.228.32
+ DEBUG [893a2a16] Command: cd /u01/apps/qwinix/events_deploy/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [893a2a16] 	6381d885c06274d30a4bee1cf910147fbc30b523
+ DEBUG [893a2a16] Finished in 0.834 seconds with exit status 0 (successful).
+ DEBUG [c98d1eb4] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615120744; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615120744'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [c98d1eb4] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615120744; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615120744'" 1>&2; false; fi
+ DEBUG [c98d1eb4] Finished in 0.838 seconds with exit status 0 (successful).
+  INFO [aa7ada40] Running /usr/bin/env echo "6381d885c06274d30a4bee1cf910147fbc30b523" > REVISION as deploy@18.191.228.32
+ DEBUG [aa7ada40] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615120744 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "6381d885c06274d30a4bee1cf910147fbc30b523" > REVISION )
+  INFO [aa7ada40] Finished in 0.854 seconds with exit status 0 (successful).
+  INFO [1053238f] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615120744/public as deploy@18.191.228.32
+ DEBUG [1053238f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615120744/public )
+  INFO [1053238f] Finished in 0.856 seconds with exit status 0 (successful).
+ DEBUG [d245584e] Running [ -L /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets ] as deploy@18.191.228.32
+ DEBUG [d245584e] Command: [ -L /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets ]
+ DEBUG [d245584e] Finished in 0.840 seconds with exit status 1 (failed).
+ DEBUG [141e78fa] Running [ -d /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets ] as deploy@18.191.228.32
+ DEBUG [141e78fa] Command: [ -d /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets ]
+ DEBUG [141e78fa] Finished in 0.902 seconds with exit status 1 (failed).
+  INFO [7897e3aa] Running /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/shared/public/assets /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets as deploy@18.191.228.32
+ DEBUG [7897e3aa] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/shared/public/assets /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets )
+  INFO [7897e3aa] Finished in 0.847 seconds with exit status 0 (successful).
+ DEBUG [301d904d] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615120744; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615120744'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [301d904d] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615120744; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615120744'" 1>&2; false; fi
+ DEBUG [301d904d] Finished in 0.834 seconds with exit status 0 (successful).
+ DEBUG [b2855334] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/events_deploy/shared/bundle as deploy@18.191.228.32
+ DEBUG [b2855334] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615120744 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/events_deploy/shared/bundle )
+ DEBUG [b2855334] 	Your Gemfile lists the gem pg (= 0.20.0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [b2855334] 	The following gems are missing
+ DEBUG [b2855334] 	 * debug_inspector (0.0.3)
+ DEBUG [b2855334] 	 * binding_of_caller (0.8.0)
+ DEBUG [b2855334] 	 * byebug (10.0.2)
+ DEBUG [b2855334] 	 * coderay (1.1.2)
+ DEBUG [b2855334] 	 * method_source (0.9.0)
+ DEBUG [b2855334] 	 * pry (0.11.3)
+ DEBUG [b2855334] 	 * spring (2.0.2)
+ DEBUG [b2855334] 	 * web-console (2.3.0)
+ DEBUG [b2855334] 	Install missing gems with `bundle install`
+ DEBUG [b2855334] Finished in 1.139 seconds with exit status 1 (failed).
+  INFO [e7be0e7f] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/events_deploy/shared/bundle --without development test --deployment --quiet as deploy@18.191.228.32
+ DEBUG [e7be0e7f] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615120744 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/events_deploy/shared/bundle --without development test --deployment --quiet )
+  INFO [e7be0e7f] Finished in 1.163 seconds with exit status 0 (successful).
+ DEBUG [70ffb73a] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615120744; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615120744'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [70ffb73a] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615120744; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615120744'" 1>&2; false; fi
+ DEBUG [70ffb73a] Finished in 0.880 seconds with exit status 0 (successful).
+  INFO [989653f6] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@18.191.228.32
+ DEBUG [989653f6] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615120744 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [989653f6] Finished in 12.352 seconds with exit status 0 (successful).
+ DEBUG [b88d6e3a] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615120744; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615120744'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [b88d6e3a] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615120744; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615120744'" 1>&2; false; fi
+ DEBUG [b88d6e3a] Finished in 0.840 seconds with exit status 0 (successful).
+  INFO [a659fc1c] Running /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615120744/assets_manifest_backup as deploy@18.191.228.32
+ DEBUG [a659fc1c] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615120744 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/events_deploy/releases/20180615120744/assets_manifest_backup )
+  INFO [a659fc1c] Finished in 0.873 seconds with exit status 0 (successful).
+ DEBUG [74e5e0b0] Running /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets/.sprockets-manifest* as deploy@18.191.228.32
+ DEBUG [74e5e0b0] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615120744 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets/.sprockets-manifest* )
+ DEBUG [74e5e0b0] 	/u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json
+ DEBUG [74e5e0b0] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG [695778c9] Running /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets/.sprockets-manifest* as deploy@18.191.228.32
+ DEBUG [695778c9] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615120744 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets/.sprockets-manifest* )
+ DEBUG [695778c9] 	/u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json
+ DEBUG [695778c9] Finished in 0.835 seconds with exit status 0 (successful).
+  INFO [e68d3c12] Running /usr/bin/env cp /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json /u01/apps/qwinix/events_deploy/releases/20180615120744/assets_manifest_backup as deploy@18.191.228.32
+ DEBUG [e68d3c12] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615120744 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cp /u01/apps/qwinix/events_deploy/releases/20180615120744/public/assets/.sprockets-manifest-54c45e1ab708ab4cfd678043855875a1.json /u01/apps/qwinix/events_deploy/releases/20180615120744/assets_manifest_backup )
+  INFO [e68d3c12] Finished in 0.929 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [d9843b9f] Running if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615120744; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615120744'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [d9843b9f] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases/20180615120744; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases/20180615120744'" 1>&2; false; fi
+ DEBUG [d9843b9f] Finished in 0.850 seconds with exit status 0 (successful).
+  INFO [522c4bb0] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@18.191.228.32
+ DEBUG [522c4bb0] Command: cd /u01/apps/qwinix/events_deploy/releases/20180615120744 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [522c4bb0] 	  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  INFO [522c4bb0] Finished in 2.609 seconds with exit status 0 (successful).
+  INFO [c5d4525c] Running /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/releases/20180615120744 /u01/apps/qwinix/events_deploy/releases/current as deploy@18.191.228.32
+ DEBUG [c5d4525c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /u01/apps/qwinix/events_deploy/releases/20180615120744 /u01/apps/qwinix/events_deploy/releases/current )
+  INFO [c5d4525c] Finished in 0.859 seconds with exit status 0 (successful).
+  INFO [80a5a12a] Running /usr/bin/env mv /u01/apps/qwinix/events_deploy/releases/current /u01/apps/qwinix/events_deploy as deploy@18.191.228.32
+ DEBUG [80a5a12a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mv /u01/apps/qwinix/events_deploy/releases/current /u01/apps/qwinix/events_deploy )
+  INFO [80a5a12a] Finished in 0.907 seconds with exit status 0 (successful).
+ DEBUG [8e0c78c7] Running /usr/bin/env ls -x /u01/apps/qwinix/events_deploy/releases as deploy@18.191.228.32
+ DEBUG [8e0c78c7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls -x /u01/apps/qwinix/events_deploy/releases )
+ DEBUG [8e0c78c7] 	20180615105016	20180615105741	20180615112750	20180615114709	20180615115416
+20180615120744
+ DEBUG [8e0c78c7] Finished in 0.860 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 18.191.228.32
+ DEBUG [ecea3cac] Running [ -d /u01/apps/qwinix/events_deploy/current ] as deploy@18.191.228.32
+ DEBUG [ecea3cac] Command: [ -d /u01/apps/qwinix/events_deploy/current ]
+ DEBUG [ecea3cac] Finished in 0.939 seconds with exit status 0 (successful).
+ DEBUG [810213df] Running /usr/bin/env readlink /u01/apps/qwinix/events_deploy/current as deploy@18.191.228.32
+ DEBUG [810213df] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env readlink /u01/apps/qwinix/events_deploy/current )
+ DEBUG [810213df] 	/u01/apps/qwinix/events_deploy/releases/20180615120744
+ DEBUG [810213df] Finished in 1.011 seconds with exit status 0 (successful).
+  INFO [c75a925d] Running /usr/bin/env rm -rf /u01/apps/qwinix/events_deploy/releases/20180615105016 as deploy@18.191.228.32
+ DEBUG [c75a925d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /u01/apps/qwinix/events_deploy/releases/20180615105016 )
+  INFO [c75a925d] Finished in 0.912 seconds with exit status 0 (successful).
+ DEBUG [57c8a741] Running if test ! -d /u01/apps/qwinix/events_deploy/releases; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases'" 1>&2; false; fi as deploy@18.191.228.32
+ DEBUG [57c8a741] Command: if test ! -d /u01/apps/qwinix/events_deploy/releases; then echo "Directory does not exist '/u01/apps/qwinix/events_deploy/releases'" 1>&2; false; fi
+ DEBUG [57c8a741] Finished in 0.893 seconds with exit status 0 (successful).
+  INFO [a8e4aabc] Running /usr/bin/env echo "Branch master (at 6381d885c06274d30a4bee1cf910147fbc30b523) deployed as release 20180615120744 by qwinix-pc" >> /u01/apps/qwinix/events_deploy/revisions.log as deploy@18.191.228.32
+ DEBUG [a8e4aabc] Command: cd /u01/apps/qwinix/events_deploy/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "Branch master (at 6381d885c06274d30a4bee1cf910147fbc30b523) deployed as release 20180615120744 by qwinix-pc" >> /u01/apps/qwinix/events_deploy/revisions.log )
+  INFO [a8e4aabc] Finished in 0.834 seconds with exit status 0 (successful).
