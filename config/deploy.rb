@@ -11,7 +11,7 @@ set :repo_url, "https://github.com/sunil-ramesh/vekatesh_event"
 # set :puma_conf, "#{current_path}/config/puma.rb"
 # set :puma_access_log, "#{shared_path}/log/puma_access.log"
 # set :puma_error_log, "#{shared_path}/log/puma_error.log"
-set :bundle exec puma -C /u01/apps/qwinix/events_deploy/shared/puma.rb –daemon
+
 # # set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 # set :puma_state, "#{shared_path}/tmp/pids/puma.state"
 # set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
