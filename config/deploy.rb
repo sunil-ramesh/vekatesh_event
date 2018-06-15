@@ -4,33 +4,33 @@
 set :application, "venkatesh_event"
 set :repo_url, "https://github.com/sunil-ramesh/vekatesh_event"
 
- set :puma_rackup, -> { File.join(current_path, 'config.ru') }
-set :puma_state, "#{shared_path}/tmp/pids/puma.state"
-set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
-set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"   #accept array for multi-bind
-set :puma_conf, "#{current_path}/config/puma.rb"
-set :puma_access_log, "#{shared_path}/log/puma_access.log"
-set :puma_error_log, "#{shared_path}/log/puma_error.log"
+#  set :puma_rackup, -> { File.join(current_path, 'config.ru') }
+# set :puma_state, "#{shared_path}/tmp/pids/puma.state"
+# set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
+# set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"   #accept array for multi-bind
+# set :puma_conf, "#{current_path}/config/puma.rb"
+# set :puma_access_log, "#{shared_path}/log/puma_access.log"
+# set :puma_error_log, "#{shared_path}/log/puma_error.log"
 
-# set :puma_rackup, -> { File.join(current_path, 'config.ru') }
-set :puma_state, "#{shared_path}/tmp/pids/puma.state"
-set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
-set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"   #accept array for multi-bind
-set :puma_conf, "#{current_path}/config/puma.rb"
-set :puma_access_log, "#{shared_path}/log/puma_access.log"
-set :puma_error_log, "#{shared_path}/log/puma_error.log"
+# # set :puma_rackup, -> { File.join(current_path, 'config.ru') }
+# set :puma_state, "#{shared_path}/tmp/pids/puma.state"
+# set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
+# set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"   #accept array for multi-bind
+# set :puma_conf, "#{current_path}/config/puma.rb"
+# set :puma_access_log, "#{shared_path}/log/puma_access.log"
+# set :puma_error_log, "#{shared_path}/log/puma_error.log"
 
-namespace :puma do
-  desc 'Create Directories for Puma Pids and Socket'
-  task :make_dirs do
-    on roles(:app) do
-      execute "mkdir #{shared_path}/tmp/sockets -p"
-      execute "mkdir #{shared_path}/tmp/pids -p"
-    end
-  end
+# namespace :puma do
+#   desc 'Create Directories for Puma Pids and Socket'
+#   task :make_dirs do
+#     on roles(:app) do
+#       execute "mkdir #{shared_path}/tmp/sockets -p"
+#       execute "mkdir #{shared_path}/tmp/pids -p"
+#     end
+#   end
 
-  before :start, :make_dirs
-end
+#   before :start, :make_dirs
+# end
 
 # namespace :deploy do
 
