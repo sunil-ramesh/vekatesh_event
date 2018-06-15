@@ -19381,3 +19381,203 @@ While it's not a problem now, it could cause errors if you change the version of
   INFO [94eb17cb] Running /usr/bin/env echo "Branch master (at 6381d885c06274d30a4bee1cf910147fbc30b523) deployed as release 20180612113133 by qwinix-pc" >> /u01/apps/qwinix/bug_tracker/revisions.log as deploy@18.218.168.189
  DEBUG [94eb17cb] Command: cd /u01/apps/qwinix/bug_tracker/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "Branch master (at 6381d885c06274d30a4bee1cf910147fbc30b523) deployed as release 20180612113133 by qwinix-pc" >> /u01/apps/qwinix/bug_tracker/revisions.log )
   INFO [94eb17cb] Finished in 0.883 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-15 11:26:58 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [1fb7f141] Running /usr/bin/env mkdir -p /tmp as deploy@18.191.179.1
+ DEBUG [1fb7f141] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [1fb7f141] Finished in 4.117 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh 100.0%
+  INFO [db7e80b2] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh as deploy@18.191.179.1
+ DEBUG [db7e80b2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh )
+  INFO [db7e80b2] Finished in 0.883 seconds with exit status 0 (successful).
+  INFO [242c6bd6] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as deploy@18.191.179.1
+ DEBUG [242c6bd6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [242c6bd6] 	6381d885c06274d30a4bee1cf910147fbc30b523	HEAD
+  INFO [242c6bd6] Finished in 1.097 seconds with exit status 0 (successful).
+  INFO [f5b67908] Running /usr/bin/env mkdir -p /u01/apps/qwinix/sunil_event/shared /u01/apps/qwinix/sunil_event/releases as deploy@18.191.179.1
+ DEBUG [f5b67908] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/sunil_event/shared /u01/apps/qwinix/sunil_event/releases )
+ DEBUG [f5b67908] 	mkdir: 
+ DEBUG [f5b67908] 	cannot create directory ‘/u01/apps/qwinix/sunil_event/releases’
+ DEBUG [f5b67908] 	: Permission denied
+ DEBUG [f5b67908] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-15 11:29:05 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [05e55b9a] Running /usr/bin/env mkdir -p /tmp as deploy@18.191.179.1
+ DEBUG [05e55b9a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [05e55b9a] Finished in 3.293 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh 0.0%
+  INFO Uploading /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh 100.0%
+  INFO [111d5bbc] Running /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh as deploy@18.191.179.1
+ DEBUG [111d5bbc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh )
+  INFO [111d5bbc] Finished in 0.788 seconds with exit status 0 (successful).
+  INFO [1b1c7784] Running /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD as deploy@18.191.179.1
+ DEBUG [1b1c7784] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git ls-remote https://github.com/sunil-ramesh/vekatesh_event HEAD )
+ DEBUG [1b1c7784] 	6381d885c06274d30a4bee1cf910147fbc30b523	HEAD
+  INFO [1b1c7784] Finished in 0.982 seconds with exit status 0 (successful).
+  INFO [46030526] Running /usr/bin/env mkdir -p /u01/apps/qwinix/sunil_event/shared /u01/apps/qwinix/sunil_event/releases as deploy@18.191.179.1
+ DEBUG [46030526] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/sunil_event/shared /u01/apps/qwinix/sunil_event/releases )
+  INFO [46030526] Finished in 0.776 seconds with exit status 0 (successful).
+  INFO [1dbf9fdd] Running /usr/bin/env mkdir -p /u01/apps/qwinix/sunil_event/shared/public/assets as deploy@18.191.179.1
+ DEBUG [1dbf9fdd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/sunil_event/shared/public/assets )
+  INFO [1dbf9fdd] Finished in 0.771 seconds with exit status 0 (successful).
+ DEBUG [8f29ec26] Running [ -f /u01/apps/qwinix/sunil_event/current/REVISION ] as deploy@18.191.179.1
+ DEBUG [8f29ec26] Command: [ -f /u01/apps/qwinix/sunil_event/current/REVISION ]
+ DEBUG [8f29ec26] Finished in 0.774 seconds with exit status 1 (failed).
+ DEBUG [f39d512e] Running [ -f /u01/apps/qwinix/sunil_event/repo/HEAD ] as deploy@18.191.179.1
+ DEBUG [f39d512e] Command: [ -f /u01/apps/qwinix/sunil_event/repo/HEAD ]
+ DEBUG [f39d512e] Finished in 0.853 seconds with exit status 1 (failed).
+ DEBUG [d2ad8fbf] Running if test ! -d /u01/apps/qwinix/sunil_event; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event'" 1>&2; false; fi as deploy@18.191.179.1
+ DEBUG [d2ad8fbf] Command: if test ! -d /u01/apps/qwinix/sunil_event; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event'" 1>&2; false; fi
+ DEBUG [d2ad8fbf] Finished in 0.788 seconds with exit status 0 (successful).
+  INFO [c2495f5e] Running /usr/bin/env git clone --mirror https://github.com/sunil-ramesh/vekatesh_event /u01/apps/qwinix/sunil_event/repo as deploy@18.191.179.1
+ DEBUG [c2495f5e] Command: cd /u01/apps/qwinix/sunil_event && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git clone --mirror https://github.com/sunil-ramesh/vekatesh_event /u01/apps/qwinix/sunil_event/repo )
+ DEBUG [c2495f5e] 	Cloning into bare repository '/u01/apps/qwinix/sunil_event/repo'...
+  INFO [c2495f5e] Finished in 2.487 seconds with exit status 0 (successful).
+ DEBUG [7cdd5f4b] Running if test ! -d /u01/apps/qwinix/sunil_event/repo; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event/repo'" 1>&2; false; fi as deploy@18.191.179.1
+ DEBUG [7cdd5f4b] Command: if test ! -d /u01/apps/qwinix/sunil_event/repo; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event/repo'" 1>&2; false; fi
+ DEBUG [7cdd5f4b] Finished in 0.966 seconds with exit status 0 (successful).
+  INFO [7bb34522] Running /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event as deploy@18.191.179.1
+ DEBUG [7bb34522] Command: cd /u01/apps/qwinix/sunil_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git remote set-url origin https://github.com/sunil-ramesh/vekatesh_event )
+  INFO [7bb34522] Finished in 0.995 seconds with exit status 0 (successful).
+  INFO [741923d7] Running /usr/bin/env git remote update --prune as deploy@18.191.179.1
+ DEBUG [741923d7] Command: cd /u01/apps/qwinix/sunil_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [741923d7] 	Fetching origin
+  INFO [741923d7] Finished in 1.582 seconds with exit status 0 (successful).
+ DEBUG [da59bd39] Running if test ! -d /u01/apps/qwinix/sunil_event/repo; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event/repo'" 1>&2; false; fi as deploy@18.191.179.1
+ DEBUG [da59bd39] Command: if test ! -d /u01/apps/qwinix/sunil_event/repo; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event/repo'" 1>&2; false; fi
+ DEBUG [da59bd39] Finished in 0.767 seconds with exit status 0 (successful).
+  INFO [f1280f52] Running /usr/bin/env mkdir -p /u01/apps/qwinix/sunil_event/releases/20180615055914 as deploy@18.191.179.1
+ DEBUG [f1280f52] Command: cd /u01/apps/qwinix/sunil_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env mkdir -p /u01/apps/qwinix/sunil_event/releases/20180615055914 )
+  INFO [f1280f52] Finished in 0.759 seconds with exit status 0 (successful).
+  INFO [bee01552] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/sunil_event/releases/20180615055914 as deploy@18.191.179.1
+ DEBUG [bee01552] Command: cd /u01/apps/qwinix/sunil_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /u01/apps/qwinix/sunil_event/releases/20180615055914 )
+  INFO [bee01552] Finished in 0.909 seconds with exit status 0 (successful).
+ DEBUG [740a3312] Running if test ! -d /u01/apps/qwinix/sunil_event/repo; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event/repo'" 1>&2; false; fi as deploy@18.191.179.1
+ DEBUG [740a3312] Command: if test ! -d /u01/apps/qwinix/sunil_event/repo; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event/repo'" 1>&2; false; fi
+ DEBUG [740a3312] Finished in 0.767 seconds with exit status 0 (successful).
+ DEBUG [24005bb4] Running /usr/bin/env git rev-list --max-count=1 master as deploy@18.191.179.1
+ DEBUG [24005bb4] Command: cd /u01/apps/qwinix/sunil_event/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-venkatesh_event-production-qwinix-pc.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [24005bb4] 	6381d885c06274d30a4bee1cf910147fbc30b523
+ DEBUG [24005bb4] Finished in 0.767 seconds with exit status 0 (successful).
+ DEBUG [1beaceb5] Running if test ! -d /u01/apps/qwinix/sunil_event/releases/20180615055914; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event/releases/20180615055914'" 1>&2; false; fi as deploy@18.191.179.1
+ DEBUG [1beaceb5] Command: if test ! -d /u01/apps/qwinix/sunil_event/releases/20180615055914; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event/releases/20180615055914'" 1>&2; false; fi
+ DEBUG [1beaceb5] Finished in 0.770 seconds with exit status 0 (successful).
+  INFO [e3495476] Running /usr/bin/env echo "6381d885c06274d30a4bee1cf910147fbc30b523" > REVISION as deploy@18.191.179.1
+ DEBUG [e3495476] Command: cd /u01/apps/qwinix/sunil_event/releases/20180615055914 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "6381d885c06274d30a4bee1cf910147fbc30b523" > REVISION )
+  INFO [e3495476] Finished in 0.758 seconds with exit status 0 (successful).
+  INFO [3da3132d] Running /usr/bin/env mkdir -p /u01/apps/qwinix/sunil_event/releases/20180615055914/public as deploy@18.191.179.1
+ DEBUG [3da3132d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /u01/apps/qwinix/sunil_event/releases/20180615055914/public )
+  INFO [3da3132d] Finished in 0.795 seconds with exit status 0 (successful).
+ DEBUG [93768798] Running [ -L /u01/apps/qwinix/sunil_event/releases/20180615055914/public/assets ] as deploy@18.191.179.1
+ DEBUG [93768798] Command: [ -L /u01/apps/qwinix/sunil_event/releases/20180615055914/public/assets ]
+ DEBUG [93768798] Finished in 0.792 seconds with exit status 1 (failed).
+ DEBUG [4f9851f1] Running [ -d /u01/apps/qwinix/sunil_event/releases/20180615055914/public/assets ] as deploy@18.191.179.1
+ DEBUG [4f9851f1] Command: [ -d /u01/apps/qwinix/sunil_event/releases/20180615055914/public/assets ]
+ DEBUG [4f9851f1] Finished in 0.769 seconds with exit status 1 (failed).
+  INFO [48f62164] Running /usr/bin/env ln -s /u01/apps/qwinix/sunil_event/shared/public/assets /u01/apps/qwinix/sunil_event/releases/20180615055914/public/assets as deploy@18.191.179.1
+ DEBUG [48f62164] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /u01/apps/qwinix/sunil_event/shared/public/assets /u01/apps/qwinix/sunil_event/releases/20180615055914/public/assets )
+  INFO [48f62164] Finished in 0.760 seconds with exit status 0 (successful).
+ DEBUG [6a460cfd] Running if test ! -d /u01/apps/qwinix/sunil_event/releases/20180615055914; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event/releases/20180615055914'" 1>&2; false; fi as deploy@18.191.179.1
+ DEBUG [6a460cfd] Command: if test ! -d /u01/apps/qwinix/sunil_event/releases/20180615055914; then echo "Directory does not exist '/u01/apps/qwinix/sunil_event/releases/20180615055914'" 1>&2; false; fi
+ DEBUG [6a460cfd] Finished in 0.761 seconds with exit status 0 (successful).
+ DEBUG [5fcfdddc] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/sunil_event/shared/bundle as deploy@18.191.179.1
+ DEBUG [5fcfdddc] Command: cd /u01/apps/qwinix/sunil_event/releases/20180615055914 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /u01/apps/qwinix/sunil_event/shared/bundle )
+ DEBUG [5fcfdddc] 	Your Gemfile lists the gem pg (= 0.20.0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [5fcfdddc] 	The following gems are missing
+ DEBUG [5fcfdddc] 	 * rake (12.3.1)
+ DEBUG [5fcfdddc] 	 * concurrent-ruby (1.0.5)
+ DEBUG [5fcfdddc] 	 * i18n (0.9.5)
+ DEBUG [5fcfdddc] 	 * json (1.8.6)
+ DEBUG [5fcfdddc] 	 * minitest (5.11.3)
+ DEBUG [5fcfdddc] 	 * thread_safe (0.3.6)
+ DEBUG [5fcfdddc] 	 * tzinfo (1.2.5)
+ DEBUG [5fcfdddc] 	 * activesupport (4.2.7.1)
+ DEBUG [5fcfdddc] 	 * builder (3.2.3)
+ DEBUG [5fcfdddc] 	 * erubis (2.7.0)
+ DEBUG [5fcfdddc] 	 * mini_portile2 (2.3.0)
+ DEBUG [5fcfdddc] 	 * nokogiri (1.8.2)
+ DEBUG [5fcfdddc] 	 * rails-deprecated_sanitizer (1.0.3)
+ DEBUG [5fcfdddc] 	 * rails-dom-testing (1.0.9)
+ DEBUG [5fcfdddc] 	 * crass (1.0.4)
+ DEBUG [5fcfdddc] 	 * loofah (2.2.2)
+ DEBUG [5fcfdddc] 	 * rails-html-sanitizer (1.0.4)
+ DEBUG [5fcfdddc] 	 * actionview (4.2.7.1)
+ DEBUG [5fcfdddc] 	 * rack (1.6.10)
+ DEBUG [5fcfdddc] 	 * rack-test (0.6.3)
+ DEBUG [5fcfdddc] 	 * actionpack (4.2.7.1)
+ DEBUG [5fcfdddc] 	 * globalid (0.4.1)
+ DEBUG [5fcfdddc] 	 * activejob (4.2.7.1)
+ DEBUG [5fcfdddc] 	 * mini_mime (1.0.0)
+ DEBUG [5fcfdddc] 	 * mail (2.7.0)
+ DEBUG [5fcfdddc] 	 * actionmailer (4.2.7.1)
+ DEBUG [5fcfdddc] 	 * activemodel (4.2.7.1)
+ DEBUG [5fcfdddc] 	 * arel (6.0.4)
+ DEBUG [5fcfdddc] 	 * activerecord (4.2.7.1)
+ DEBUG [5fcfdddc] 	 * net-ssh (5.0.1)
+ DEBUG [5fcfdddc] 	 * net-scp (1.2.1)
+ DEBUG [5fcfdddc] 	 * sshkit (1.16.1)
+ DEBUG [5fcfdddc] 	 * airbrussh (1.3.0)
+ DEBUG [5fcfdddc] 	 * bcrypt (3.1.12)
+ DEBUG [5fcfdddc] 	 * debug_inspector (0.0.3)
+ DEBUG [5fcfdddc] 	 * binding_of_caller (0.8.0)
+ DEBUG [5fcfdddc] 	 * byebug (10.0.2)
+ DEBUG [5fcfdddc] 	 * capistrano (3.11.0)
+ DEBUG [5fcfdddc] 	 * capistrano-bundler (1.3.0)
+ DEBUG [5fcfdddc] 	 * capistrano-rails (1.4.0)
+ DEBUG [5fcfdddc] 	 * capistrano-rbenv (2.1.3)
+ DEBUG [5fcfdddc] 	 * mime-types-data (3.2016.0521)
+ DEBUG [5fcfdddc] 	 * mime-types (3.1)
+ DEBUG [5fcfdddc] 	 * carrierwave (1.2.2)
+ DEBUG [5fcfdddc] 	 * coderay (1.1.2)
+ DEBUG [5fcfdddc] 	 * coffee-script-source (1.12.2)
+ DEBUG [5fcfdddc] 	 * execjs (2.7.0)
+ DEBUG [5fcfdddc] 	 * coffee-script (2.4.1)
+ DEBUG [5fcfdddc] 	 * thor (0.20.0)
+ DEBUG [5fcfdddc] 	 * railties (4.2.7.1)
+ DEBUG [5fcfdddc] 	 * coffee-rails (4.1.1)
+ DEBUG [5fcfdddc] 	 * ffi (1.9.25)
+ DEBUG [5fcfdddc] 	 * multi_json (1.13.1)
+ DEBUG [5fcfdddc] 	 * jbuilder (2.7.0)
+ DEBUG [5fcfdddc] 	 * jquery-rails (4.3.3)
+ DEBUG [5fcfdddc] 	 * kgio (2.11.2)
+ DEBUG [5fcfdddc] 	 * libv8 (3.16.14.19)
+ DEBUG [5fcfdddc] 	 * method_source (0.9.0)
+ DEBUG [5fcfdddc] 	 * pg (0.20.0)
+ DEBUG [5fcfdddc] 	 * pry (0.11.3)
+ DEBUG [5fcfdddc] 	 * puma (3.11.4)
+ DEBUG [5fcfdddc] 	 * sprockets (3.7.1)
+ DEBUG [5fcfdddc] 	 * sprockets-rails (3.2.1)
+ DEBUG [5fcfdddc] 	 * rails (4.2.7.1)
+ DEBUG [5fcfdddc] 	 * rails_serve_static_assets (0.0.5)
+ DEBUG [5fcfdddc] 	 * rails_stdout_logging (0.0.5)
+ DEBUG [5fcfdddc] 	 * rails_12factor (0.0.3)
+ DEBUG [5fcfdddc] 	 * raindrops (0.19.0)
+ DEBUG [5fcfdddc] 	 * rb-fsevent (0.10.3)
+ DEBUG [5fcfdddc] 	 * rb-inotify (0.9.10)
+ DEBUG [5fcfdddc] 	 * rdoc (4.3.0)
+ DEBUG [5fcfdddc] 	 * ref (2.0.0)
+ DEBUG [5fcfdddc] 	 * sass-listen (4.0.0)
+ DEBUG [5fcfdddc] 	 * sass (3.5.6)
+ DEBUG [5fcfdddc] 	 * tilt (2.0.8)
+ DEBUG [5fcfdddc] 	 * sass-rails (5.0.7)
+ DEBUG [5fcfdddc] 	 * sdoc (0.4.2)
+ DEBUG [5fcfdddc] 	 * spring (2.0.2)
+ DEBUG [5fcfdddc] 	 * therubyracer (0.12.3)
+ DEBUG [5fcfdddc] 	 * turbolinks-source (5.1.0)
+ DEBUG [5fcfdddc] 	 * turbolinks (5.1.1)
+ DEBUG [5fcfdddc] 	 * uglifier (4.1.11)
+ DEBUG [5fcfdddc] 	 * unicorn (5.4.0)
+ DEBUG [5fcfdddc] 	 * web-console (2.3.0)
+ DEBUG [5fcfdddc] 	Install missing gems with `bundle install`
+ DEBUG [5fcfdddc] Finished in 1.165 seconds with exit status 1 (failed).
+  INFO [2ece918b] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/sunil_event/shared/bundle --without development test --deployment --quiet as deploy@18.191.179.1
+ DEBUG [2ece918b] Command: cd /u01/apps/qwinix/sunil_event/releases/20180615055914 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /u01/apps/qwinix/sunil_event/shared/bundle --without development test --deployment --quiet )
+ DEBUG [2ece918b] 	net-ssh-5.0.1 requires ruby version >= 2.2.6, which is incompatible with the
+current version, ruby 2.2.1p85
