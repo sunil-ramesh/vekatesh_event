@@ -43,6 +43,7 @@ set :ssh_options, {
    #verbose: :debug,
    keys: %w(~/.ssh/id_rsa),
    auth_methods: %w(publickey)
+}
 
 
 # Configuration
