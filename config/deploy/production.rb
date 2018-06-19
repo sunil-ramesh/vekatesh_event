@@ -23,7 +23,7 @@
 # role :db,  %w{deploy@example.com}
 set :stage, :production
 set :branch, :demo_jenkins
-set :rails_env, :it
+set :rails_env, :production
 set :deploy_to, '/u01/apps/qwinix/event_jenkins'
 set :log_level, :debug
 
