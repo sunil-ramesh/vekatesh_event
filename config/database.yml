@@ -44,6 +44,6 @@ production:
   reconnect: false
   username: postgres
   password: password
-  database: event_production
+  database: event_jenks
   pool: 5
   host: localhost
