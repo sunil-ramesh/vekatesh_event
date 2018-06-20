@@ -23450,3 +23450,39 @@ While it's not a problem now, it could cause errors if you change the version of
   INFO [2ef5be30] Running /usr/bin/env echo "Branch demo_jenkins (at 678ee28792a8aca29d5c7b80c9a46de39f611d57) deployed as release 20180619103152 by qwinix-pc" >> /u01/apps/qwinix/event_jenkins/revisions.log as deploy@18.222.165.142
  DEBUG [2ef5be30] Command: cd /u01/apps/qwinix/event_jenkins/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "Branch demo_jenkins (at 678ee28792a8aca29d5c7b80c9a46de39f611d57) deployed as release 20180619103152 by qwinix-pc" >> /u01/apps/qwinix/event_jenkins/revisions.log )
   INFO [2ef5be30] Finished in 0.838 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-20 10:38:51 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [f8df5b9e] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.165.142
+ DEBUG [f8df5b9e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-20 10:46:54 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [f1d1b943] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.165.142
+ DEBUG [f1d1b943] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-20 10:51:58 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [61db0640] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.165.142
+ DEBUG [61db0640] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-20 10:54:43 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [fbb1aecd] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.165.142
+ DEBUG [fbb1aecd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-20 10:57:05 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [76cc37bd] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.165.142
+ DEBUG [76cc37bd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-06-20 11:06:47 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [82a5a871] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.165.142
+ DEBUG [82a5a871] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
