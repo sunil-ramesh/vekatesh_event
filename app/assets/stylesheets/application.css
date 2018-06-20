@@ -71,8 +71,8 @@ font-size: 15px;
 font-weight: bolder;
 }
 .navbar-inverse .navbar-nav > li > a {
-	color: white;
-}
+	/*color: white;*/
+	color: #d44646; }
 .navbar-nav > li > a {
 	    padding-top: 10px;
      padding-bottom: 10px; 
@@ -90,7 +90,8 @@ font-weight: bolder;
 
 .jumbotron{
 	
-	background-color: #333333;
+/*	background-color: #333333;
+*/  background-color: #a9322f;
 	color: white;
 	text-align: center;
 	
