@@ -10,10 +10,10 @@ set :deploy_to, '/u01/apps/qwinix/event_scheduler'
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-role :app, %w{harsha@13.232.114.192}
-role :web, %w{harsha@13.232.114.192}
-role :db, %w{harsha@13.232.114.192}
-server '13.232.114.192', roles: %w{:web, :app, :db}, user: 'harsha'
+role :app, %w{harsha@35.154.44.206}
+role :web, %w{harsha@35.154.44.206}
+role :db, %w{harsha@35.154.44.206}
+server '35.154.44.206', roles: %w{:web, :app, :db}, user: 'harsha'
 
 set :ssh_options, {
    #verbose: :debug,
