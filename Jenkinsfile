@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''gem install net-ssh -v \'5.0.1\'
+        sh '''gem install net-ssh -v 2.6.5
 bundle install'''
       }
     }
