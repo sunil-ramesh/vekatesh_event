@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'rails:4.2.5.1' 
+            image 'ruby:2.3.0' 
             args '-p 3000:3000' 
         }
     }
